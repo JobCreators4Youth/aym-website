@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volunteer Application | Twenty-First Century African Youth Movement (AYM)</title>
+<meta name="description" content="Apply to volunteer with the Twenty-First Century African Youth Movement using our five-step application form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main" style="position:absolute;left:-999px">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="AYM home">
+      <img src="assets/img/logo.png" alt="AYM logo">
+      <span class="brand__name">AYM<span>African Youth Movement</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <nav class="nav" aria-label="Primary">
+      <div class="has-drop"><a class="navlink" href="volunteer.html">Get Involved</a>
+        <div class="dropdown">
+          <a href="volunteer.html">Volunteer</a>
+          <a href="volunteer-apply.html" class="dropdown__sub">Volunteer Application</a>
+          <a href="volunteer-fellowship.html" class="dropdown__sub">AYM Youth Fellowship</a>
+          <a href="donate.html#fundraise">Fundraise</a>
+          <a href="chapter.html">Start an AYM Chapter</a>
+        </div>
+      </div>
+      <div class="has-drop"><a class="navlink" href="about.html">About</a>
+        <div class="dropdown">
+          <a href="about.html">About AYM</a>
+          <a href="about-team.html">About the Team</a>
+          <a href="where-we-work.html">Where We Work</a>
+        </div>
+      </div>
+      <div class="has-drop"><a class="navlink" href="focus-art.html">Focus Areas</a>
+        <div class="dropdown">
+          <a href="focus-art.html">Art</a>
+          <a href="focus-agriculture.html">Agriculture</a>
+          <a href="focus-education.html">Education</a>
+          <a href="focus-entrepreneurship.html">Entrepreneurship</a>
+          <a href="focus-ecotourism.html">Ecotourism</a>
+          <a href="focus-ecotourism-forest-safari.html" class="dropdown__sub">Forest Safari</a>
+          <a href="focus-health.html">Healthcare</a>
+          <a href="focus-technology.html">Technology</a>
+        </div>
+      </div>
+      <div class="has-drop"><a class="navlink" href="projects.html">Our Work</a>
+        <div class="dropdown">
+          <a href="projects.html">Projects</a>
+          <a href="events.html">Events</a>
+          <a href="where-we-work.html">Where We Work</a>
+        </div>
+      </div>
+      <a class="navlink" href="contact.html">Contact</a>
+      <a class="btn btn--accent header__cta" href="donate.html">Donate Now</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero hero--page">
+  <img class="hero__bg" src="assets/img/volunteer-0.png" alt="">
+  <div class="container hero__inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Get Involved / Volunteer / Apply</div>
+    <span class="eyebrow eyebrow--brand" style="color:var(--brand)">Volunteer Application</span>
+    <h1 class="hero__title">Submit Your <em>Application</em></h1>
+    <p class="hero__sub">Five short steps. Your progress is saved as you go, so you can pause and come back at any time.</p>
+    <div class="hero__actions"><a class="btn btn--ghost btn--lg" href="#apply">Start Application</a></div>
+    
+  </div>
+</section>
+
+<section class="section" id="apply">
+  <div class="container">
+    <div class="section__head center"><span class="eyebrow">Application</span><h2>Volunteer application form</h2>
+      <p class="lead">Fields marked <span class="req">*</span> are required. Nothing is submitted until the final step.</p>
+    </div>
+
+    <noscript>
+      <p class="cta-note">JavaScript is turned off, so all five steps are shown together below. Please complete every field marked <span class="req">*</span>, or email your application to <a href="mailto:info@aym-inc.org">info@aym-inc.org</a>.</p>
+      <style>
+        .apply__steps,.apply__progress{display:none}
+        .apply__panel[hidden]{display:block}
+        .apply__panel[data-step="5"]{display:none}
+        .apply__nav [data-apply-back],.apply__nav [data-apply-next]{display:none}
+        .apply__nav [data-apply-submit]{display:inline-flex;margin-left:0}
+      </style>
+    </noscript>
+
+    <form class="apply" data-apply novalidate>
+      <ol class="apply__steps" data-apply-steps aria-label="Application progress">
+        <li class="apply__step is-active" data-step-indicator="1"><span class="apply__dot">1</span><span class="apply__label">About you</span></li>
+        <li class="apply__step" data-step-indicator="2"><span class="apply__dot">2</span><span class="apply__label">Role &amp; skills</span></li>
+        <li class="apply__step" data-step-indicator="3"><span class="apply__dot">3</span><span class="apply__label">Availability</span></li>
+        <li class="apply__step" data-step-indicator="4"><span class="apply__dot">4</span><span class="apply__label">Motivation</span></li>
+        <li class="apply__step" data-step-indicator="5"><span class="apply__dot">5</span><span class="apply__label">Review</span></li>
+      </ol>
+      <div class="apply__progress"><span data-apply-bar style="width:20%"></span></div>
+
+      <div class="apply__panels">
+        <fieldset class="apply__panel is-active" data-step="1" aria-label="About you">
+          <legend class="apply__legend">Tell us about you</legend>
+          <div class="grid grid-2">
+            <label>First name <span class="req">*</span><input type="text" name="first" placeholder="First name" autocomplete="given-name" required></label>
+            <label>Last name <span class="req">*</span><input type="text" name="last" placeholder="Last name" autocomplete="family-name" required></label>
+          </div>
+          <div class="grid grid-2">
+            <label>Email <span class="req">*</span><input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+            <label>Phone <span class="small muted">(optional)</span><input type="tel" name="phone" placeholder="+1 555 000 0000" autocomplete="tel"></label>
+          </div>
+          <div class="grid grid-2">
+            <label>Country <span class="req">*</span><select name="country" required><option value="">Select a country</option><option>Sierra Leone</option><option>United States</option><option>United Kingdom</option><option>Kenya</option><option>Rwanda</option><option>Uganda</option><option>Nigeria</option><option>South Africa</option><option>Canada</option><option>Other</option></select></label>
+            <label>City / region<input type="text" name="city" placeholder="City or region"></label>
+          </div>
+          <label>Date of birth <span class="req">*</span>
+            <input type="date" name="dob" required data-minage="16" data-error="You must be at least 16 to volunteer with AYM.">
+            <span class="small muted">You must be 16 or older to apply.</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="apply__panel" data-step="2" aria-label="Role and skills" hidden>
+          <legend class="apply__legend">Choose your role and skills</legend>
+          <label>Which role interests you most? <span class="req">*</span>
+            <select name="role" required><option value="">Select a role</option><option>Web Designer</option><option>Digital Marketer</option><option>Content Writer</option><option>Data & Analytics</option><option>Researcher</option><option>Project Manager</option><option>Not sure yet &mdash; help me choose</option></select>
+          </label>
+          <fieldset class="choice-group"><legend>Your top skills <span class="small muted">(select any)</span></legend><label class="check-inline"><input type="checkbox" name="skills" value="Web / design"> Web / design</label><label class="check-inline"><input type="checkbox" name="skills" value="Writing / editing"> Writing / editing</label><label class="check-inline"><input type="checkbox" name="skills" value="Marketing / social"> Marketing / social</label><label class="check-inline"><input type="checkbox" name="skills" value="Data / analytics"> Data / analytics</label><label class="check-inline"><input type="checkbox" name="skills" value="Project management"> Project management</label><label class="check-inline"><input type="checkbox" name="skills" value="Translation"> Translation</label><label class="check-inline"><input type="checkbox" name="skills" value="Teaching / tutoring"> Teaching / tutoring</label><label class="check-inline"><input type="checkbox" name="skills" value="Fundraising"> Fundraising</label><label class="check-inline"><input type="checkbox" name="skills" value="Other"> Other</label></fieldset>
+          <div class="grid grid-2">
+            <label>Experience level<select name="experience"><option value="">Select</option><option>No prior experience</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Professional</option></select></label>
+            <label>Portfolio / LinkedIn / website <span class="small muted">(optional)</span><input type="url" name="portfolio" placeholder="https://"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="apply__panel" data-step="3" aria-label="Availability" hidden>
+          <legend class="apply__legend">Your availability</legend>
+          <fieldset class="choice-group"><legend>How much time can you commit? <span class="req">*</span></legend><label class="choice"><input type="radio" name="commitment" value="2&ndash;4 hrs/week" required> <span><strong>2&ndash;4 hrs/week</strong> &middot; a light but steady commitment</span></label><label class="choice"><input type="radio" name="commitment" value="4&ndash;8 hrs/week" required> <span><strong>4&ndash;8 hrs/week</strong> &middot; a meaningful weekly contribution</span></label><label class="choice"><input type="radio" name="commitment" value="8&ndash;16 hrs/week" required> <span><strong>8&ndash;16 hrs/week</strong> &middot; a significant role in a team</span></label><label class="choice"><input type="radio" name="commitment" value="16+ hrs/week" required> <span><strong>16+ hrs/week</strong> &middot; near full-time dedication</span></label></fieldset>
+          <fieldset class="choice-group"><legend>How would you like to volunteer? <span class="req">*</span></legend><label class="choice"><input type="radio" name="mode" value="Remote" required> <span>Remote</span></label><label class="choice"><input type="radio" name="mode" value="On-site" required> <span>On-site</span></label><label class="choice"><input type="radio" name="mode" value="Either" required> <span>Either</span></label></fieldset>
+          <div class="grid grid-2">
+            <label>Preferred start date<input type="date" name="start"></label>
+            <label>Time zone<select name="timezone"><option value="">Select a time zone</option><option>UTC-08:00 Pacific</option><option>UTC-05:00 Eastern</option><option>UTC+00:00 GMT/London</option><option>UTC+01:00 Central Europe / West Africa</option><option>UTC+02:00 Central/Southern Africa</option><option>UTC+03:00 East Africa</option><option>Other</option></select></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="apply__panel" data-step="4" aria-label="Motivation and background" hidden>
+          <legend class="apply__legend">Motivation &amp; background</legend>
+          <label>Why do you want to volunteer with AYM? <span class="req">*</span>
+            <textarea name="why" rows="5" placeholder="Tell us what motivates you (at least a few sentences)..." required data-minchars="40" data-error="Please write at least 40 characters so we can get to know you."></textarea>
+            <span class="small muted" data-count-for="why">0 characters</span>
+          </label>
+          <div class="grid grid-2">
+            <label>How did you hear about us?<select name="heard"><option value="">Select</option><option>Search engine</option><option>Social media</option><option>A friend or colleague</option><option>An AYM event</option><option>Newsletter or email</option><option>Other</option></select></label>
+            <label>Reference name <span class="small muted">(optional)</span><input type="text" name="refname" placeholder="Name of a reference"></label>
+          </div>
+          <label>Reference email <span class="small muted">(optional)</span><input type="email" name="refemail" placeholder="reference@example.com"></label>
+          <label class="checkbox"><input type="checkbox" name="consent_bg" required> I understand a basic background check is part of onboarding. <span class="req">*</span></label>
+          <label class="checkbox"><input type="checkbox" name="consent_coc" required> I agree to AYM's code of conduct and privacy policy. <span class="req">*</span></label>
+        </fieldset>
+
+        <fieldset class="apply__panel" data-step="5" aria-label="Review and submit" hidden>
+          <legend class="apply__legend">Review your application</legend>
+          <p class="lead">Please check everything below. Use <strong>Back</strong> to make changes.</p>
+          <div class="review" data-review></div>
+          <label class="checkbox"><input type="checkbox" name="confirm" required> I confirm the information above is accurate and complete. <span class="req">*</span></label>
+        </fieldset>
+      </div>
+
+      <p class="apply__error" data-apply-error hidden role="alert"></p>
+
+      <div class="apply__nav">
+        <button type="button" class="btn btn--outline" data-apply-back hidden>&larr; Back</button>
+        <span class="small muted apply__saved" data-apply-saved hidden></span>
+        <button type="button" class="btn btn--accent" data-apply-next>Next step &rarr;</button>
+        <button type="submit" class="btn btn--accent" data-apply-submit hidden>Submit application</button>
+      </div>
+    </form>
+
+    <div class="success" data-apply-done hidden>
+      <div class="success__ico">&#10003;</div>
+      <h2>Application received</h2>
+      <p>Thank you, <strong data-apply-name>friend</strong>. We've recorded your interest and our volunteer team will be in touch.</p>
+      <p class="small muted">This is a demo build, so nothing was sent. In the live site your application would be delivered to AYM's volunteer team and a confirmation emailed to <strong data-apply-email></strong>. Your reference for this session is <code data-apply-ref></code>.</p>
+      <div class="flex"><a class="btn btn--brand" href="focus-ecotourism.html">Explore Our Work</a><a class="btn btn--outline" href="donate.html">Donate Instead</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer__cta">
+    <div class="container">
+      <h3>Join us in our mission</h3>
+      <div class="flex">
+        <a class="btn btn--brand" href="donate.html">Donate</a>
+        <a class="btn btn--ghost" href="volunteer.html">Volunteer</a>
+        <a class="btn btn--ghost" href="store.html">Shop</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="AYM logo">
+        <p class="small" style="margin-top:1rem">Twenty-First Century African Youth Movement (AYM) mobilizes Africa's unemployed and underemployed youth to end poverty together.</p>
+        <p class="small">6811 North Ave. Middleton, WI 53562. USA<br>
+        Tel: (608) 879-5487<br>
+        Email: <a href="mailto:info@aym-inc.org">info@aym-inc.org</a></p>
+        <div class="social">
+          <a href="https://x.com/AYMOVEMENT" aria-label="Twitter">X</a>
+          <a href="https://www.facebook.com/africanyouthmovement/" aria-label="Facebook">f</a>
+          <a href="https://www.youtube.com/c/Aym-incOrg" aria-label="YouTube">&#9654;</a>
+          <a href="https://www.linkedin.com/company/twenty-first-century-african-youth-movement/" aria-label="LinkedIn">in</a>
+          <a href="https://www.instagram.com/aymovement/" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div>
+        <h4>Where We Work</h4>
+        <ul>
+          <li><a href="where-we-work.html">Africa</a></li>
+          <li><a href="where-we-work.html">Sierra Leone</a></li>
+          <li><a href="where-we-work.html">United Kingdom</a></li>
+          <li><a href="where-we-work.html">USA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="about.html">About AYM</a></li>
+          <li><a href="about.html#mission">Mission</a></li>
+          <li><a href="about.html#history">History</a></li>
+          <li><a href="about-team.html">Leadership</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Focus Areas</h4>
+        <ul>
+          <li><a href="focus-art.html">Art</a></li>
+          <li><a href="focus-agriculture.html">Agriculture</a></li>
+          <li><a href="focus-education.html">Education</a></li>
+          <li><a href="focus-entrepreneurship.html">Entrepreneurship</a></li>
+          <li><a href="focus-ecotourism.html">Ecotourism</a></li>
+          <li><a href="focus-health.html">Healthcare</a></li>
+          <li><a href="focus-technology.html">Technology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="projects.html">Our Work</a></li>
+          <li><a href="volunteer.html">Get Involved</a></li>
+          <li><a href="store.html">Impact Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span data-year>2026</span> Twenty-First Century African Youth Movement (AYM), Inc., USA. All rights reserved.</span>
+      <span>AYM is a 501(C)(3) Nonprofit Organization, EIN 39-1742519.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
