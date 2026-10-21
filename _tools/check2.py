@@ -1,5 +1,5 @@
 import os, glob
-OUT = r'C:\Users\Toks\Documents\AYM\website'
+OUT = os.environ.get("AYM_SITE_DIR") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 css = open(os.path.join(OUT, 'assets/css/styles.css'), encoding='utf-8').read()
 print('css braces:', css.count('{'), css.count('}'))
 ok = True

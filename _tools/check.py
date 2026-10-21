@@ -1,5 +1,5 @@
 import os, re, glob
-OUT = r'C:\Users\Toks\Documents\AYM\website'
+OUT = os.environ.get("AYM_SITE_DIR") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 pages = [os.path.basename(p) for p in glob.glob(os.path.join(OUT, '*.html'))]
 print('PAGES:', len(pages))
 missing = set()

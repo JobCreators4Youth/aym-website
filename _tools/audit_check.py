@@ -1,7 +1,7 @@
 import os, re, glob, sys
 sys.stdout.reconfigure(encoding='utf-8')
 
-OUT = r'C:\Users\Toks\Documents\AYM\website'
+OUT = os.environ.get("AYM_SITE_DIR") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 pages = sorted(glob.glob(os.path.join(OUT, '*.html')))
 def read(n): return open(os.path.join(OUT, n), encoding='utf-8').read()
 

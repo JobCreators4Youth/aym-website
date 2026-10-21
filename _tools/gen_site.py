@@ -2,7 +2,7 @@
 """Builds the AYM static website (redesign matching the Figma file)."""
 import os
 
-OUT = r"C:\Users\Toks\Documents\AYM\website"
+OUT = os.environ.get("AYM_SITE_DIR") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs(OUT, exist_ok=True)
 
 # ------------------------------------------------------------------ helpers
@@ -305,9 +305,47 @@ LANDING = hero_page(
 ) + f"""
 <section class="section">
   <div class="container">
+    <div class="section__head center">
+      <span class="eyebrow">Our Objectives</span>
+      <h2>Change-makers rebuilding rural communities</h2>
+      <p class="lead">AYM engages youth as change-makers in rebuilding and developing rural communities through innovative and progressive local-driven programs and enterprises. AYM facilitates increased access to critical resources and opportunities for rural youth.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="feature"><div class="feature__ico">1</div><h3>Extinguish rural poverty</h3><p class="muted">Help people acquire the right skills that will help them improve their livelihood.</p></div>
+      <div class="feature"><div class="feature__ico">2</div><h3>Skill Development</h3><p class="muted">Provide youth with job training to acquire employable skills valuable for their future.</p></div>
+      <div class="feature"><div class="feature__ico">3</div><h3>Youth Empowerment</h3><p class="muted">Shrink the share of youth most at risk of being left behind in the labor market.</p></div>
+      <div class="feature"><div class="feature__ico">4</div><h3>African Intervention</h3><p class="muted">Promote youth self-employment in Sierra Leone as a model for our African intervention.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section__head center">
+      <span class="eyebrow" style="color:var(--brand)">Where we are stationed</span>
+      <h2>Mobilize local youth around pressing regional issues</h2>
+      <p class="lead" style="color:rgba(255,255,255,.85)">From environmental sustainability to tech education and policy advocacy.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><div class="card__body">
+        <div class="card__tag">Sierra Leone</div>
+        <h3 class="card__title">Contribute to our fundraising</h3>
+        <p class="card__text">Mobilize local youth around pressing regional issues—from environmental sustainability to tech education and policy advocacy.</p>
+        <a class="card__link" href="donate.html">Donate Now →</a></div></div>
+      <div class="card"><div class="card__body">
+        <div class="card__tag">United States</div>
+        <h3 class="card__title">Apply as a Volunteer</h3>
+        <p class="card__text">Run local campaigns via custom fundraising pages and leverage AYM's legal framework to pitch for institutional funding.</p>
+        <a class="card__link" href="volunteer.html">Apply as a Volunteer →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <div class="section__head"><span class="eyebrow">Current projects</span><h2>What we're working on right now</h2><p class="lead">Where your support goes today &mdash; live projects across art, ecotourism and youth enterprise.</p></div>
     {cards_grid(CURRENT_PROJECTS[:3], 3)}
-    <div class="center mt-3"><a class="btn btn--outline" href="projects.html">View all projects →</a></div>
+    <div class="center mt-3"><a class="btn btn--outline" href="projects.html">View All Projects →</a></div>
   </div>
 </section>
 
@@ -334,45 +372,6 @@ LANDING = hero_page(
     </div>
     <div class="chips mb-2">{chips}</div>
     <div class="focus-panels">{panels}</div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section__head center">
-      <span class="eyebrow">Our Objectives</span>
-      <h2>Change-makers rebuilding rural communities</h2>
-      <p class="lead">AYM engages youth as change-makers in rebuilding and developing rural communities through innovative and progressive local-driven programs and enterprises. AYM facilitates increased access to critical resources and opportunities for rural youth.</p>
-    </div>
-    <div class="grid grid-4">
-      <div class="feature"><div class="feature__ico">1</div><h3>Extinguish rural poverty</h3><p class="muted">Help people acquire the right skills that will help them improve their livelihood.</p></div>
-      <div class="feature"><div class="feature__ico">2</div><h3>Skill Development</h3><p class="muted">Provide youth with job training to acquire employable skills valuable for their future.</p></div>
-      <div class="feature"><div class="feature__ico">3</div><h3>Youth Empowerment</h3><p class="muted">Shrink the share of youth most at risk of being left behind in the labor market.</p></div>
-      <div class="feature"><div class="feature__ico">4</div><h3>African Intervention</h3><p class="muted">Promote youth self-employment in Sierra Leone as a model for our African intervention.</p></div>
-    </div>
-    
-  </div>
-</section>
-
-<section class="section section--dark">
-  <div class="container">
-    <div class="section__head center">
-      <span class="eyebrow" style="color:var(--brand)">Where we are stationed</span>
-      <h2>Mobilize local youth around pressing regional issues</h2>
-      <p class="lead" style="color:rgba(255,255,255,.85)">From environmental sustainability to tech education and policy advocacy.</p>
-    </div>
-    <div class="grid grid-2">
-      <div class="card"><div class="card__body">
-        <div class="card__tag">Sierra Leone</div>
-        <h3 class="card__title">Contribute to our fundraising</h3>
-        <p class="card__text">Mobilize local youth around pressing regional issues—from environmental sustainability to tech education and policy advocacy.</p>
-        <a class="card__link" href="donate.html">Donate Now →</a></div></div>
-      <div class="card"><div class="card__body">
-        <div class="card__tag">United States</div>
-        <h3 class="card__title">Apply as a Volunteer</h3>
-        <p class="card__text">Run local campaigns via custom fundraising pages and leverage AYM's legal framework to pitch for institutional funding.</p>
-        <a class="card__link" href="volunteer.html">Apply as a Volunteer →</a></div></div>
-    </div>
   </div>
 </section>
 
@@ -414,7 +413,7 @@ LANDING = hero_page(
       <article class="card"><div class="card__body"><div class="card__tag">Programs</div><h3 class="card__title"><a href="https://www.aym-inc.org/rwandan-youth-in-african-youth-movement/">Rwandan Youth in African Youth Movement</a></h3><p class="card__text">The African Youth Movement (AYM) trains Rwandan youth in leadership...</p><div class="meta mt-1"><span>Abu-Hassan Koroma</span><span>Apr 4, 2025</span></div></div></article>
       <article class="card"><div class="card__body"><div class="card__tag">Stories</div><h3 class="card__title"><a href="https://www.aym-inc.org/empowering-african-youth-through-web-design/">Empowering African Youth Through Web Design</a></h3><p class="card__text">The journey of a volunteer using digital skills to empower African youth...</p><div class="meta mt-1"><span>Abu-Hassan Koroma</span><span>Dec 22, 2024</span></div></div></article>
     </div>
-    <div class="center mt-3"><a class="btn btn--outline" href="https://www.aym-inc.org/aym-blog/" target="_blank" rel="noopener">View all posts →</a></div>
+    <div class="center mt-3"><a class="btn btn--outline" href="https://www.aym-inc.org/aym-blog/" target="_blank" rel="noopener">View All Posts →</a></div>
   </div>
 </section>
 """ + CONTACT_CTA
