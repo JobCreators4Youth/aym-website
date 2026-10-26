@@ -673,6 +673,24 @@ ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok)
 .hero--home .hero__title em{color:#f3a333}
 .hero--home .hero__sub{max-width:48ch;font-size:1.05rem}
 .hero--home .hero__actions{gap:.65rem}
+.hero-carousel{display:block;min-height:clamp(570px,calc(100svh - 74px),760px);isolation:isolate}
+.hero-carousel::after{display:none}
+.hero-carousel__slides{position:absolute;inset:0}
+.hero-carousel__slide{position:absolute;inset:0;display:flex;align-items:center;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility .55s ease}
+.hero-carousel__slide.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.hero-carousel__slide::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(13,52,39,.92),rgba(13,52,39,.74) 43%,rgba(13,52,39,.22))}
+.hero-carousel__slide .hero__bg{z-index:0;object-position:center 42%}
+.hero-carousel__slide:nth-child(3) .hero__bg{object-position:center 38%}
+.hero-carousel__slide .hero__inner{z-index:2;padding:clamp(4rem,9vw,7rem) 22px 7.5rem}
+.hero-carousel__slide .hero__title{max-width:11ch}
+.hero-carousel__controls{position:absolute;z-index:3;left:max(22px,calc((100vw - var(--maxw))/2 + 22px));bottom:2rem;display:flex;align-items:center;gap:.85rem}
+.hero-carousel__arrow,.hero-carousel__dot{font:inherit;cursor:pointer}
+.hero-carousel__arrow{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:1.05rem;transition:.18s}
+.hero-carousel__arrow:hover{background:#f3a333;border-color:#f3a333;color:#173c2e}
+.hero-carousel__dots{display:flex;align-items:center;gap:.5rem}
+.hero-carousel__dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);transition:width .2s,background .2s}
+.hero-carousel__dot.is-active{width:26px;border-radius:8px;background:#f3a333}
+.hero-carousel button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .home-projects,.home-stories{background:#fbf7ee}
 .home-projects .section__head,.home-stories .section__head,.home-locations .section__head{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 1rem;max-width:none}
 .home-projects .section__head .eyebrow,.home-stories .section__head .eyebrow,.home-locations .section__head .eyebrow{flex-basis:100%;margin-bottom:.2rem;color:#607d6d}
@@ -746,6 +764,7 @@ ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok)
 .home-stories .card__title a:hover{color:#e18b1c}
 @media(max-width:800px){
  .hero--home{min-height:500px}.hero--home::after{background:linear-gradient(90deg,rgba(13,52,39,.9),rgba(13,52,39,.48))}
+ .hero-carousel{min-height:590px}.hero-carousel__slide::after{background:linear-gradient(90deg,rgba(13,52,39,.9),rgba(13,52,39,.52))}
  .intro-layout{grid-template-columns:1fr 1fr;gap:1.5rem}.intro-image img{height:390px}
  .results-layout{grid-template-columns:1fr 220px;gap:1.5rem}.results-story img{height:240px}
  .pathways-layout{grid-template-columns:1fr;gap:1.2rem}.pathways-layout .section__head{position:static}
@@ -753,6 +772,7 @@ ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok)
 }
 @media(max-width:600px){
  .hero--home{min-height:520px}.hero--home .hero__inner{padding:4rem 22px}
+ .hero-carousel{min-height:570px}.hero-carousel__slide .hero__inner{padding:3.5rem 22px 7rem}.hero-carousel__controls{bottom:1.4rem}
  .hero--home .hero__title{font-size:clamp(2.8rem,13vw,4rem)}
  .intro-layout{grid-template-columns:1fr}.intro-image img{height:260px}.intro-pillars{gap:.6rem}
  .home-projects .section__head,.home-stories .section__head,.home-locations .section__head{display:block}
@@ -764,6 +784,7 @@ ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok)
  .location-grid{grid-template-columns:1fr 1fr}.location{min-height:135px;padding:.9rem}.location strong{font-size:1rem}
  .home-sponsors .container{grid-template-columns:1fr;gap:1.4rem}.sponsor-logos img{height:85px}
 }
+@media(prefers-reduced-motion:reduce){.hero-carousel__slide,.hero-carousel__arrow,.hero-carousel__dot{transition:none}}
 @media(max-width:900px){.home-header .nav{background:#173c2e}}
 
 @media (max-width:640px){

@@ -28,6 +28,51 @@
     });
   }
 
+  // Homepage hero carousel: each slide has one clear action.
+  var heroCarousel = document.querySelector(".hero-carousel");
+  if (heroCarousel) {
+    var heroSlides = Array.prototype.slice.call(heroCarousel.querySelectorAll("[data-hero-slide]"));
+    var heroDots = Array.prototype.slice.call(heroCarousel.querySelectorAll("[data-hero-to]"));
+    var heroIndex = 0;
+
+    function showHeroSlide(nextIndex) {
+      heroIndex = (nextIndex + heroSlides.length) % heroSlides.length;
+      heroSlides.forEach(function (slide, index) {
+        var active = index === heroIndex;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", active ? "false" : "true");
+        slide.toggleAttribute("inert", !active);
+      });
+      heroDots.forEach(function (dot, index) {
+        var active = index === heroIndex;
+        dot.classList.toggle("is-active", active);
+        if (active) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    }
+
+    heroCarousel.querySelector("[data-hero-prev]").addEventListener("click", function () {
+      showHeroSlide(heroIndex - 1);
+    });
+    heroCarousel.querySelector("[data-hero-next]").addEventListener("click", function () {
+      showHeroSlide(heroIndex + 1);
+    });
+    heroDots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        showHeroSlide(Number(dot.getAttribute("data-hero-to")));
+      });
+    });
+    heroCarousel.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showHeroSlide(heroIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showHeroSlide(heroIndex + 1);
+      }
+    });
+  }
+
   // ---- Donation: amount + payment method -------------------------------
   var tierInput = document.querySelector("[data-tier-input]");
   var methodCta = document.querySelector("[data-method-cta]");
