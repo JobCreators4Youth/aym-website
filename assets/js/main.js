@@ -35,8 +35,7 @@
     var heroDots = Array.prototype.slice.call(heroCarousel.querySelectorAll("[data-hero-to]"));
     var heroRotationButton = heroCarousel.querySelector("[data-hero-rotation]");
     var heroIndex = 0;
-    var heroRotation = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var heroPointerInside = false;
+    var heroRotation = true;
     var heroTimer = null;
 
     function updateHeroRotationButton() {
@@ -47,7 +46,7 @@
 
     function scheduleHeroAdvance() {
       window.clearTimeout(heroTimer);
-      if (!heroRotation || heroPointerInside || document.hidden) return;
+      if (!heroRotation || document.hidden) return;
       heroTimer = window.setTimeout(function () {
         showHeroSlide(heroIndex + 1);
         scheduleHeroAdvance();
@@ -86,14 +85,6 @@
       dot.addEventListener("click", function () {
         showHeroSlide(Number(dot.getAttribute("data-hero-to")));
       });
-    });
-    heroCarousel.addEventListener("mouseenter", function () {
-      heroPointerInside = true;
-      window.clearTimeout(heroTimer);
-    });
-    heroCarousel.addEventListener("mouseleave", function () {
-      heroPointerInside = false;
-      scheduleHeroAdvance();
     });
     heroCarousel.addEventListener("focusin", function (event) {
       if (event.target !== heroRotationButton && heroRotation) {
