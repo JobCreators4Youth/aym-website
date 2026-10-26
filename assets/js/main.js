@@ -33,7 +33,26 @@
   if (heroCarousel) {
     var heroSlides = Array.prototype.slice.call(heroCarousel.querySelectorAll("[data-hero-slide]"));
     var heroDots = Array.prototype.slice.call(heroCarousel.querySelectorAll("[data-hero-to]"));
+    var heroRotationButton = heroCarousel.querySelector("[data-hero-rotation]");
     var heroIndex = 0;
+    var heroRotation = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var heroPointerInside = false;
+    var heroTimer = null;
+
+    function updateHeroRotationButton() {
+      if (!heroRotationButton) return;
+      heroRotationButton.textContent = heroRotation ? "Ⅱ" : "▶";
+      heroRotationButton.setAttribute("aria-label", heroRotation ? "Pause automatic slide rotation" : "Start automatic slide rotation");
+    }
+
+    function scheduleHeroAdvance() {
+      window.clearTimeout(heroTimer);
+      if (!heroRotation || heroPointerInside || document.hidden) return;
+      heroTimer = window.setTimeout(function () {
+        showHeroSlide(heroIndex + 1);
+        scheduleHeroAdvance();
+      }, 6500);
+    }
 
     function showHeroSlide(nextIndex) {
       heroIndex = (nextIndex + heroSlides.length) % heroSlides.length;
@@ -49,8 +68,14 @@
         if (active) dot.setAttribute("aria-current", "true");
         else dot.removeAttribute("aria-current");
       });
+      scheduleHeroAdvance();
     }
 
+    heroRotationButton.addEventListener("click", function () {
+      heroRotation = !heroRotation;
+      updateHeroRotationButton();
+      scheduleHeroAdvance();
+    });
     heroCarousel.querySelector("[data-hero-prev]").addEventListener("click", function () {
       showHeroSlide(heroIndex - 1);
     });
@@ -62,6 +87,22 @@
         showHeroSlide(Number(dot.getAttribute("data-hero-to")));
       });
     });
+    heroCarousel.addEventListener("mouseenter", function () {
+      heroPointerInside = true;
+      window.clearTimeout(heroTimer);
+    });
+    heroCarousel.addEventListener("mouseleave", function () {
+      heroPointerInside = false;
+      scheduleHeroAdvance();
+    });
+    heroCarousel.addEventListener("focusin", function (event) {
+      if (event.target !== heroRotationButton && heroRotation) {
+        heroRotation = false;
+        updateHeroRotationButton();
+        window.clearTimeout(heroTimer);
+      }
+    });
+    document.addEventListener("visibilitychange", scheduleHeroAdvance);
     heroCarousel.addEventListener("keydown", function (event) {
       if (event.key === "ArrowLeft") {
         event.preventDefault();
@@ -71,6 +112,8 @@
         showHeroSlide(heroIndex + 1);
       }
     });
+    updateHeroRotationButton();
+    scheduleHeroAdvance();
   }
 
   // ---- Donation: amount + payment method -------------------------------
