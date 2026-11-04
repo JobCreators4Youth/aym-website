@@ -120,9 +120,19 @@
     var sel = document.querySelector("[data-tier].is-active");
     if (!sel) return { label: "", isMonthly: false };
     var a = sel.getAttribute("data-amount") || "";
-    if (a === "monthly") return { label: "", isMonthly: true };
+    if (a.toLowerCase() === "monthly") return { label: "", isMonthly: true };
     if (!a) return { label: "", isMonthly: false };
     return { label: a.charAt(0) === "$" ? a : "$" + a, isMonthly: false };
+  }
+
+  function paymentHref(m, amt) {
+    var href = m ? (m.getAttribute("data-href") || "#") : "#";
+    if (!href || href === "#") return href;
+    if (m.getAttribute("data-method") !== "paypal") return href;
+    var numeric = amt.label.replace(/[^0-9.]/g, "");
+    if (!/^\d+(\.\d{1,2})?$/.test(numeric)) return href;
+    var sep = href.indexOf("?") === -1 ? "?" : "&";
+    return href + sep + "amount=" + encodeURIComponent(numeric) + "&currency_code=USD";
   }
 
   function refreshCta() {
@@ -132,7 +142,7 @@
     var amt = selectedAmount();
     var part = amt.isMonthly ? "monthly " : (amt.label ? amt.label + " " : "");
     methodCta.textContent = ("Donate " + part + "with " + name).replace(/\s+/g, " ").trim();
-    methodCta.setAttribute("href", m ? (m.getAttribute("data-href") || "#") : "#");
+    methodCta.setAttribute("data-href", paymentHref(m, amt));
     if (ctaNote) ctaNote.hidden = true;
   }
 
@@ -143,7 +153,7 @@
       tiers.forEach(function (x) {
         x.classList.toggle("is-active", x.getAttribute("data-amount") === a);
       });
-      if (tierInput) tierInput.value = (a === "monthly") ? "" : a.replace(/[^0-9.]/g, "");
+      if (tierInput) tierInput.value = (a.toLowerCase() === "monthly") ? "" : a.replace(/[^0-9.]/g, "");
       refreshCta();
     });
   });
@@ -158,6 +168,36 @@
   }
 
   var methodBtns = document.querySelectorAll("[data-method]");
+  var paymentDialog = document.querySelector("[data-payment-dialog]");
+  var paymentBody = paymentDialog && paymentDialog.querySelector("[data-payment-body]");
+  var paymentTitle = paymentDialog && paymentDialog.querySelector("[data-payment-title]");
+  var paymentAction = paymentDialog && paymentDialog.querySelector("[data-payment-action]");
+
+  function openPaymentDetails() {
+    var method = document.querySelector("[data-method].is-active");
+    if (!method || !paymentDialog || !paymentBody) return;
+    var key = method.getAttribute("data-method");
+    var panel = document.querySelector('[data-method-panel="' + key + '"]');
+    var amount = selectedAmount();
+    var amountText = amount.isMonthly ? "Monthly gift" : (amount.label || "Your chosen amount");
+    paymentTitle.textContent = method.getAttribute("data-name") + " donation";
+    paymentBody.replaceChildren();
+    var amountLine = document.createElement("p");
+    amountLine.className = "payment-dialog__amount";
+    amountLine.textContent = amountText;
+    paymentBody.appendChild(amountLine);
+    if (panel) paymentBody.appendChild(panel.cloneNode(true));
+
+    var href = method.getAttribute("data-href") || "#";
+    var hasLink = href !== "#";
+    paymentAction.hidden = !hasLink;
+    paymentAction.href = hasLink ? paymentHref(method, amount) : "mailto:info@aym-inc.org?subject=" + encodeURIComponent("AYM donation - " + method.getAttribute("data-name"));
+    paymentAction.textContent = hasLink ? (key === "crypto" ? "Open in wallet" : "Continue with " + method.getAttribute("data-name")) : "Email AYM about giving";
+    if (!hasLink) paymentAction.hidden = false;
+    if (paymentDialog.showModal) paymentDialog.showModal();
+    else paymentDialog.setAttribute("open", "");
+  }
+
   if (methodBtns.length) {
     var methodPanels = document.querySelectorAll("[data-method-panel]");
     methodBtns.forEach(function (btn) {
@@ -169,20 +209,40 @@
           p.hidden = p.getAttribute("data-method-panel") !== key;
         });
         refreshCta();
+        openPaymentDetails();
       });
     });
   }
 
   if (methodCta) {
     methodCta.addEventListener("click", function (e) {
-      var href = methodCta.getAttribute("href");
-      if (href && href !== "#") return;
       e.preventDefault();
-      if (ctaNote) {
-        var m = document.querySelector("[data-method].is-active");
-        ctaNote.hidden = false;
-        ctaNote.textContent = "Demo build — connect this button to AYM\u2019s " +
-          (m ? m.getAttribute("data-name") : "") + " link (set data-href on that option).";
+      openPaymentDetails();
+    });
+  }
+
+  if (paymentDialog) {
+    paymentDialog.querySelectorAll("[data-payment-close]").forEach(function (button) {
+      button.addEventListener("click", function () { paymentDialog.close ? paymentDialog.close() : paymentDialog.removeAttribute("open"); });
+    });
+    paymentDialog.addEventListener("click", function (event) {
+      if (event.target === paymentDialog) {
+        if (paymentDialog.close) paymentDialog.close();
+        else paymentDialog.removeAttribute("open");
+      }
+      var copy = event.target.closest("[data-copy]");
+      if (copy) {
+        var value = copy.getAttribute("data-copy") || "";
+        var note = paymentDialog.querySelector("[data-copy-note]");
+        function copied(ok) {
+          if (note) { note.hidden = false; note.textContent = ok ? "Address copied." : "Copy failed. You can select and copy the address above."; }
+          if (ok) copy.textContent = "Copied";
+        }
+        if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(value).then(function () { copied(true); }, function () { copied(false); });
+        else {
+          var field = document.createElement("textarea"); field.value = value; field.style.position = "fixed"; field.style.opacity = "0"; document.body.appendChild(field); field.select();
+          var ok = false; try { ok = document.execCommand("copy"); } catch (err) {} document.body.removeChild(field); copied(ok);
+        }
       }
     });
   }
@@ -249,6 +309,46 @@
       if (note) {
         note.hidden = false;
         note.textContent = b.getAttribute("data-demo-msg");
+      }
+    });
+  });
+
+  // Copy-to-clipboard buttons (crypto address)
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy") || "";
+      var panel = btn.closest("[data-method-panel]") || document;
+      var note = panel.querySelector("[data-copy-note]");
+      function done(ok) {
+        if (note) {
+          note.hidden = false;
+          note.textContent = ok
+            ? "Address copied."
+            : "Copy failed - select the address and copy it manually.";
+        }
+        if (ok) {
+          var label = btn.textContent;
+          btn.textContent = "Copied";
+          setTimeout(function () { btn.textContent = label; }, 1800);
+        }
+      }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-1000px";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+        done(ok);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+      } else {
+        fallback();
       }
     });
   });

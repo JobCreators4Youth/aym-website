@@ -154,6 +154,7 @@ FOOTER = """
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/chat.js" defer></script>
 </body>
 </html>
 """
@@ -294,12 +295,13 @@ CURRENT_PROJECTS = [
 
 LANDING = hero_page(
   "Twenty-First Century African Youth Movement",
-  'Empowering Youth. <em>Rebuilding Economies.</em>',
-  "AYM works with unemployed and underemployed young people across Africa, helping them build skills, enterprises and jobs. Donate, volunteer, or start a chapter in your city.",
+  'Young People. <em>Real Power. A Thriving Africa.</em>',
+  "AYM works with young people to build skills, create enterprises, and strengthen communities",
   "assets/img/landing-page01-3.png", "Home",
   actions='<a class="btn btn--accent btn--lg" href="donate.html">Donate Now</a>'
           '<a class="btn btn--ghost btn--lg" href="volunteer.html">Volunteer</a>'
-          '<a class="btn btn--ghost btn--lg" href="chapter.html">Start a Chapter</a>',
+          '<a class="btn btn--ghost btn--lg" href="chapter.html">Start a Chapter</a>'
+          '<a class="btn btn--ghost btn--lg" href="store.html">Impact Store</a>',
   extra='<div class="hero__media hero__media--placeholder" role="img" aria-label="AYM project preview"><span class="hero__media-inner">AYM Project</span></div>',
   cls=" hero--split",
 ) + f"""
@@ -418,7 +420,7 @@ LANDING = hero_page(
 </section>
 """ + CONTACT_CTA
 
-page("index.html", "Empowering Youth. Rebuilding Economies.", "AYM mobilizes Africa's youth to end poverty through education, technology, agriculture, ecotourism, entrepreneurship and the arts.", LANDING, "home")
+page("index.html", "Young People. Real Power. A Thriving Africa.", "AYM works with young people to build skills, create enterprises, and strengthen communities.", LANDING, "home")
 
 print("landing done")
 
@@ -973,15 +975,17 @@ tier_buttons = "".join(
 # (id, short name used in the CT one-line subtitle, detail panel copy, href)
 PAY_METHODS = [
   ("card", "Credit Card", "Visa, Mastercard, Discover &amp; Amex",
-   "Checkout runs through our secure payment processor over an encrypted connection. AYM never sees or stores your full card number.", "#"),
+   "Card checkout is not connected on this site yet. Please choose another payment method or email info@aym-inc.org for help.", "#"),
   ("paypal", "PayPal", "Give with your PayPal balance or card",
-   "You'll be taken to PayPal to approve the gift, then returned to this page with a receipt.", "#"),
-  ("crypto", "Crypto", "Bitcoin, Ethereum &amp; USDC",
-   "Our crypto wallet address is being updated — the address that was live on the old site was a placeholder. Once confirmed it will appear here and in your receipt.", "#"),
+   "You'll be taken to PayPal's secure donation page. You can review or change the amount there before giving.", "https://www.paypal.com/donate/?hosted_button_id=VFN9CU8SVZ6ZE"),
+  ("crypto", "Bitcoin", "Send BTC directly to AYM",
+   "Send Bitcoin on the Bitcoin network to AYM. The wallet address is bc1qetqdrsm33xqg8ks24gtzczqk0p6z0jxesac7lu. Email info@aym-inc.org with your transaction ID for a receipt.", "bitcoin:bc1qetqdrsm33xqg8ks24gtzczqk0p6z0jxesac7lu"),
   ("cashapp", "Cash App", "$C21stAYM &middot; fast and fee-free in the US",
-   "Send your gift to <strong>$C21stAYM</strong> and include your email so we can issue a receipt.", "#"),
+   "Send your gift to <strong>$C21stAYM</strong> and include your email so we can issue a receipt.", "https://cash.app/$C21stAYM"),
   ("bank", "Network for Good", "Bank transfer, stock &amp; donor-advised funds",
-   "Network for Good and eBay for Nonprofits are accepted giving portals for ACH transfers, appreciated stock, and DAF distributions.", "#"),
+   "Use Network for Good's donation form for ACH transfers, appreciated stock, and donor-advised funds. AYM's EIN is 39-1742519.", "https://www.networkforgood.org/donation/ExpressDonation.aspx?ORGID2=+391742519"),
+  ("ebay", "eBay for Charity", "Shop or sell on eBay and support AYM",
+   "Visit AYM's eBay for Charity page to support AYM while shopping or selling.", "https://charity.ebay.com/charity/i/Twenty-First-Century-African-Youth-Movement/190751"),
   ("match", "Employer Match", "Double your gift at no cost",
    "Many employers match charitable gifts and volunteer hours. Search your employer's matching-gift system or ask your HR team, and name <strong>Twenty-First Century African Youth Movement</strong>.", "#"),
 ]
@@ -1020,15 +1024,20 @@ DONATE = hero_page(
 
     <div class="divider"></div>
 
-    <div class="section__head center"><span class="eyebrow">Payment method</span><h2>How would you like to pay?</h2><p class="lead">Pick a method below — the button at the bottom updates to match your choice.</p></div>
+    <div class="section__head center"><span class="eyebrow">Payment method</span><h2>How would you like to pay?</h2><p class="lead">Choose a method to see its details and next steps.</p></div>
     <div class="methods" data-methods>{pay_buttons}</div>
     <div class="method-panels" data-method-panels>{pay_panels}</div>
 
     <div class="center mt-3">
-      <a class="btn btn--accent btn--lg" data-method-cta href="#">Donate $100 with Credit Card</a>
+      <button class="btn btn--accent btn--lg" data-method-cta type="button">Donate $100 with Credit Card</button>
       <p class="cta-note" data-cta-note hidden></p>
       <p class="small muted mt-1">Secure payments processed by verified third-party providers. AYM never stores your full card details.</p>
     </div>
+    <dialog class="payment-dialog" data-payment-dialog aria-labelledby="payment-dialog-title">
+      <div class="payment-dialog__head"><div><span class="eyebrow">AYM donations</span><h2 id="payment-dialog-title" data-payment-title>Payment details</h2></div><button class="payment-dialog__close" type="button" data-payment-close aria-label="Close">&times;</button></div>
+      <div class="payment-dialog__body" data-payment-body></div>
+      <div class="payment-dialog__actions"><button class="btn btn--outline" type="button" data-payment-close>Close</button><a class="btn btn--accent" data-payment-action href="#" target="_blank" rel="noopener" hidden>Continue</a></div>
+    </dialog>
   </div>
 </section>
 

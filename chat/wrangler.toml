@@ -1,0 +1,12 @@
+name = "aym-chat"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://www.aym-inc.org,https://aym-inc.org,https://jobcreators4youth.github.io,http://localhost:8000,http://127.0.0.1:8000"
+OPENAI_MODEL = "gpt-4o-mini"
+
+# Set these as secrets instead of committing them:
+#   wrangler secret put OPENAI_API_KEY
+# Optional, for OpenRouter/Groq/other OpenAI-compatible providers:
+#   wrangler secret put OPENAI_BASE_URL

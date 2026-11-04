@@ -6,7 +6,7 @@ missing = set()
 for p in pages:
     html = open(os.path.join(OUT, p), encoding='utf-8').read()
     for m in re.findall(r'(?:href|src)="([^"]+)"', html):
-        if m.startswith(('http', 'mailto', '#', 'tel:')):
+        if m.startswith(('http', 'mailto', '#', 'tel:', 'bitcoin:')):
             continue
         path = m.split('#')[0]
         if not path:
