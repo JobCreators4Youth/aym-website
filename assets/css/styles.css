@@ -777,7 +777,7 @@ ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok)
 .pathway p{color:#5c7566;font-size:.94rem;line-height:1.55;flex:1;margin-bottom:.8rem}
 .pathway .text-link{font-size:.88rem}
 .home-locations{position:relative;isolation:isolate;overflow:hidden;padding-bottom:clamp(3rem,6vw,5rem);background:linear-gradient(118deg,#143b2d 0%,#1d4c38 55%,#163d2e 100%);color:#fff}
-.home-locations::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:url("../img/world-map.svg") center 45%/min(1100px,96vw) auto no-repeat;opacity:.19}
+.home-locations::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:url("../img/world-map.svg?v=glow-pulse-20261104") center 45%/min(1100px,96vw) auto no-repeat;opacity:.27}
 .home-locations::after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(15,54,39,.42),transparent 48%,rgba(15,54,39,.35)),linear-gradient(0deg,rgba(13,48,35,.32),transparent 58%)}
 .home-locations .container{position:relative}
 .home-locations .section__head .eyebrow{color:#f3a333}
