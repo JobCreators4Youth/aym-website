@@ -974,8 +974,8 @@ tier_buttons = "".join(
 
 # (id, short name used in the CT one-line subtitle, detail panel copy, href)
 PAY_METHODS = [
-  ("card", "Credit Card", "Visa, Mastercard, Discover &amp; Amex",
-   "Card checkout is not connected on this site yet. Please choose another payment method or email info@aym-inc.org for help.", "#"),
+  ("zeffy", "Zeffy", "Secure credit card donations",
+   "You'll be taken to Zeffy's secure donation form to complete your gift. You can review or change the amount there before giving.", "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-21909"),
   ("paypal", "PayPal", "Give with your PayPal balance or card",
    "You'll be taken to PayPal's secure donation page. You can review or change the amount there before giving.", "https://www.paypal.com/donate/?hosted_button_id=VFN9CU8SVZ6ZE"),
   ("crypto", "Bitcoin", "Send BTC directly to AYM",
@@ -1029,7 +1029,7 @@ DONATE = hero_page(
     <div class="method-panels" data-method-panels>{pay_panels}</div>
 
     <div class="center mt-3">
-      <button class="btn btn--accent btn--lg" data-method-cta type="button">Donate $100 with Credit Card</button>
+      <button class="btn btn--accent btn--lg" data-method-cta type="button">Donate $100 with Zeffy</button>
       <p class="cta-note" data-cta-note hidden></p>
       <p class="small muted mt-1">Secure payments processed by verified third-party providers. AYM never stores your full card details.</p>
     </div>
