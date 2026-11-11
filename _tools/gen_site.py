@@ -153,7 +153,7 @@ FOOTER = """
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=20261111-web3forms"></script>
 <script src="assets/js/chat.js" defer></script>
 </body>
 </html>
