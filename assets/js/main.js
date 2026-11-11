@@ -301,6 +301,58 @@
     });
   });
 
+  // Web3Forms: send enquiries without leaving the page
+  document.querySelectorAll("form[data-web3forms]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var note = form.querySelector("[data-form-note]");
+      var button = form.querySelector('button[type="submit"]');
+      var original = button ? button.textContent : "";
+      var payload = {};
+      new FormData(form).forEach(function (value, key) {
+        payload[key] = value;
+      });
+      if (note) {
+        note.hidden = false;
+        note.textContent = "Sending your message…";
+      }
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Sending…";
+      }
+      fetch(form.getAttribute("action"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (response) {
+          return response.json().catch(function () { return {}; }).then(function (json) {
+            return { ok: response.ok, json: json };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok || !result.json.success) {
+            throw new Error(result.json.message || "Submission failed");
+          }
+          form.reset();
+          if (note) {
+            note.textContent = "Thanks! Your message has been sent. We'll get back to you soon.";
+          }
+        })
+        .catch(function () {
+          if (note) {
+            note.textContent = "Sorry, something went wrong. Please email info@aym-inc.org directly.";
+          }
+        })
+        .finally(function () {
+          if (button) {
+            button.disabled = false;
+            button.textContent = original;
+          }
+        });
+    });
+  });
+
   // Chip filters: reveal cards whose data-role tag matches the chosen filter
   document.querySelectorAll("[data-filters]").forEach(function (group) {
     var scope = group.closest("section") || document;
@@ -605,20 +657,56 @@
         return;
       }
       var data = collect();
-      if (submit) submit.disabled = true;
-      try { localStorage.removeItem(storeKey); } catch (err) {}
-      if (done) {
-        form.hidden = true;
-        done.hidden = false;
-        var nameEl = done.querySelector("[data-apply-name]");
-        if (nameEl) nameEl.textContent = data.first || "friend";
-        var emailEl = done.querySelector("[data-apply-email]");
-        if (emailEl) emailEl.textContent = data.email || "your email";
-        var refEl = done.querySelector("[data-apply-ref]");
-        if (refEl) refEl.textContent = "AYM-VOL-" + Date.now().toString(36).toUpperCase();
-        var top = done.getBoundingClientRect().top + window.pageYOffset - 90;
-        window.scrollTo({ top: top, behavior: "smooth" });
-      }
+      var reference = "AYM-VOL-" + Date.now().toString(36).toUpperCase();
+      var payload = {};
+      Object.keys(data).forEach(function (key) {
+        var value = data[key];
+        if (key === "botcheck") {
+          if (value) payload[key] = "on";
+          return;
+        }
+        if (Array.isArray(value)) value = value.join(", ");
+        else if (value === true) value = "Yes";
+        else if (value === false) value = "No";
+        payload[key] = value;
+      });
+      payload.reference = reference;
+      var originalLabel = submit ? submit.textContent : "";
+      if (submit) { submit.disabled = true; submit.textContent = "Sending…"; }
+      if (errorBox) errorBox.hidden = true;
+      fetch(form.getAttribute("action") || "https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (response) {
+          return response.json().catch(function () { return {}; }).then(function (json) {
+            if (!response.ok || !json.success) throw new Error(json.message || "Submission failed");
+            return json;
+          });
+        })
+        .then(function () {
+          try { localStorage.removeItem(storeKey); } catch (err) {}
+          if (done) {
+            form.hidden = true;
+            done.hidden = false;
+            var nameEl = done.querySelector("[data-apply-name]");
+            if (nameEl) nameEl.textContent = data.first || "friend";
+            var emailEl = done.querySelector("[data-apply-email]");
+            if (emailEl) emailEl.textContent = data.email || "your email";
+            var refEl = done.querySelector("[data-apply-ref]");
+            if (refEl) refEl.textContent = reference;
+            var top = done.getBoundingClientRect().top + window.pageYOffset - 90;
+            window.scrollTo({ top: top, behavior: "smooth" });
+          }
+        })
+        .catch(function () {
+          if (submit) { submit.disabled = false; submit.textContent = originalLabel; }
+          if (errorBox) {
+            errorBox.hidden = false;
+            errorBox.textContent = "Sorry, we couldn't send your application. Please try again or email info@aym-inc.org directly.";
+          }
+        });
     });
 
     restore();

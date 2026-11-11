@@ -559,7 +559,10 @@ CONTACT = hero_page(
   <div class="container grid grid-2">
     <div>
       <h2>Send us a message</h2>
-      <form class="form" data-demo>
+      <form class="form" action="https://api.web3forms.com/submit" method="POST" data-web3forms>
+        <input type="hidden" name="access_key" value="1afd7c99-a77e-4aab-9fac-111a25871653">
+        <input type="hidden" name="from_name" value="AYM Website">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
         <div class="grid grid-2">
           <label>First name<input type="text" name="first" placeholder="First name" required></label>
           <label>Last name<input type="text" name="last" placeholder="Last name" required></label>
@@ -569,7 +572,7 @@ CONTACT = hero_page(
         <label>Message<textarea name="message" rows="5" placeholder="Leave us a message..." required></textarea></label>
         <label class="checkbox"><input type="checkbox" required> You agree to our friendly privacy policy.</label>
         <button class="btn btn--accent" type="submit">Send Form</button>
-        <p class="form__note" data-form-note hidden></p>
+        <p class="form__note" data-form-note role="status" aria-live="polite" hidden></p>
       </form>
     </div>
     <div>
@@ -785,7 +788,11 @@ APPLY = hero_page(
       </style>
     </noscript>
 
-    <form class="apply" data-apply novalidate>
+    <form class="apply" action="https://api.web3forms.com/submit" method="POST" data-apply novalidate>
+      <input type="hidden" name="access_key" value="1afd7c99-a77e-4aab-9fac-111a25871653">
+      <input type="hidden" name="from_name" value="AYM Website">
+      <input type="hidden" name="subject" value="Volunteer application from AYM website">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
       <ol class="apply__steps" data-apply-steps aria-label="Application progress">
         <li class="apply__step is-active" data-step-indicator="1"><span class="apply__dot">1</span><span class="apply__label">About you</span></li>
         <li class="apply__step" data-step-indicator="2"><span class="apply__dot">2</span><span class="apply__label">Role &amp; skills</span></li>
@@ -875,7 +882,7 @@ APPLY = hero_page(
       <div class="success__ico">&#10003;</div>
       <h2>Application received</h2>
       <p>Thank you, <strong data-apply-name>friend</strong>. We've recorded your interest and our volunteer team will be in touch.</p>
-      <p class="small muted">This is a demo build, so nothing was sent. In the live site your application would be delivered to AYM's volunteer team and a confirmation emailed to <strong data-apply-email></strong>. Your reference for this session is <code data-apply-ref></code>.</p>
+      <p class="small muted">Your application has been delivered to AYM's volunteer team. We'll be in touch at <strong data-apply-email></strong>. Your reference is <code data-apply-ref></code>.</p>
       <div class="flex"><a class="btn btn--brand" href="focus-ecotourism.html">Explore Our Work</a><a class="btn btn--outline" href="donate.html">Donate Instead</a></div>
     </div>
   </div>

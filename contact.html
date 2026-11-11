@@ -79,7 +79,10 @@
   <div class="container grid grid-2">
     <div>
       <h2>Send us a message</h2>
-      <form class="form" data-demo>
+      <form class="form" action="https://api.web3forms.com/submit" method="POST" data-web3forms>
+        <input type="hidden" name="access_key" value="1afd7c99-a77e-4aab-9fac-111a25871653">
+        <input type="hidden" name="from_name" value="AYM Website">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
         <div class="grid grid-2">
           <label>First name<input type="text" name="first" placeholder="First name" required></label>
           <label>Last name<input type="text" name="last" placeholder="Last name" required></label>
@@ -89,7 +92,7 @@
         <label>Message<textarea name="message" rows="5" placeholder="Leave us a message..." required></textarea></label>
         <label class="checkbox"><input type="checkbox" required> You agree to our friendly privacy policy.</label>
         <button class="btn btn--accent" type="submit">Send Form</button>
-        <p class="form__note" data-form-note hidden></p>
+        <p class="form__note" data-form-note role="status" aria-live="polite" hidden></p>
       </form>
     </div>
     <div>
