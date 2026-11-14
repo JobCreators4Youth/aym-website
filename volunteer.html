@@ -12,84 +12,67 @@
 </head>
 <body>
 <a class="skip" href="#main" style="position:absolute;left:-999px">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a class="brand" href="index.html" aria-label="AYM home">
-      <img src="assets/img/logo.png" alt="AYM logo">
-      <span class="brand__name">AYM<span>African Youth Movement</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <nav class="nav" aria-label="Primary">
-      <div class="has-drop"><a class="navlink" href="volunteer.html">Get Involved</a>
-        <div class="dropdown">
-          <a href="volunteer.html">Volunteer</a>
-          <a href="volunteer-apply.html" class="dropdown__sub">Volunteer Application</a>
-          <a href="volunteer-fellowship.html" class="dropdown__sub">AYM Youth Fellowship</a>
-          <a href="donate.html#fundraise">Fundraise</a>
-          <a href="chapter.html">Start an AYM Chapter</a>
-        </div>
-      </div>
-      <div class="has-drop"><a class="navlink" href="about.html">About</a>
-        <div class="dropdown">
-          <a href="about.html">About AYM</a>
-          <a href="about-team.html">About the Team</a>
-          <a href="where-we-work.html">Where We Work</a>
-        </div>
-      </div>
-      <div class="has-drop"><a class="navlink" href="focus-art.html">Focus Areas</a>
-        <div class="dropdown">
-          <a href="focus-art.html">Art</a>
-          <a href="focus-agriculture.html">Agriculture</a>
-          <a href="focus-education.html">Education</a>
-          <a href="focus-entrepreneurship.html">Entrepreneurship</a>
-          <a href="focus-ecotourism.html">Ecotourism</a>
-          <a href="focus-ecotourism-forest-safari.html" class="dropdown__sub">Forest Safari</a>
-          <a href="focus-health.html">Healthcare</a>
-          <a href="focus-technology.html">Technology</a>
-        </div>
-      </div>
-      <div class="has-drop"><a class="navlink" href="projects.html">Our Work</a>
-        <div class="dropdown">
-          <a href="projects.html">Projects</a>
-          <a href="events.html">Events</a>
-          <a href="where-we-work.html">Where We Work</a>
-        </div>
-      </div>
-      <a class="navlink" href="blog.html">Blog</a>
-      <a class="navlink" href="contact.html">Contact</a>
-      <a class="btn btn--accent header__cta" href="donate.html">Donate Now</a>
-    </nav>
-  </div>
-</header>
+
+<div data-component="header" data-variant="overlay"></div>
+
 <main id="main">
 
-<section class="hero hero--page">
+<!-- HERO -->
+<section class="hero hero--page hero--landing">
   <img class="hero__bg" src="assets/img/volunteers/aym-volunteer-service.jpg" alt="">
   <div class="container hero__inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Get Involved / Volunteer</div>
-    <span class="eyebrow eyebrow--brand" style="color:var(--brand)">Volunteer</span>
+    <!-- <div class="breadcrumb"><a href="index.html">Home</a> / Get Involved / Volunteer</div> -->
+    <!-- <span class="eyebrow eyebrow--brand" style="color:var(--brand)">Volunteer</span> -->
     <h1 class="hero__title">Drive Real Impact <em>Across Africa</em></h1>
     <p class="hero__sub">Lend your skills to empower local communities and shape sustainable youth-led futures.</p>
-    <div class="hero__actions"><a class="btn btn--accent" href="volunteer-apply.html">Apply to Volunteer</a><a class="btn btn--ghost" href="#roles">See Open Roles</a></div>
+    <div class="hero__actions"><a class="btn btn--brand" href="volunteer-apply.html">Apply to Volunteer</a><a class="btn btn--ghost" href="#roles">See Open Roles</a></div>
     
   </div>
 </section>
 
+<!-- ROLE -->
 <section class="section" id="roles">
   <div class="container">
-    <div class="section__head"><span class="eyebrow">Open Opportunities</span><h2>Find a role that fits you</h2><p class="lead">Filter by location or time commitment &mdash; roles show the skills and eligibility you need before you apply.</p></div>
-    <div class="chips mb-2" data-filters>
+    <div class="section__head intro-copy">
+      <span class="eyebrow">Open Opportunities</span>
+      <h2>Find a role that fits you</h2>
+      <p class="lead">Filter by location or time commitment &mdash; roles show the skills and eligibility you need before you apply.</p>
+    </div>
+    <div class="chips mb-2 data-filters">
       <button class="chip is-active" data-filter="all">All roles</button>
       <button class="chip" data-filter="remote">Remote</button>
       <button class="chip" data-filter="on-site">On-site</button>
       <button class="chip" data-filter="flexible">Flexible hours</button>
       <button class="chip" data-filter="part-time">Part-time</button>
     </div>
-    <div class="grid grid-3" data-filter-list><article class="card" data-role="remote flexible"><div class="card__body"><div class="card__tag">Remote</div><h3 class="card__title">Web Designer</h3><p class="card__text">Build and maintain pages for AYM's global programs.</p><dl class="spec"><div><dt>Commitment</dt><dd>Flexible · 4+ hrs/week</dd></div><div><dt>Skills</dt><dd>HTML/CSS, Figma, basic JavaScript</dd></div><div><dt>Eligibility</dt><dd>Beginner to intermediate</dd></div></dl><a class="card__link" href="volunteer-apply.html">Apply for this role →</a></div></article><article class="card" data-role="remote flexible"><div class="card__body"><div class="card__tag">Remote</div><h3 class="card__title">Digital Marketer</h3><p class="card__text">Run campaigns that grow awareness and donations.</p><dl class="spec"><div><dt>Commitment</dt><dd>Flexible · 6+ hrs/week</dd></div><div><dt>Skills</dt><dd>SEO, email, social advertising</dd></div><div><dt>Eligibility</dt><dd>Beginner to advanced</dd></div></dl><a class="card__link" href="volunteer-apply.html">Apply for this role →</a></div></article><article class="card" data-role="remote flexible"><div class="card__body"><div class="card__tag">Remote</div><h3 class="card__title">Content Writer</h3><p class="card__text">Tell the stories of the youth we serve.</p><dl class="spec"><div><dt>Commitment</dt><dd>Flexible · 4+ hrs/week</dd></div><div><dt>Skills</dt><dd>Writing, interviewing, editing</dd></div><div><dt>Eligibility</dt><dd>No experience required</dd></div></dl><a class="card__link" href="volunteer-apply.html">Apply for this role →</a></div></article><article class="card" data-role="remote part-time"><div class="card__body"><div class="card__tag">Remote</div><h3 class="card__title">Data &amp; Analytics</h3><p class="card__text">Measure impact and improve our programs.</p><dl class="spec"><div><dt>Commitment</dt><dd>Part-time · 10+ hrs/week</dd></div><div><dt>Skills</dt><dd>Excel, SQL, dashboards</dd></div><div><dt>Eligibility</dt><dd>Intermediate</dd></div></dl><a class="card__link" href="volunteer-apply.html">Apply for this role →</a></div></article><article class="card" data-role="remote part-time"><div class="card__body"><div class="card__tag">Remote</div><h3 class="card__title">Researcher</h3><p class="card__text">Research policy, funding, and best practice.</p><dl class="spec"><div><dt>Commitment</dt><dd>Part-time · 8+ hrs/week</dd></div><div><dt>Skills</dt><dd>Research, synthesis, citations</dd></div><div><dt>Eligibility</dt><dd>Intermediate</dd></div></dl><a class="card__link" href="volunteer-apply.html">Apply for this role →</a></div></article><article class="card" data-role="remote on-site"><div class="card__body"><div class="card__tag">Remote / Sierra Leone</div><h3 class="card__title">Project Manager</h3><p class="card__text">Coordinate volunteers and deliverables.</p><dl class="spec"><div><dt>Commitment</dt><dd>Part-time · 10+ hrs/week</dd></div><div><dt>Skills</dt><dd>Planning, coordination, reporting</dd></div><div><dt>Eligibility</dt><dd>Experienced</dd></div></dl><a class="card__link" href="volunteer-apply.html">Apply for this role →</a></div></article></div>
+    <div class="grid grid-3" data-filter-list>
+      <article class="card" data-role="remote flexible">
+        <div class="card__body"><div class="card__tag intro-copy"> <span>Remote</span></div>
+        <h3 class="card__title">Web Designer</h3>
+        <p class="card__text">Build and maintain pages for AYM's global programs.</p>
+        <dl class="spec">
+          <div>
+            <dt>Commitment</dt>
+            <dd>Flexible · 4+ hrs/week</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>HTML/CSS, Figma, basic JavaScript</dd>
+          </div>
+          <div>
+            <dt>Eligibility</dt>
+            <dd>Beginner to intermediate</dd>
+          </div>
+        </dl>
+        <a class="btn btn--link" href="volunteer-apply.html">Apply for this role </a>
+      </div>
+    </article>
+    <article class="card" data-role="remote flexible">
+      <div class="card__body"><div class="card__tag intro-copy"> <span>Remote</span></div><h3 class="card__title">Digital Marketer</h3><p class="card__text">Run campaigns that grow awareness and donations.</p><dl class="spec"><div><dt>Commitment</dt><dd>Flexible · 6+ hrs/week</dd></div><div><dt>Skills</dt><dd>SEO, email, social advertising</dd></div><div><dt>Eligibility</dt><dd>Beginner to advanced</dd></div></dl><a class="btn btn--link" href="volunteer-apply.html">Apply for this role </a></div></article><article class="card" data-role="remote flexible"><div class="card__body"><div class="card__tag intro-copy"> <span>Remote</span></div><h3 class="card__title">Content Writer</h3><p class="card__text">Tell the stories of the youth we serve.</p><dl class="spec"><div><dt>Commitment</dt><dd>Flexible · 4+ hrs/week</dd></div><div><dt>Skills</dt><dd>Writing, interviewing, editing</dd></div><div><dt>Eligibility</dt><dd>No experience required</dd></div></dl><a class="btn btn--link" href="volunteer-apply.html">Apply for this role </a></div></article><article class="card" data-role="remote part-time"><div class="card__body"><div class="card__tag intro-copy"> <span>Remote</span></div><h3 class="card__title">Data &amp; Analytics</h3><p class="card__text">Measure impact and improve our programs.</p><dl class="spec"><div><dt>Commitment</dt><dd>Part-time · 10+ hrs/week</dd></div><div><dt>Skills</dt><dd>Excel, SQL, dashboards</dd></div><div><dt>Eligibility</dt><dd>Intermediate</dd></div></dl><a class="btn btn--link" href="volunteer-apply.html">Apply for this role </a></div></article><article class="card" data-role="remote part-time"><div class="card__body"><div class="card__tag intro-copy"> <span>Remote</span></div><h3 class="card__title">Researcher</h3><p class="card__text">Research policy, funding, and best practice.</p><dl class="spec"><div><dt>Commitment</dt><dd>Part-time · 8+ hrs/week</dd></div><div><dt>Skills</dt><dd>Research, synthesis, citations</dd></div><div><dt>Eligibility</dt><dd>Intermediate</dd></div></dl><a class="btn btn--link" href="volunteer-apply.html">Apply for this role </a></div></article><article class="card" data-role="remote on-site"><div class="card__body"><div class="card__tag">Remote / Sierra Leone</div><h3 class="card__title">Project Manager</h3><p class="card__text">Coordinate volunteers and deliverables.</p><dl class="spec"><div><dt>Commitment</dt><dd>Part-time · 10+ hrs/week</dd></div><div><dt>Skills</dt><dd>Planning, coordination, reporting</dd></div><div><dt>Eligibility</dt><dd>Experienced</dd></div></dl><a class="btn btn--link" href="volunteer-apply.html">Apply for this role </a></div></article></div>
 
     <div class="grid grid-2 mt-3">
       <div class="card card--flat"><div class="card__body">
-        <span class="eyebrow">Eligibility</span>
+        <!-- <span class="eyebrow">Eligibility</span> -->
         <h3 class="card__title">Am I eligible?</h3>
         <ul class="ticks">
           <li>You're 16 or older and can commit to your chosen hours.</li>
@@ -97,39 +80,46 @@
           <li>You can pass a basic background check.</li>
           <li>Most roles need no prior professional experience.</li>
         </ul>
-        <a class="card__link" href="contact.html">Not sure? Ask us →</a>
+        <a class="btn btn--link" href="contact.html">Not sure? Ask us </a>
       </div></div>
       <div class="card card--flat"><div class="card__body">
-        <span class="eyebrow">Not ready to commit?</span>
+        <!-- <span class="eyebrow">Not ready to commit?</span> -->
         <h3 class="card__title">Other ways to help</h3>
         <p class="card__text">Give once or monthly, start a chapter in your city, or take on the one-year AYM Youth Fellowship for school leavers.</p>
-        <a class="card__link" href="donate.html">Donate →</a>
-        <a class="card__link" href="chapter.html">Start a Chapter →</a>
+        <a class="btn btn--link" href="donate.html">Donate </a>
+        <a class="btn btn--link" href="chapter.html">Start a Chapter </a>
       </div></div>
     </div>
   </div>
 </section>
 
-<section class="section section--cream">
-  <div class="container">
-    <div class="section__head center"><span class="eyebrow">How it works</span><h2>From application to your first project</h2></div>
-    <div class="grid grid-4">
-      <div class="step"><div class="step__num">1</div><h3>Submit Your Application</h3><p class="muted">Tell us your skills, interests, and availability.</p></div>
-      <div class="step"><div class="step__num">2</div><h3>Fill Background Check</h3><p class="muted">A quick screening helps keep our community safe.</p></div>
-      <div class="step"><div class="step__num">3</div><h3>Receive Role Acceptance</h3><p class="muted">We match you with the team that needs you most.</p></div>
-      <div class="step"><div class="step__num">4</div><h3>Start Your First Project</h3><p class="muted">Get onboarded and make an impact from day one.</p></div>
+
+<!-- STEPS -->
+ <section class="section home-pathways" id="pathways">
+  <div class="container pathways-layout">
+    <div class="section__head intro-copy"><span class="eyebrow">Now is the Time</span>
+     <h1>From application to your first project</h1>
+     <a class="btn btn--brand" href="volunteer-apply.html">Start a Chapter </a>
+    </div>
+    <div class="pathway-grid">
+        
+      <div class="pathway"><h3>Step 1: Submit Your Application</h3><p>Tell us your skills, interests, and availability.</p></div>
+      <div class="pathway"><h3>Step 2: Fill Background Check</h3><p>A quick screening helps keep our community safe.</p></div>
+      <div class="pathway"><h3>Step 3: Receive Role Acceptance</h3><p>We match you with the team that needs you most.</p></div>
+      <div class="pathway"><h3>Step 4: Start Your First Project</h3><p>Get onboarded and make an impact from day one.</p></div>
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container split">
     <div class="split__media"><img src="assets/img/volunteers/aym-community-work.jpg" alt="AYM volunteer"></div>
-    <div>
+    <div class="intro-copy>
       <span class="eyebrow">Fellowship</span>
       <h2>1-Year School Leaver Fellowship</h2>
       <p class="lead">Not just ready for a job—ready to lead. The AYM Youth Fellowship is a one-year immersive placement that bridges the gap between school and a meaningful career.</p>
-      <p><a class="btn btn--brand" href="volunteer-fellowship.html">Explore the Fellowship →</a></p>
+      <p><a class="btn btn--brand" href="volunteer-fellowship.html">Explore the Fellowship </a></p>
     </div>
   </div>
 </section>
@@ -149,7 +139,7 @@
     <span class="eyebrow" style="color:var(--brand)">Ready to start?</span>
     <h2>The application takes about 10 minutes</h2>
     <p class="lead" style="color:rgba(255,255,255,.85);max-width:60ch;margin:0 auto 1.4rem">Five short steps, saved as you go. Tell us your skills and availability and we'll match you with the team that needs you most.</p>
-    <a class="btn btn--accent btn--lg" href="volunteer-apply.html">Start Your Application</a>
+    <a class="btn btn--brand btn--lg" href="volunteer-apply.html">Start Your Application</a>
   </div>
 </section>
 
@@ -163,92 +153,16 @@
   </div>
 </section>
 
-<section class="section section--cream">
-  <div class="container center">
-    <h2>Still have questions?</h2>
-    <p class="lead">Can't find the answer you're looking for? Please chat to our friendly team.</p>
-    <p><a class="btn btn--accent" href="contact.html">Contact Us</a></p>
-  </div>
-</section>
+
 
 </main>
-<footer class="site-footer">
-  <div class="footer__cta">
-    <div class="container">
-      <h3>Join us in our mission</h3>
-      <div class="flex">
-        <a class="btn btn--brand" href="donate.html">Donate</a>
-        <a class="btn btn--ghost" href="volunteer.html">Volunteer</a>
-        <a class="btn btn--ghost" href="store.html">Shop</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <img src="assets/img/logo.png" alt="AYM logo">
-        <p class="small" style="margin-top:1rem">Twenty-First Century African Youth Movement (AYM) mobilizes Africa's unemployed and underemployed youth to end poverty together.</p>
-        <p class="small">6811 North Ave. Middleton, WI 53562. USA<br>
-        Tel: (608) 879-5487<br>
-        Email: <a href="mailto:info@aym-inc.org">info@aym-inc.org</a></p>
-        <div class="social">
-          <a href="https://x.com/AYMOVEMENT" aria-label="Twitter">X</a>
-          <a href="https://www.facebook.com/africanyouthmovement/" aria-label="Facebook">f</a>
-          <a href="https://www.youtube.com/c/Aym-incOrg" aria-label="YouTube">&#9654;</a><a href="https://za.pinterest.com/aymovement/" aria-label="Pinterest">P</a>
-          <a href="https://www.linkedin.com/company/twenty-first-century-african-youth-movement/" aria-label="LinkedIn">in</a>
-          <a href="https://www.instagram.com/aymovement/" aria-label="Instagram">ig</a>
-        </div>
-      </div>
-      <div>
-        <h4>Where We Work</h4>
-        <ul>
-          <li><a href="where-we-work.html#sierra-leone">Sierra Leone</a></li>
-          <li><a href="where-we-work.html#united-states">United States</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>About Us</h4>
-        <ul>
-          <li><a href="about.html">About AYM</a></li>
-          <li><a href="about.html#mission">Mission</a></li>
-          <li><a href="about.html#history">History</a></li>
-          <li><a href="about-team.html">Leadership</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Focus Areas</h4>
-        <ul>
-          <li><a href="focus-art.html">Art</a></li>
-          <li><a href="focus-agriculture.html">Agriculture</a></li>
-          <li><a href="focus-education.html">Education</a></li>
-          <li><a href="focus-entrepreneurship.html">Entrepreneurship</a></li>
-          <li><a href="focus-ecotourism.html">Ecotourism</a></li>
-          <li><a href="focus-health.html">Healthcare</a></li>
-          <li><a href="focus-technology.html">Technology</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="projects.html">Our Work</a></li>
-          <li><a href="blog.html">Stories</a></li>
-          <li><a href="volunteer.html">Get Involved</a></li>
-          <li><a href="store.html">Impact Store</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; <span data-year>2026</span> Twenty-First Century African Youth Movement (AYM), Inc., USA. All rights reserved.</span>
-      <span>AYM is a 501(C)(3) Nonprofit Organization, EIN 39-1742519.</span>
-    </div>
-  </div>
-</footer>
+<div data-component="footer" data-variant="home"></div>
+
 <a class="whatsapp-float" href="https://wa.me/12403743303" target="_blank" rel="noopener" aria-label="Chat with AYM on WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16.003 2.667c-7.36 0-13.333 5.973-13.333 13.333 0 2.35.616 4.643 1.787 6.664L2.667 29.333l6.827-1.787a13.27 13.27 0 0 0 6.51 1.706h.006c7.36 0 13.333-5.973 13.333-13.333 0-3.562-1.387-6.91-3.906-9.429a13.24 13.24 0 0 0-9.434-3.823zm0 24.373h-.005a11.06 11.06 0 0 1-5.635-1.543l-.404-.24-4.052 1.062 1.083-3.95-.263-.406a11.03 11.03 0 0 1-1.694-5.896c0-6.117 4.978-11.094 11.098-11.094 2.963 0 5.747 1.155 7.842 3.25a11.02 11.02 0 0 1 3.249 7.851c0 6.117-4.978 11.094-11.094 11.094zm6.086-8.306c-.333-.167-1.973-.973-2.279-1.084-.306-.111-.529-.167-.751.167-.222.333-.862 1.084-1.057 1.306-.194.222-.389.25-.722.083-.333-.167-1.407-.518-2.68-1.653-.99-.883-1.658-1.973-1.852-2.306-.194-.333-.021-.513.146-.679.15-.15.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.417-.028-.583-.083-.167-.751-1.807-1.029-2.474-.271-.65-.547-.562-.751-.572l-.639-.011c-.222 0-.583.083-.889.417-.306.333-1.166 1.139-1.166 2.778 0 1.639 1.194 3.223 1.361 3.445.167.222 2.35 3.589 5.694 5.033.796.344 1.417.549 1.901.703.799.254 1.526.218 2.101.132.641-.095 1.973-.806 2.251-1.585.278-.778.278-1.445.194-1.585-.083-.139-.306-.222-.639-.389z"/></svg>
 </a>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/components.js"></script>
 <script src="assets/js/chat.js" defer></script>
 </body>
 </html>

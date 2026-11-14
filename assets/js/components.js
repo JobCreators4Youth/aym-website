@@ -117,8 +117,19 @@
 
 var parts = { header: header, cta: cta, footer: footer };
 
-  document.querySelectorAll("[data-component]").forEach(function (slot) {
+    document.querySelectorAll("[data-component]").forEach(function (slot) {
     var build = parts[slot.getAttribute("data-component")];
     if (build) slot.outerHTML = build(slot.getAttribute("data-variant"));
   });
+
+  var siteHeader = document.querySelector(".site-header--overlay");
+  if (siteHeader) {
+    var hero = document.querySelector(".hero");
+    var onScroll = function () {
+      var limit = hero ? hero.offsetHeight - siteHeader.offsetHeight : 50;
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > limit);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 })();

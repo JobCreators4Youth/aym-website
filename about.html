@@ -12,245 +12,142 @@
 </head>
 <body>
 <a class="skip" href="#main" style="position:absolute;left:-999px">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a class="brand" href="index.html" aria-label="AYM home">
-      <img src="assets/img/logo.png" alt="AYM logo">
-      <span class="brand__name">AYM<span>African Youth Movement</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <nav class="nav" aria-label="Primary">
-      <div class="has-drop"><a class="navlink" href="volunteer.html">Get Involved</a>
-        <div class="dropdown">
-          <a href="volunteer.html">Volunteer</a>
-          <a href="volunteer-apply.html" class="dropdown__sub">Volunteer Application</a>
-          <a href="volunteer-fellowship.html" class="dropdown__sub">AYM Youth Fellowship</a>
-          <a href="donate.html#fundraise">Fundraise</a>
-          <a href="chapter.html">Start an AYM Chapter</a>
-        </div>
-      </div>
-      <div class="has-drop"><a class="navlink" href="about.html">About</a>
-        <div class="dropdown">
-          <a href="about.html">About AYM</a>
-          <a href="about-team.html">About the Team</a>
-          <a href="where-we-work.html">Where We Work</a>
-        </div>
-      </div>
-      <div class="has-drop"><a class="navlink" href="focus-art.html">Focus Areas</a>
-        <div class="dropdown">
-          <a href="focus-art.html">Art</a>
-          <a href="focus-agriculture.html">Agriculture</a>
-          <a href="focus-education.html">Education</a>
-          <a href="focus-entrepreneurship.html">Entrepreneurship</a>
-          <a href="focus-ecotourism.html">Ecotourism</a>
-          <a href="focus-ecotourism-forest-safari.html" class="dropdown__sub">Forest Safari</a>
-          <a href="focus-health.html">Healthcare</a>
-          <a href="focus-technology.html">Technology</a>
-        </div>
-      </div>
-      <div class="has-drop"><a class="navlink" href="projects.html">Our Work</a>
-        <div class="dropdown">
-          <a href="projects.html">Projects</a>
-          <a href="events.html">Events</a>
-          <a href="where-we-work.html">Where We Work</a>
-        </div>
-      </div>
-      <a class="navlink" href="blog.html">Blog</a>
-      <a class="navlink" href="contact.html">Contact</a>
-      <a class="btn btn--accent header__cta" href="donate.html">Donate Now</a>
-    </nav>
-  </div>
-</header>
+
+<div data-component="header" data-variant="overlay"></div>
 <main id="main">
 
-<section class="hero hero--page">
+  <!-- HERO SECTION -->
+<section class="hero hero--page hero--landing">
   <img class="hero__bg" src="assets/img/volunteers/aym-community-gathering.jpg" alt="">
   <div class="container hero__inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
-    <span class="eyebrow eyebrow--brand" style="color:var(--brand)">About AYM</span>
+    <!-- <div class="breadcrumb"><a href="index.html">Home</a> / About</div> -->
+    <!-- <span class="eyebrow eyebrow--brand" style="color:var(--brand)">About AYM</span> -->
     <h1 class="hero__title">A Movement Led by the Youth</h1>
     <p class="hero__sub">Mobilizing Africa's unemployed and underemployed youth as active drivers of economic growth, stability, and lasting social change.</p>
-    <div class="hero__actions"><a class="btn btn--accent" href="donate.html">Donate Now</a><a class="btn btn--ghost" href="about-team.html">Meet the Team</a></div>
+    <div class="hero__actions"><a class="btn btn--brand" href="donate.html">Donate Now</a><a class="btn btn--ghost" href="about-team.html">Meet the Team</a></div>
     
   </div>
 </section>
+
+
+
 <div class="statrow"><div class="statcell"><strong>2000</strong><span>Founded</span></div><div class="statcell"><strong>50+</strong><span>Enterprises Created</span></div><div class="statcell"><strong>7</strong><span>Sierra Leone Staff</span></div><div class="statcell"><strong>6</strong><span>Chapter Countries</span></div></div>
-<section class="section">
-  <div class="container grid grid-2">
-    <div>
-      <span class="eyebrow">Our Vision</span>
-      <h2>An Africa where youth are empowered and inspired</h2>
-      <p class="lead">We envision an Africa where youth are empowered, inspired, and active drivers of change. The vision of AYM is a stable, peaceful, and economically self-sustaining Africa with hope and opportunities for youth in every sphere of life and endeavor.</p>
-      <p class="muted">By focusing on education, technology, arts, entrepreneurship, agriculture, ecotourism, and healthcare, we aim to establish personal youth empowerment and community resilience by energizing the continent's youth population—its most critical resource—to reverse social and economic stagnation.</p>
-    </div>
+
+<!-- VISION -->
+<section class="section home-intro">
+  <div class="container intro-layout">
     <div class="split__media"><img src="assets/img/volunteers/aym-community-work.jpg" alt="AYM community"></div>
+
+    <div class="intro-copy  intro-copy--about">
+      <span class="eyebrow">Our Vision</span>
+      <h1 class="header__title">We believe Africas future is already here. It is <em>young, ambitious </em>and ready to lead.</h1>
+      <div class="section__head">
+          <p class="lead">Lorem ipsum dolor sit amet consectetur. Vestibulum morbi felis pharetra convallis. Volutpat nullam arcu enim malesuada.</p>
+          <a class="btn btn--link btn--lg" href="projects.html">Explore all projects </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section section--cream" id="mission">
-  <div class="container">
-    <div class="section__head center">
-      <span class="eyebrow">Our Mission</span>
-      <h2>Educate and employ young people</h2>
-      <p class="lead">Our mission is to educate and employ young people in technology, agribusiness, eco-tourism, entrepreneurship, and the creative arts to revitalize the country's potential and bring its population social and political stability.</p>
+<!-- What we do -->
+<section class="tile-grid" aria-label="What we do">
+  <div class="tile tile--brand"><h2>Job Creation</h2><p>We design programs that foster employment through skill-building workshops and hands-on training.</p></div>
+  <img class="tile__img" src="assets/img/volunteers/aym-creative-arts-workshop.jpg" alt="" loading="lazy">
+  <div class="tile tile--brand"><h2>Community Projects</h2><p>Our initiatives connect youth with real-world projects that promote development and social impact.</p></div>
+  <img class="tile__img" src="assets/img/volunteers/aym-community-gathering.jpg" alt="" loading="lazy">
+  <img class="tile__img" src="assets/img/volunteers/aym-community-training.jpg" alt="" loading="lazy">
+  <div class="tile tile--dark"><h2>Youth Training</h2><p>We offer courses and mentorships in various sectors, including technology, entrepreneurship, agribusiness, and creative arts.</p></div>
+  <img class="tile__img" src="assets/img/volunteers/aym-volunteer-service.jpg" alt="" loading="lazy">
+  <div class="tile tile--dark"><h2>Strategic Partnerships</h2><p>We collaborate with NGOs, educational institutions, and private sector partners to expand opportunities for youth.</p></div>
+</section>
+
+<!-- MISSION -->
+<section class="section section--sand" id="mission">
+  <div class="container focus-split">
+    <div class="focus-split__main">
+      <span class="eyebrow eyebrow--line">Our focus</span>
+      <h1>What we do to take action.</h1>
+      <!-- <p class="lead">Creating jobs and employment for young people across Africa.</p> -->
+      <img src="assets/img/volunteers/aym-community-work.jpg" alt="Young people working together" loading="lazy">
     </div>
-    <div class="card card--flat" style="max-width:920px;margin:0 auto"><div class="card__body">
-      <h3 class="card__title">The Solution</h3>
-      <p class="card__text">Mobilizing and providing employment for Africa's unemployed and underemployed youth is the key to the continent's economic growth and stability. AYM works to mobilize marginalized youth through education, training, and entrepreneurial opportunities to help move communities away from poverty, disease, and hunger—engaging them as change-makers in the rebuilding and development of Sierra Leone and across Africa.</p>
+    <aside class="focus-split__side">
+      <div>
+        <h2>Our Mission</h2>
+        <p>Our mission is to educate and employ young people in technology, agribusiness, eco-tourism, entrepreneurship, and the creative arts to revitalize the country's potential and bring its population social and political stability.</p>
+      </div>
+      <div>
+        <h2>The Solution</h2>
+        <p>Mobilizing and providing employment for Africa's unemployed and underemployed youth is the key to the continent's economic growth and stability. AYM works to mobilize marginalized youth through education, training, and entrepreneurial opportunities to help move communities away from poverty, disease, and hunger—engaging them as change-makers in the rebuilding and development of Sierra Leone and across Africa.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+<section class="section home-focus" id="history">
+  <div class="container">
+    <div class="section__head intro-copy">
+      <span class="eyebrow">Get Involved</span>
+      <h1>The History and Story of AYM</h1>
+    </div>
+
+    <div class="chips focus-tabs focus-tabs--4" role="tablist" aria-label="AYM story" aria-orientation="horizontal">
+      <button class="chip is-active" id="focus-tab-roots" data-focus="roots" role="tab" aria-selected="true" aria-controls="focus-panel-roots" tabindex="0"><span class="chip__label">Roots</span></button>
+      <button class="chip" id="focus-tab-founding" data-focus="founding" role="tab" aria-selected="false" aria-controls="focus-panel-founding" tabindex="-1"><span class="chip__label">Founding</span></button>
+      <button class="chip" id="focus-tab-impact" data-focus="impact" role="tab" aria-selected="false" aria-controls="focus-panel-impact" tabindex="-1"><span class="chip__label">Impact</span></button>
+      <button class="chip" id="focus-tab-expansion" data-focus="expansion" role="tab" aria-selected="false" aria-controls="focus-panel-expansion" tabindex="-1"><span class="chip__label">Expansion</span></button>
+    </div>
+
+    <div class="focus-feature"><div class="focus-panels">
+      <div class="focus-panel" id="focus-panel-roots" role="tabpanel" aria-labelledby="focus-tab-roots" data-focus-panel="roots">
+        <div class="focus-panel__copy">
+          <h3>Born from a civil war</h3>
+          <p>Abu-Hassan Koroma migrated to the United States in 1991, immediately after the start of the Sierra Leone Civil War. The war (1991–2002) left an estimated 60% of young people economically and socially abandoned. Training alone was not enough, so creating long-term alternatives for self-reliance required a broader coalition and genuine employment opportunities.</p>
+          <!-- <a class="btn btn--brand" href="about-team.html">Learn More </a> -->
+        </div>
+        <img src="assets/img/about-0.png" alt="AYM history" loading="lazy">
+      </div>
+
+      <div class="focus-panel" id="focus-panel-founding" role="tabpanel" aria-labelledby="focus-tab-founding" data-focus-panel="founding" hidden>
+        <div class="focus-panel__copy">
+          <h3>Founded in 2000</h3>
+          <p>Founded in 2000 in Wisconsin, US to give rural Sierra Leonean youth a path to self-reliance.</p>
+          <!-- <a class="btn btn--brand" href="about-team.html">Learn More </a> -->
+        </div>
+        <img src="assets/img/about-0.png" alt="AYM founding" loading="lazy">
+      </div>
+
+      <div class="focus-panel" id="focus-panel-impact" role="tabpanel" aria-labelledby="focus-tab-impact" data-focus-panel="impact" hidden>
+        <div class="focus-panel__copy">
+          <h3>Growing impact</h3>
+          <p>From 7 staff to a growing team, AYM created enterprises, trained youth, and built the Mattru Jong project.</p>
+          <!-- <a class="btn btn--brand" href="about-team.html">Learn More </a> -->
+        </div>
+        <img src="assets/img/volunteers/aym-community-gathering.jpg" alt="AYM impact" loading="lazy">
+      </div>
+
+      <div class="focus-panel" id="focus-panel-expansion" role="tabpanel" aria-labelledby="focus-tab-expansion" data-focus-panel="expansion" hidden>
+        <div class="focus-panel__copy">
+          <h3>A Pan-African network</h3>
+          <p>A growing Pan-African network of chapters across West, East, and Southern Africa.</p>
+          <!-- <a class="btn btn--brand" href="chapter.html">Explore Chapters </a> -->
+        </div>
+        <img src="assets/img/volunteers/aym-community-work.jpg" alt="AYM expansion" loading="lazy">
+      </div>
     </div></div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section__head"><span class="eyebrow">What we do</span><h2>What we do to take action</h2></div>
-    <div class="grid grid-4">
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Job Creation</h3><p class="muted">We design programs that foster employment through skill-building workshops and hands-on training.</p></div>
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Youth Training</h3><p class="muted">We offer courses and mentorships in various sectors, including technology, entrepreneurship, agribusiness, and creative arts.</p></div>
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Community Projects</h3><p class="muted">Our initiatives connect youth with real-world projects that promote development and social impact.</p></div>
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Strategic Partnerships</h3><p class="muted">We collaborate with NGOs, educational institutions, and private sector partners to expand opportunities for youth.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--dark" id="history">
-  <div class="container split">
-    <div>
-      <span class="eyebrow" style="color:var(--brand)">Our Story</span>
-      <h2>The History and Story of AYM</h2>
-      <p class="lead" style="color:rgba(255,255,255,.85)">Abu-Hassan Koroma migrated to the United States in 1991, immediately after the start of the Sierra Leone Civil War. The war (1991–2002) left an estimated 60% of young people economically and socially abandoned. At the end of the war, training alone was not enough—creating long-term alternatives for self-reliance required a broader coalition and genuine employment opportunities.</p>
-      <div class="tabs mt-2" data-tabs>
-        <div class="tabs__nav">
-          <button class="chip is-active" data-tab="roots">Roots</button>
-          <button class="chip" data-tab="founding">Founding</button>
-          <button class="chip" data-tab="impact">Impact</button>
-          <button class="chip" data-tab="expansion">Expansion</button>
-        </div>
-        <div class="tabs__panel" data-tab-panel="roots"><p>Born out of the tragedy of a decade-long civil war that displaced and abandoned an entire generation of youth.</p></div>
-        <div class="tabs__panel" data-tab-panel="founding" hidden><p>Founded in 2000 in Wisconsin, US to give rural Sierra Leonean youth a path to self-reliance.</p></div>
-        <div class="tabs__panel" data-tab-panel="impact" hidden><p>From 7 staff to a growing team, AYM created enterprises, trained youth, and built the Mattru Jong project.</p></div>
-        <div class="tabs__panel" data-tab-panel="expansion" hidden><p>A growing Pan-African network of chapters across West, East, and Southern Africa.</p></div>
-      </div>
-      <p class="mt-2"><a class="btn btn--brand" href="about-team.html">Learn More →</a></p>
-    </div>
-    <div class="split__media"><img src="assets/img/about-0.png" alt="AYM history"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="grid grid-3">
-      <div class="card card--flat">
-        <div class="card__body">
-          <h3 class="card__title">Want to join us and connect with individuals globally together?</h3>
-          <p class="card__text">Lend your skills to empower local communities and shape sustainable youth-led futures.</p>
-          <a class="card__link" href="volunteer.html">Become a Volunteer →</a>
-        </div>
-      </div>
-      <div class="card card--flat">
-        <div class="card__body">
-          <h3 class="card__title">Want to become a part of our AYM chapters?</h3>
-          <p class="card__text">Bring the movement to your city or country and lead grassroots change.</p>
-          <a class="card__link" href="chapter.html">Start an AYM Chapter →</a>
-        </div>
-      </div>
-      <div class="card card--flat">
-        <div class="card__body">
-          <h3 class="card__title">Want to explore our extensive array of products?</h3>
-          <p class="card__text">Each purchase gives purpose and supports youth-led programs.</p>
-          <a class="card__link" href="store.html">Explore Store →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--cream">
-  <div class="container center">
-    <h2>Still have questions?</h2>
-    <p class="lead">Can't find the answer you're looking for? Please chat to our friendly team.</p>
-    <p><a class="btn btn--accent" href="contact.html">Contact Us</a></p>
-  </div>
-</section>
 
 </main>
-<footer class="site-footer">
-  <div class="footer__cta">
-    <div class="container">
-      <h3>Join us in our mission</h3>
-      <div class="flex">
-        <a class="btn btn--brand" href="donate.html">Donate</a>
-        <a class="btn btn--ghost" href="volunteer.html">Volunteer</a>
-        <a class="btn btn--ghost" href="store.html">Shop</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <img src="assets/img/logo.png" alt="AYM logo">
-        <p class="small" style="margin-top:1rem">Twenty-First Century African Youth Movement (AYM) mobilizes Africa's unemployed and underemployed youth to end poverty together.</p>
-        <p class="small">6811 North Ave. Middleton, WI 53562. USA<br>
-        Tel: (608) 879-5487<br>
-        Email: <a href="mailto:info@aym-inc.org">info@aym-inc.org</a></p>
-        <div class="social">
-          <a href="https://x.com/AYMOVEMENT" aria-label="Twitter">X</a>
-          <a href="https://www.facebook.com/africanyouthmovement/" aria-label="Facebook">f</a>
-          <a href="https://www.youtube.com/c/Aym-incOrg" aria-label="YouTube">&#9654;</a><a href="https://za.pinterest.com/aymovement/" aria-label="Pinterest">P</a>
-          <a href="https://www.linkedin.com/company/twenty-first-century-african-youth-movement/" aria-label="LinkedIn">in</a>
-          <a href="https://www.instagram.com/aymovement/" aria-label="Instagram">ig</a>
-        </div>
-      </div>
-      <div>
-        <h4>Where We Work</h4>
-        <ul>
-          <li><a href="where-we-work.html#sierra-leone">Sierra Leone</a></li>
-          <li><a href="where-we-work.html#united-states">United States</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>About Us</h4>
-        <ul>
-          <li><a href="about.html">About AYM</a></li>
-          <li><a href="about.html#mission">Mission</a></li>
-          <li><a href="about.html#history">History</a></li>
-          <li><a href="about-team.html">Leadership</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Focus Areas</h4>
-        <ul>
-          <li><a href="focus-art.html">Art</a></li>
-          <li><a href="focus-agriculture.html">Agriculture</a></li>
-          <li><a href="focus-education.html">Education</a></li>
-          <li><a href="focus-entrepreneurship.html">Entrepreneurship</a></li>
-          <li><a href="focus-ecotourism.html">Ecotourism</a></li>
-          <li><a href="focus-health.html">Healthcare</a></li>
-          <li><a href="focus-technology.html">Technology</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="projects.html">Our Work</a></li>
-          <li><a href="blog.html">Stories</a></li>
-          <li><a href="volunteer.html">Get Involved</a></li>
-          <li><a href="store.html">Impact Store</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; <span data-year>2026</span> Twenty-First Century African Youth Movement (AYM), Inc., USA. All rights reserved.</span>
-      <span>AYM is a 501(C)(3) Nonprofit Organization, EIN 39-1742519.</span>
-    </div>
-  </div>
-</footer>
+<div data-component="footer" data-variant="home"></div>
+
 <a class="whatsapp-float" href="https://wa.me/12403743303" target="_blank" rel="noopener" aria-label="Chat with AYM on WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16.003 2.667c-7.36 0-13.333 5.973-13.333 13.333 0 2.35.616 4.643 1.787 6.664L2.667 29.333l6.827-1.787a13.27 13.27 0 0 0 6.51 1.706h.006c7.36 0 13.333-5.973 13.333-13.333 0-3.562-1.387-6.91-3.906-9.429a13.24 13.24 0 0 0-9.434-3.823zm0 24.373h-.005a11.06 11.06 0 0 1-5.635-1.543l-.404-.24-4.052 1.062 1.083-3.95-.263-.406a11.03 11.03 0 0 1-1.694-5.896c0-6.117 4.978-11.094 11.098-11.094 2.963 0 5.747 1.155 7.842 3.25a11.02 11.02 0 0 1 3.249 7.851c0 6.117-4.978 11.094-11.094 11.094zm6.086-8.306c-.333-.167-1.973-.973-2.279-1.084-.306-.111-.529-.167-.751.167-.222.333-.862 1.084-1.057 1.306-.194.222-.389.25-.722.083-.333-.167-1.407-.518-2.68-1.653-.99-.883-1.658-1.973-1.852-2.306-.194-.333-.021-.513.146-.679.15-.15.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.417-.028-.583-.083-.167-.751-1.807-1.029-2.474-.271-.65-.547-.562-.751-.572l-.639-.011c-.222 0-.583.083-.889.417-.306.333-1.166 1.139-1.166 2.778 0 1.639 1.194 3.223 1.361 3.445.167.222 2.35 3.589 5.694 5.033.796.344 1.417.549 1.901.703.799.254 1.526.218 2.101.132.641-.095 1.973-.806 2.251-1.585.278-.778.278-1.445.194-1.585-.083-.139-.306-.222-.639-.389z"/></svg>
 </a>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/components.js"></script>
 <script src="assets/js/chat.js" defer></script>
 </body>
 </html>
