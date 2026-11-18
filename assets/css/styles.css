@@ -435,7 +435,7 @@ ul{margin:0 0 1rem;padding-left:1.2rem}
 /* Tick list */
 ul.ticks{list-style:none;padding:0;display:grid;gap:.6rem}
 ul.ticks li{position:relative;padding-left:1.8rem}
-ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok);font-weight:800}
+ul.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--brand-2);}
 .section--dark ul.ticks li::before{color:var(--brand)}
 
 /* Contact info list */
