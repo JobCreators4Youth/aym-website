@@ -33,10 +33,10 @@
         <div data-zeffy-embed-fallback style="display:none;">
           <div style="position:relative;overflow:hidden;height:450px;width:100%;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' data-zeffy-embed-src='https://www.zeffy.com/embed/donation-form/invest-in-african-youth-build-sustainable-communities' allowpaymentrequest allowTransparency="true"></iframe></div>
         </div>
-        <script
+        <!-- <script
           src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
           onerror="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';el.querySelectorAll('iframe[data-zeffy-embed-src]').forEach(function(f){f.src=f.getAttribute('data-zeffy-embed-src');});});">
-        </script>
+        </script> -->
       </div>
     </div>
   </div>
@@ -81,60 +81,112 @@
   </div>
 </section>
 
-<section class="section section--cream">
+<!-- supports -->
+<section class="section section--sand ">
   <div class="container">
-    <div class="section__head center"><span class="eyebrow">Your impact</span><h2>What your donation supports</h2></div>
+    <div class="section__head  intro-copy"><span class="eyebrow">Your impact</span><h1>What your donation supports</h1></div>
     <div class="grid grid-3">
-      <div class="feature"><h3>Youth Employment</h3><p class="muted">Job training and hands-on placements that lead to real work.</p></div>
-      <div class="feature"><h3>Youth Enterprises</h3><p class="muted">Seed support for small, youth-led ventures that generate income.</p></div>
-      <div class="feature"><h3>Community Projects</h3><p class="muted">Education, agriculture, health, and tech initiatives in rural communities.</p></div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="section__head center"><span class="eyebrow">Areas we support</span><h2>Direct your gift to a focus area</h2><p class="lead">Choose a program area to see exactly what your money funds &mdash; or let AYM put it where it is needed most.</p></div>
-    <div class="chips chips--lg">
-      <a class="chip" href="focus-art.html">Art</a>
-      <a class="chip" href="focus-agriculture.html">Agriculture</a>
-      <a class="chip" href="focus-education.html">Education</a>
-      <a class="chip" href="focus-entrepreneurship.html">Entrepreneurship</a>
-      <a class="chip" href="focus-ecotourism.html">Ecotourism</a>
-      <a class="chip" href="focus-health.html">Healthcare</a>
-      <a class="chip" href="focus-technology.html">Technology</a>
+      <article class="card project-card" ><div class="pathway"><h2 class="card__title">Youth Employment</h2><p class="card__text" style="color:var(--brand2)">Job training and hands-on placements that lead to real work. </p></div></article>
+      <article class="card project-card"><div class="pathway"><h2 class="card__title">Youth Enterprises</h2><p class="card__text" style="color:var(--brand2)">Seed support for small, youth-led ventures that generate income.</p></div></article>
+      <article class="card project-card"><div class="pathway"><h2 class="card__title">Program &amp; Event Playbooks</h2><p class="card__text" style="color:var(--brand2)">Education, agriculture, health, and tech initiatives in rural communities.</p></div></article>
     </div>
   </div>
 </section>
 
-<section class="section">
+
+<!-- AREAS SECTION -->
+<section class="section home-focus">
   <div class="container">
-    <div class="section__head center"><span class="eyebrow">After you give</span><h2>What happens next</h2></div>
-    <div class="grid grid-3">
-      <div class="step"><div class="step__num">1</div><h3>Instant confirmation</h3><p class="muted">You’ll see a confirmation on screen the moment your gift goes through.</p></div>
-      <div class="step"><div class="step__num">2</div><h3>Your receipt</h3><p class="muted">An emailed receipt with the amount, date, and AYM’s EIN for your records.</p></div>
-      <div class="step"><div class="step__num">3</div><h3>Impact updates</h3><p class="muted">We follow up with news of the programs and youth your gift supports.</p></div>
+    <div class="section__head intro-copy" >
+      <span class="eyebrow">Areas we support</span>
+      <h1>Direct your gift to a focus area</h1>
     </div>
-    <p class="small muted center mt-2">Gifts are processed by verified third-party payment providers. AYM does not store your card details.</p>
+    <div class="chips focus-tabs" role="tablist" aria-label="Focus areas" aria-orientation="horizontal">
+      <button class="chip is-active" id="focus-tab-art" data-focus="art" role="tab" aria-selected="true" aria-controls="focus-panel-art" tabindex="0"><span class="chip__label">Art</span></button>
+      <button class="chip" id="focus-tab-agriculture" data-focus="agriculture" role="tab" aria-selected="false" aria-controls="focus-panel-agriculture" tabindex="-1"><span class="chip__label">Agriculture</span></button>
+      <button class="chip" id="focus-tab-education" data-focus="education" role="tab" aria-selected="false" aria-controls="focus-panel-education" tabindex="-1"><span class="chip__label">Education</span></button>
+      <button class="chip" id="focus-tab-entrepreneurship" data-focus="entrepreneurship" role="tab" aria-selected="false" aria-controls="focus-panel-entrepreneurship" tabindex="-1"><span class="chip__label">Entrepreneurship</span></button>
+      <button class="chip" id="focus-tab-ecotourism" data-focus="ecotourism" role="tab" aria-selected="false" aria-controls="focus-panel-ecotourism" tabindex="-1"><span class="chip__label">Ecotourism</span></button>
+      <button class="chip" id="focus-tab-health" data-focus="health" role="tab" aria-selected="false" aria-controls="focus-panel-health" tabindex="-1"><span class="chip__label">Healthcare</span></button>
+      <button class="chip" id="focus-tab-technology" data-focus="technology" role="tab" aria-selected="false" aria-controls="focus-panel-technology" tabindex="-1"><span class="chip__label">Technology</span></button>
+    </div>
+    <div class="focus-feature"><div class="focus-panels">
+      <div class="focus-panel" id="focus-panel-art" role="tabpanel" aria-labelledby="focus-tab-art" data-focus-panel="art"><div class="focus-panel__copy"><h3>Creative arts &amp; cultural expression</h2><p>We harness creative talent to build a thriving creative industry that empowers young artists and creates sustainable employment.</p><a class="btn btn--brand" href="focus-art.html">Discover Art Projects <span aria-hidden="true"></span></a></div><img src="assets/img/art-1.png" alt="Artwork displayed in a gallery" loading="lazy"></div>
+      <div class="focus-panel" id="focus-panel-agriculture" role="tabpanel" aria-labelledby="focus-tab-agriculture" data-focus-panel="agriculture" hidden><div class="focus-panel__copy"><h2>Agribusiness &amp; economic empowerment</h2><p>We cultivate sustainable agriculture and youth entrepreneurship across Africa.</p><a class="btn btn--brand" href="focus-agriculture.html">Discover Our Agricultural Projects<span aria-hidden="true"></span></a></div><img src="assets/img/volunteers/aym-agriculture-training.jpg" alt="Young people planting and tending a community field" loading="lazy"></div>
+      <div class="focus-panel" id="focus-panel-education" role="tabpanel" aria-labelledby="focus-tab-education" data-focus-panel="education" hidden><div class="focus-panel__copy"><h2>Education &amp; skill development</h2><p>We open pathways through practical learning, hands-on science and digital skills.</p><a class="btn btn--brand" href="focus-education.html">Discover Our Educational Projects <span aria-hidden="true"></span></a></div><img src="assets/img/volunteers/aym-community-training.jpg" alt="Young people taking part in an outdoor learning activity" loading="lazy"></div>
+      <div class="focus-panel" id="focus-panel-entrepreneurship" role="tabpanel" aria-labelledby="focus-tab-entrepreneurship" data-focus-panel="entrepreneurship" hidden><div class="focus-panel__copy"><h2>Youth entrepreneurship &amp; innovation</h2><p>Young people build sustainable ventures that strengthen local economies.</p><a class="btn btn--brand" href="focus-entrepreneurship.html">Discover Our Entrepreneurial Projects <span aria-hidden="true"></span></a></div><img src="assets/img/volunteers/aym-brickmaking.jpg" alt="Young people making bricks for a local enterprise" loading="lazy"></div>
+      <div class="focus-panel" id="focus-panel-ecotourism" role="tabpanel" aria-labelledby="focus-tab-ecotourism" data-focus-panel="ecotourism" hidden><div class="focus-panel__copy"><h2>Ecotourism &amp; sustainable travel</h2><p>Community-led tourism helps protect natural places while building livelihoods.</p><a class="btn btn--brand" href="focus-ecotourism.html">Discover Our Educational Projects <span aria-hidden="true"></span></a></div><img src="assets/img/ecotourism-2.png" alt="A safari vehicle exploring a grassy wildlife landscape" loading="lazy"></div>
+      <div class="focus-panel" id="focus-panel-health" role="tabpanel" aria-labelledby="focus-tab-health" data-focus-panel="health" hidden><div class="focus-panel__copy"><h2>Community healthcare initiatives</h2><p>We work with communities and partners to address vital healthcare needs.</p><a class="btn btn--brand" href="focus-health.html">Discover Our Healthcare Initiatives <span aria-hidden="true"></span></a></div><img src="assets/img/health-0.png" alt="A community health worker with children" loading="lazy"></div>
+      <div class="focus-panel" id="focus-panel-technology" role="tabpanel" aria-labelledby="focus-tab-technology" data-focus-panel="technology" hidden><div class="focus-panel__copy"><h2>Technology &amp; digital inclusion</h2><p>We bridge the digital divide with computer education and sustainable access.</p><a class="btn btn--brand" href="focus-technology.html">Discover Our Technological Efforts <span aria-hidden="true"></span></a></div><img src="assets/img/volunteers/aym-solar-training.jpg" alt="Young people installing a solar panel as part of technical training" loading="lazy"></div>
+    </div></div>
   </div>
 </section>
+
+
+  <div class="statrow ">
+  <div class="statcell">
+    <strong>5000+</strong>
+    <span>Lives Changed</span>
+  </div>
+  <div class="statcell">
+    <strong>50+</strong>
+    <span>Enterprises Created</span>
+  </div>
+  <div class="statcell">
+    <strong>$100K</strong>
+    <span>Funds Raised</span>
+  </div>
+  <div class="statcell">
+    <strong>10K+</strong>
+    <span>Members Worldwide</span>
+  </div>
+</div>
+
+
+<section class="section section--sand" id="mission">
+  <div class="container focus-split">
+    <div class="focus-split__main">
+      <span class="eyebrow eyebrow--line">After you give</span>
+      <h1>What happens next</h1>
+      <!-- <p class="lead">Creating jobs and employment for young people across Africa.</p> -->
+      <img src="assets/img/volunteers/aym-community-work.jpg" alt="Young people working together" loading="lazy">
+    </div>
+    <aside class="focus-split__side">
+      <div>
+        <h2>1 Instant confirmation</h2>
+        <p>You’ll see a confirmation on screen the moment your gift goes through.</p>
+      </div>
+      <div>
+        <h2>2 Your receipt</h2>
+        <p>An emailed receipt with the amount, date, and AYM’s EIN for your records.</p>
+      </div>
+      <div>
+        <h2>3 Impact updates</h2>
+        <p>We follow up with news of the programs and youth your gift supports.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container grid grid-2">
-    <div class="card card--flat"><div class="card__body">
-      <span class="eyebrow">Trust &amp; Transparency</span>
+    <div class="card card--flat"><div class="pathway">
+      <!-- <span class="eyebrow">Trust &amp; Transparency</span> -->
       <h3 class="card__title">Your gift is handled with care</h3>
-      <p class="card__text">AYM is committed to ethical stewardship and transparent reporting. We provide clear information on our leadership, finances, and programs so donors can see exactly how their support drives youth employment and community development.</p>
+      <p class="card__text">AYM is committed to ethical and transparent reporting. We provide clear information on so donors can see exactly how their support drives development.</p>
       <p class="small muted">AYM is a 501(C)(3) Nonprofit Organization.<br>EIN: 39-1742519. Donations are tax-deductible to the extent allowed by law.</p>
     </div></div>
-    <div class="card card--flat"><div class="card__body">
-      <span class="eyebrow">Need a hand?</span>
+    <div class="card card--flat"><div class="pathway">
+      <!-- <span class="eyebrow">Need a hand?</span> -->
       <h3 class="card__title">Giving by cheque, stock or wire?</h3>
       <p class="card__text">For gifts by cheque, wire transfer, appreciated stock, planned giving, or anything the buttons above don't cover, our team will set it up with you and send a tax receipt.</p>
-      <a class="card__link" href="contact.html">Talk to our team →</a>
+      <a class="btn btn--link" href="contact.html">Talk to our team</a>
     </div></div>
   </div>
 </section>
 
-<section class="section section--dark">
+<!-- <section class="section section--dark">
   <div class="container center">
     <span class="eyebrow" style="color:var(--brand)">Our impact so far</span>
     <h2>Together we've built momentum</h2>
@@ -145,7 +197,8 @@
       <div class="stat"><div class="stat__num">10K+</div><div class="stat__label">Members Worldwide</div></div>
     </div>
   </div>
-</section>
+</section> -->
+
 
 <section class="section">
   <div class="container">
@@ -157,13 +210,7 @@
   </div>
 </section>
 
-<section class="section section--cream">
-  <div class="container center">
-    <h2>Still have questions?</h2>
-    <p class="lead">Can't find the answer you're looking for? Please chat to our friendly team.</p>
-    <p><a class="btn btn--accent" href="contact.html">Contact Us</a></p>
-  </div>
-</section>
+
 
 </main>
 <div data-component="footer" data-variant="home"></div>
