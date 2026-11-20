@@ -116,6 +116,19 @@ ul{margin:0 0 1rem;padding-left:1.2rem}
 .hero__sub{max-width:60ch;color:rgba(255,255,255,.9);font-size:1.08rem}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
 .hero--page .hero__inner{padding:clamp(2.6rem,6vw,4.5rem) 0}
+.hero--home-nav{min-height:clamp(620px,calc(100svh - 74px),780px);display:flex;align-items:center}
+.hero.hero--home-nav .hero__inner{padding-top:clamp(4rem,8vw,6.5rem);padding-bottom:clamp(11rem,16vw,13rem)}
+.hero-quick-nav{position:absolute;z-index:3;right:0;bottom:0;left:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:rgba(9,38,28,.84);border-top:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hero-quick-nav__item{min-width:0;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.75rem;min-height:112px;padding:1.25rem 1.35rem;color:#fff;text-decoration:none;border-right:1px solid rgba(255,255,255,.14);transition:background-color .2s ease}
+.hero-quick-nav__item:last-child{border-right:0}
+.hero-quick-nav__item:hover,.hero-quick-nav__item:focus-visible{background:rgba(9,38,28,.96)}
+.hero-quick-nav__item:focus-visible{outline:3px solid var(--brand);outline-offset:-3px}
+.hero-quick-nav__number{align-self:start;font-size:.7rem;font-weight:800;letter-spacing:.08em;color:var(--brand)}
+.hero-quick-nav__copy{min-width:0;display:flex;flex-direction:column;gap:.3rem}
+.hero-quick-nav__title{font-size:.78rem;font-weight:800;letter-spacing:.08em;line-height:1.25;text-transform:uppercase}
+.hero-quick-nav__desc{font-size:.8rem;line-height:1.35;color:rgba(255,255,255,.7)}
+.hero-quick-nav__arrow{font-size:1.15rem;line-height:1;color:rgba(255,255,255,.75);transition:color .2s ease,transform .2s ease}
+.hero-quick-nav__item:hover .hero-quick-nav__arrow,.hero-quick-nav__item:focus-visible .hero-quick-nav__arrow{color:var(--brand);transform:translate(2px,-2px)}
 .where-work-hero{min-height:clamp(390px,40vw,520px);display:flex;align-items:center;background:#143b2d}
 .where-work-hero::after{background:linear-gradient(90deg,rgba(13,52,39,.96) 0%,rgba(13,52,39,.82) 42%,rgba(13,52,39,.22) 100%)}
 .where-work-hero .where-work-hero__map{left:auto;right:0;width:78%;height:100%;object-fit:contain;object-position:right center;opacity:.86}
@@ -930,6 +943,23 @@ img,video,iframe{max-width:100%}
   .apply__step{font-size:.72rem;padding:.4rem .25rem}
   .apply__legend{font-size:1.05rem}
   .apply__saved{flex-basis:100%}
+}
+@media(max-width:900px){
+  .hero--home-nav{min-height:700px}
+  .hero.hero--home-nav .hero__inner{padding-bottom:15rem}
+  .hero-quick-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-quick-nav__item{min-height:104px;padding:1.1rem 1.2rem}
+  .hero-quick-nav__item:nth-child(2n){border-right:0}
+  .hero-quick-nav__item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.14)}
+}
+@media(max-width:520px){
+  .hero--home-nav{min-height:760px}
+  .hero.hero--home-nav .hero__inner{padding-top:3.5rem;padding-bottom:17.5rem}
+  .hero-quick-nav__item{min-height:92px;padding:.85rem .9rem;gap:.55rem}
+  .hero-quick-nav__number{font-size:.65rem}
+  .hero-quick-nav__title{font-size:.68rem}
+  .hero-quick-nav__desc{font-size:.72rem}
+  .hero-quick-nav__arrow{font-size:1rem}
 }
 
 /* Floating WhatsApp contact */
