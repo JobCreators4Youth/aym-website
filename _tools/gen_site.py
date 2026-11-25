@@ -278,32 +278,32 @@ def cards_grid(cards, cols=3):
 # PAGE: LANDING
 # ==========================================================================
 FOCUS = {
- "art": ("Creative Economy",
-    "We harness creative talent to build a thriving Creative Industry that supports creative livelihoods across all genres.",
-   "focus-art.html"),
- "agriculture": ("Agriculture &amp; Food Systems",
-   "We cultivate short-duration crops, sustainable livestock, and youth entrepreneurship across Africa.",
-   "focus-agriculture.html"),
- "education": ("Learning &amp; Future Careers",
-   "Revolutionizing rural learning through dynamic hybrid models, hands-on science, and mobile technology.",
-   "focus-education.html"),
- "entrepreneurship": ("Enterprise &amp; Youth Employment",
-   "The driving force of the 21st century—unlocking creativity, building sustainable ventures, and empowering local economies.",
-   "focus-entrepreneurship.html"),
- "ecotourism": ("Heritage &amp; Sustainability",
-   "Experience the natural beauty of Sierra Leone while supporting local community development and conservation.",
-   "focus-ecotourism.html"),
- "health": ("Health &amp; Wellbeing",
-   "Addressing vital healthcare needs through community assessment, medical supplies, and stakeholder collaboration.",
-   "focus-health.html"),
- "technology": ("Technology &amp; Digital Inclusion",
-   "Bridging the digital divide in rural Sierra Leone through broadband expansion, computer education, and sustainable infrastructure.",
-   "focus-technology.html"),
+  "art": ("Creative Economy &amp; Culture",
+     "Promote African creativity, cultural identity, and creative enterprises.",
+    "focus-art.html"),
+  "agriculture": ("Agriculture &amp; Food Systems",
+    "Advance food security, agribusiness, and rural employment.",
+    "focus-agriculture.html"),
+  "education": ("Education &amp; Skills",
+    "Expand access to learning, professional development, and career opportunities.",
+    "focus-education.html"),
+  "entrepreneurship": ("Entrepreneurship &amp; Employment",
+    "Support youth-led enterprises, innovation, and job creation.",
+    "focus-entrepreneurship.html"),
+  "ecotourism": ("Tourism, Heritage &amp; Environment",
+    "Promote cultural heritage, sustainable tourism, and environmental responsibility.",
+    "focus-ecotourism.html"),
+  "health": ("Health &amp; Community Wellbeing",
+    "Promote health education, awareness, and community resilience.",
+    "focus-health.html"),
+  "technology": ("Technology &amp; Digital Innovation",
+    "Advance digital literacy, artificial intelligence, and technology-driven solutions.",
+    "focus-technology.html"),
 }
-FOCUS_ORDER = [("Creative Economy","art"),("Agriculture &amp; Food Systems","agriculture"),
- ("Learning &amp; Future Careers","education"),("Enterprise &amp; Youth Employment","entrepreneurship"),
- ("Heritage &amp; Sustainability","ecotourism"),("Health &amp; Wellbeing","health"),
- ("Technology &amp; Digital Inclusion","technology")]
+FOCUS_ORDER = [("Creative Economy &amp; Culture","art"),("Agriculture &amp; Food Systems","agriculture"),
+  ("Education &amp; Skills","education"),("Entrepreneurship &amp; Employment","entrepreneurship"),
+  ("Tourism, Heritage &amp; Environment","ecotourism"),("Health &amp; Community Wellbeing","health"),
+  ("Technology &amp; Digital Innovation","technology")]
 
 chips = "".join(
     f'<button class="chip{" is-active" if k=="art" else ""}" data-focus="{k}">{lbl}</button>'
@@ -314,18 +314,18 @@ panels = "".join(
     for lbl, k in FOCUS_ORDER for v in [FOCUS[k]])
 
 SECTOR_CARDS = [
-  {"title": "Creative Economy", "text": "We feature African artists, filmmakers, designers, musicians and cultural entrepreneurs whose work creates value, preserves heritage and opens new opportunities. Through interviews and learning resources, we explore the skills, markets and partnerships that can help creative talent grow.", "cta": "Explore sector", "href": "focus-art.html"},
-  {"title": "Agriculture &amp; Food Systems", "text": "Agriculture remains central to community livelihoods. VOTE Africa documents the experiences of young farmers, food processors and agribusiness innovators, while AYM may support approved local enterprise pilots, learning and partnerships.", "cta": "Explore sector", "href": "focus-agriculture.html"},
-  {"title": "Learning &amp; Future Careers", "text": "We examine how young Africans gain useful knowledge through schools, apprenticeships, online learning and practical work. Our stories connect training with real labor-market needs and highlight accessible pathways to develop skills.", "cta": "Explore sector", "href": "focus-education.html"},
-  {"title": "Enterprise &amp; Youth Employment", "text": "We report on young entrepreneurs who identify problems, test ideas, serve customers and create value. AYM helps approved teams organize, assess feasibility and mobilize resources responsibly; funding and success are not guaranteed.", "cta": "Explore sector", "href": "focus-entrepreneurship.html"},
-  {"title": "Heritage &amp; Sustainability", "text": "We explore the connection between African heritage, natural places and responsible local livelihoods. Stories feature community-led tourism, conservation, hospitality skills and cultural preservation, with verified local projects presented separately.", "cta": "Explore sector", "href": "focus-ecotourism.html"},
-  {"title": "Health &amp; Wellbeing", "text": "Healthy communities make youth opportunity possible. We share carefully sourced public-health stories, highlight qualified local practitioners and examine community-led solutions. VOTE Africa does not replace medical advice or clinical services.", "cta": "Explore sector", "href": "focus-health.html"},
-  {"title": "Technology &amp; Digital Inclusion", "text": "We document how African creators, students and enterprises use software, AI, mobile tools and digital infrastructure to solve practical problems. Our volunteer teams also build skills through supervised digital projects.", "cta": "Explore sector", "href": "focus-technology.html"},
+  {"title": "Creative Economy &amp; Culture", "text": "Promote African creativity, cultural identity, and creative enterprises.", "cta": "Explore sector", "href": "focus-art.html"},
+  {"title": "Agriculture &amp; Food Systems", "text": "Advance food security, agribusiness, and rural employment.", "cta": "Explore sector", "href": "focus-agriculture.html"},
+  {"title": "Education &amp; Skills", "text": "Expand access to learning, professional development, and career opportunities.", "cta": "Explore sector", "href": "focus-education.html"},
+  {"title": "Entrepreneurship &amp; Employment", "text": "Support youth-led enterprises, innovation, and job creation.", "cta": "Explore sector", "href": "focus-entrepreneurship.html"},
+  {"title": "Tourism, Heritage &amp; Environment", "text": "Promote cultural heritage, sustainable tourism, and environmental responsibility.", "cta": "Explore sector", "href": "focus-ecotourism.html"},
+  {"title": "Health &amp; Community Wellbeing", "text": "Promote health education, awareness, and community resilience.", "cta": "Explore sector", "href": "focus-health.html"},
+  {"title": "Technology &amp; Digital Innovation", "text": "Advance digital literacy, artificial intelligence, and technology-driven solutions.", "cta": "Explore sector", "href": "focus-technology.html"},
 ]
 SECTOR_HUB = hero_page(
   "Opportunity Sectors",
   "Explore Africa’s Opportunity Sectors.",
-  "We cover seven fields where African youth are learning, creating, working and improving their communities. Each sector follows the same five-part path: the challenge, African voices, opportunities and solutions, projects and evidence, and ways to get involved.",
+  "Its seven original priorities serve as Opportunity Sectors that support this mission. Each sector follows the same five-part path: the challenge, African voices, opportunities and solutions, projects and evidence, and ways to get involved.",
   "assets/img/landing-page01-1.png", "Opportunity Sectors",
   actions='<a class="btn btn--accent" href="blog.html">Explore Stories</a>'
           '<a class="btn btn--ghost" href="volunteer.html">Join the Movement</a>'
@@ -518,13 +518,11 @@ ABOUT = hero_page(
   actions='<a class="btn btn--accent" href="donate.html">Donate Now</a>'
           '<a class="btn btn--ghost" href="about-team.html">Meet the Team</a>'
 ) + statrow([("2000", "Founded"), ("Youth-led", "Program design"), ("Sierra Leone", "Operational base"), ("Local", "Community roots")]) + f"""
-<section class="section">
+<section class="section" id="vision">
   <div class="container grid grid-2">
     <div>
-      <span class="eyebrow">Our Vision</span>
-      <h2>An Africa where youth are empowered and inspired</h2>
-      <p class="lead">We envision an Africa where youth are empowered, inspired, and active drivers of change. The vision of AYM is a stable, peaceful, and economically self-sustaining Africa with hope and opportunities for youth in every sphere of life and endeavor.</p>
-      <p class="muted">By focusing on education, technology, arts, entrepreneurship, agriculture, ecotourism, and healthcare, we aim to establish personal youth empowerment and community resilience by energizing the continent's youth population—its most critical resource—to reverse social and economic stagnation.</p>
+      <span class="eyebrow">VISION</span>
+      <h2>An Africa where every young person has the voice, knowledge, skills, and economic opportunities to shape their future and contribute to the sustainable development of their community and continent.</h2>
     </div>
     <div class="split__media"><img src="assets/img/about-2.png" alt="AYM community"></div>
   </div>
@@ -533,14 +531,21 @@ ABOUT = hero_page(
 <section class="section section--cream" id="mission">
   <div class="container">
     <div class="section__head center">
-      <span class="eyebrow">Our Mission</span>
-      <h2>Educate and employ young people</h2>
-      <p class="lead">Our mission is to educate and employ young people in technology, agribusiness, eco-tourism, entrepreneurship, and the creative arts to revitalize the country's potential and bring its population social and political stability.</p>
+      <span class="eyebrow">MISSION</span>
+      <p class="lead">To empower African youth through digital media, education, entrepreneurship, civic engagement, and global collaboration by amplifying their voices, developing their skills, connecting them to opportunities, and transforming their ideas into sustainable economic and social impact.</p>
     </div>
-    <div class="card card--flat" style="max-width:920px;margin:0 auto"><div class="card__body">
-      <h3 class="card__title">The Solution</h3>
-      <p class="card__text">Mobilizing and supporting Africa's unemployed and underemployed youth is central to the continent's economic growth and stability. AYM works through education, training, and entrepreneurial opportunities to help move communities away from poverty, disease, and hunger—engaging young people as change-makers in the rebuilding and development of Sierra Leone and across Africa.</p>
-    </div></div>
+  </div>
+</section>
+
+<section class="section" id="delivery">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Mission delivery</span>
+      <h2>How AYM Will Deliver Its Mission</h2>
+      <p class="lead">Through Voices of the Emerging Africa (VOE Africa), AYM will use digital storytelling, media production, research, education, global partnerships, and volunteer engagement to advance its mission.</p>
+      <p class="lead">Its seven original priorities will serve as Opportunity Sectors that support this mission:</p>
+    </div>
+    {cards_grid(SECTOR_CARDS, 3)}
   </div>
 </section>
 
@@ -1182,13 +1187,13 @@ DONATE = hero_page(
     <div class="section__head center"><span class="eyebrow">Opportunity Sectors</span><h2>Topics connected to AYM's work</h2><p class="lead">Explore the sectors covered by VOTE Africa. Project-restricted gifts are accepted only for campaigns AYM has approved and can administer.</p></div>
     <div class="chips chips--lg">
       <a class="chip" href="opportunity-sectors.html">All sectors</a>
-      <a class="chip" href="focus-art.html">Creative Economy</a>
-      <a class="chip" href="focus-agriculture.html">Agriculture</a>
-      <a class="chip" href="focus-education.html">Learning</a>
-      <a class="chip" href="focus-entrepreneurship.html">Enterprise</a>
-      <a class="chip" href="focus-ecotourism.html">Heritage and Tourism</a>
-      <a class="chip" href="focus-health.html">Health</a>
-      <a class="chip" href="focus-technology.html">Technology</a>
+      <a class="chip" href="focus-art.html">Creative Economy &amp; Culture</a>
+      <a class="chip" href="focus-agriculture.html">Agriculture &amp; Food Systems</a>
+      <a class="chip" href="focus-education.html">Education &amp; Skills</a>
+      <a class="chip" href="focus-entrepreneurship.html">Entrepreneurship &amp; Employment</a>
+      <a class="chip" href="focus-ecotourism.html">Tourism, Heritage &amp; Environment</a>
+      <a class="chip" href="focus-health.html">Health &amp; Community Wellbeing</a>
+      <a class="chip" href="focus-technology.html">Technology &amp; Digital Innovation</a>
     </div>
   </div>
 </section>
@@ -1499,8 +1504,8 @@ def sector_framework(key):
 
 # ---- ART ----
 ART = focus_hero(
-  "Creative Economy",
-  "We feature African artists, filmmakers, designers, musicians and cultural entrepreneurs whose work creates value, preserves heritage and opens new opportunities. Through interviews and learning resources, we explore the skills, markets and partnerships that can help creative talent grow.",
+  "Creative Economy &amp; Culture",
+  "Promote African creativity, cultural identity, and creative enterprises.",
   "assets/img/art-2.png",
   '<a class="btn btn--accent" href="contact.html">Profile a Creator</a><a class="btn btn--ghost" href="opportunity-sectors.html">Explore Skills and Markets</a>'
 ) + statrow([("All genres","Music, visual, film, design"),("Youth-led","Creator profiles"),("Heritage","Cultural preservation"),("Global","Perception & dialogue")]) + f"""
@@ -1543,12 +1548,12 @@ ART = focus_hero(
   </div>
 </section>
 """ + sector_framework("art") + CONTACT_CTA
-page("focus-art.html", "Creative Economy", "Profiles, interviews and learning resources for African creative talent.", ART)
+page("focus-art.html", "Creative Economy &amp; Culture", "Promote African creativity, cultural identity, and creative enterprises.", ART)
 
 # ---- AGRICULTURE ----
 AGRI = focus_hero(
   "Agriculture &amp; Food Systems",
-  "Agriculture remains central to community livelihoods. VOTE Africa documents the experiences of young farmers, food processors and agribusiness innovators, while AYM may support approved local enterprise pilots, learning and partnerships.",
+  "Advance food security, agribusiness, and rural employment.",
   "assets/img/agri-0.png",
   '<a class="btn btn--accent" href="blog.html">Watch Farmer Stories</a><a class="btn btn--ghost" href="contact.html">Propose an Enterprise Pilot</a>'
 ) + statrow([("Short-duration","crops for rapid returns"),("6+","livestock varieties"),("Fast-turnover","harvesting"),("Local","enterprise pilots")]) + f"""
@@ -1578,12 +1583,12 @@ AGRI = focus_hero(
   </div>
 </section>
 """ + sector_framework("agriculture") + CONTACT_CTA
-page("focus-agriculture.html", "Agriculture &amp; Food Systems", "Farmer stories, food-system learning and approved local enterprise pilots.", AGRI)
+page("focus-agriculture.html", "Agriculture &amp; Food Systems", "Advance food security, agribusiness, and rural employment.", AGRI)
 
 # ---- EDUCATION ----
 EDU = focus_hero(
-  "Learning &amp; Future Careers",
-  "We examine how young Africans gain useful knowledge through schools, apprenticeships, online learning and practical work. Our stories connect training with real labor-market needs and highlight accessible pathways to develop skills.",
+  "Education &amp; Skills",
+  "Expand access to learning, professional development, and career opportunities.",
   "assets/img/education-1.png",
   '<a class="btn btn--accent" href="blog.html">Explore Learning Stories</a><a class="btn btn--ghost" href="volunteer.html">Volunteer as a Mentor</a>'
 ) + f"""
@@ -1624,14 +1629,14 @@ EDU = focus_hero(
   </div>
 </section>
 """ + sector_framework("education") + CONTACT_CTA
-page("focus-education.html", "Learning &amp; Future Careers", "Learning stories, skills pathways and practical work connected to future careers.", EDU)
+page("focus-education.html", "Education &amp; Skills", "Expand access to learning, professional development, and career opportunities.", EDU)
 
 print("art/agri/edu done")
 
 # ---- ENTREPRENEURSHIP ----
 ENTRE = focus_hero(
-  "Enterprise &amp; Youth Employment",
-  "We report on young entrepreneurs who identify problems, test ideas, serve customers and create value. AYM helps approved teams organize, assess feasibility and mobilize resources responsibly; funding and success are not guaranteed.",
+  "Entrepreneurship &amp; Employment",
+  "Support youth-led enterprises, innovation, and job creation.",
   "assets/img/entre-1.png",
   '<a class="btn btn--accent" href="contact.html">Submit an Idea</a><a class="btn btn--ghost" href="blog.html">Watch Enterprise Stories</a>'
 ) + f"""
@@ -1664,12 +1669,12 @@ ENTRE = focus_hero(
   </div>
 </section>
 """ + sector_framework("entrepreneurship") + CONTACT_CTA
-page("focus-entrepreneurship.html", "Enterprise &amp; Youth Employment", "Entrepreneur stories, responsible feasibility support and practical learning.", ENTRE)
+page("focus-entrepreneurship.html", "Entrepreneurship &amp; Employment", "Support youth-led enterprises, innovation, and job creation.", ENTRE)
 
 # ---- HEALTHCARE ----
 HEALTH = focus_hero(
-  "Health &amp; Wellbeing",
-  "Healthy communities make youth opportunity possible. We share carefully sourced public-health stories, highlight qualified local practitioners and examine community-led solutions. VOTE Africa does not replace medical advice or clinical services.",
+  "Health &amp; Community Wellbeing",
+  "Promote health education, awareness, and community resilience.",
   "assets/img/health-0.png",
   '<a class="btn btn--accent" href="contact.html">Suggest a Health Story</a><a class="btn btn--ghost" href="blog.html">Explore Verified Resources</a>'
 ) + f"""
@@ -1696,7 +1701,7 @@ HEALTH = focus_hero(
   </div>
 </section>
 """ + sector_framework("health") + CONTACT_CTA
-page("focus-health.html", "Health &amp; Wellbeing", "Carefully sourced public-health stories and community-led solutions.", HEALTH)
+page("focus-health.html", "Health &amp; Community Wellbeing", "Promote health education, awareness, and community resilience.", HEALTH)
 
 # ---- ECOTOURISM ----
 # (title, description, image, optional detail href)
@@ -1728,8 +1733,8 @@ eco_cards = "".join(
   for t, d, img, href in ACTIVITIES
 )
 ECO = focus_hero(
-  "Heritage &amp; Sustainability",
-  "We explore the connection between African heritage, natural places and responsible local livelihoods. Stories feature community-led tourism, conservation, hospitality skills and cultural preservation, with verified local projects presented separately.",
+  "Tourism, Heritage &amp; Environment",
+  "Promote cultural heritage, sustainable tourism, and environmental responsibility.",
   "assets/img/ecotourism-0.png",
   '<a class="btn btn--accent" href="blog.html">Explore Heritage Stories</a><a class="btn btn--ghost" href="contact.html">Suggest a Community Feature</a>'
 ) + f"""
@@ -1783,14 +1788,14 @@ ECO = focus_hero(
   </div>
 </section>
 """ + sector_framework("ecotourism") + CONTACT_CTA
-page("focus-ecotourism.html", "Heritage &amp; Sustainability", "Heritage stories, responsible tourism and community-led conservation.", ECO)
+page("focus-ecotourism.html", "Tourism, Heritage &amp; Environment", "Promote cultural heritage, sustainable tourism, and environmental responsibility.", ECO)
 
 # ---- ECOTOURISM > FOREST SAFARI (inner sub-page from the Figma menu) ----
 SAFARI = hero_page(
-  "Heritage &amp; Sustainability / Forest Safari",
+  "Tourism, Heritage &amp; Environment / Forest Safari",
   "A Journey Into <em>the Wild</em>",
   "Walk Sierra Leone's protected forests with a local guide and see the wildlife, rivers and canopy that make the country's interior so extraordinary.",
-  "assets/img/ecotourism-3.png", "Opportunity Sectors / Heritage &amp; Sustainability / Forest Safari",
+  "assets/img/ecotourism-3.png", "Opportunity Sectors / Tourism, Heritage &amp; Environment / Forest Safari",
   actions='<a class="btn btn--accent" href="focus-ecotourism.html#packages">Book Your Experience</a> '
           '<a class="btn btn--ghost btn--lg" href="contact.html">Ask a Question</a>'
 ) + f"""
@@ -1857,8 +1862,8 @@ page("focus-ecotourism-forest-safari.html", "Forest Safari",
 
 # ---- TECHNOLOGY ----
 TECH = focus_hero(
-  "Technology &amp; Digital Inclusion",
-  "We document how African creators, students and enterprises use software, AI, mobile tools and digital infrastructure to solve practical problems. Our volunteer teams also build skills through supervised digital projects.",
+  "Technology &amp; Digital Innovation",
+  "Advance digital literacy, artificial intelligence, and technology-driven solutions.",
   "assets/img/tech-0.png",
   '<a class="btn btn--accent" href="contact.html">Share an Innovation</a><a class="btn btn--ghost" href="volunteer.html">Volunteer Technical Skills</a>'
 ) + f"""
@@ -1888,7 +1893,7 @@ TECH = focus_hero(
   </div>
 </section>
 """ + sector_framework("technology") + CONTACT_CTA
-page("focus-technology.html", "Technology &amp; Digital Inclusion", "Stories of African creators, students and enterprises using practical digital tools.", TECH)
+page("focus-technology.html", "Technology &amp; Digital Innovation", "Advance digital literacy, artificial intelligence, and technology-driven solutions.", TECH)
 
 print("entre/health/eco/tech done")
 
