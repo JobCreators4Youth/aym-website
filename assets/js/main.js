@@ -336,7 +336,7 @@
           }
           form.reset();
           if (note) {
-            note.textContent = "Thanks! Your message has been sent. We'll get back to you soon.";
+            note.textContent = form.getAttribute("data-success-note") || "Thanks! Your message has been sent. We'll get back to you soon.";
           }
         })
         .catch(function () {

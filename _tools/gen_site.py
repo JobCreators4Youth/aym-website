@@ -23,6 +23,7 @@ def head(title, desc, active=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 <body>
 <a class="skip" href="#main" style="position:absolute;left:-999px">Skip to content</a>
@@ -34,43 +35,60 @@ def head(title, desc, active=""):
     </a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
     <nav class="nav" aria-label="Primary">
-      <div class="has-drop"><a class="navlink" href="volunteer.html">Get Involved</a>
-        <div class="dropdown">
-          <a href="volunteer.html">Volunteer</a>
-          <a href="volunteer-apply.html" class="dropdown__sub">Volunteer Application</a>
-          <a href="volunteer-fellowship.html" class="dropdown__sub">AYM Youth Fellowship</a>
-          <a href="donate.html#fundraise">Fundraise</a>
-          <a href="chapter.html">Start an AYM Chapter</a>
-        </div>
-      </div>
+      <a class="navlink" href="index.html">Home</a>
       <div class="has-drop"><a class="navlink" href="about.html">About</a>
         <div class="dropdown">
           <a href="about.html">About AYM</a>
+          <a href="about.html#mission">Mission</a>
+          <a href="about.html#history">History</a>
           <a href="about-team.html">About the Team</a>
-          <a href="where-we-work.html">Where We Work</a>
         </div>
       </div>
-      <div class="has-drop"><a class="navlink" href="focus-art.html">Focus Areas</a>
+      <div class="has-drop"><a class="navlink" href="blog.html">Voices &amp; Stories</a>
         <div class="dropdown">
-          <a href="focus-art.html">Art</a>
-          <a href="focus-agriculture.html">Agriculture</a>
-          <a href="focus-education.html">Education</a>
-          <a href="focus-entrepreneurship.html">Entrepreneurship</a>
-          <a href="focus-ecotourism.html">Ecotourism</a>
-          <a href="focus-ecotourism-forest-safari.html" class="dropdown__sub">Forest Safari</a>
-          <a href="focus-health.html">Healthcare</a>
-          <a href="focus-technology.html">Technology</a>
+          <a href="blog.html">Stories</a>
+          <a href="events.html">Events &amp; Replays</a>
+          <a href="https://www.youtube.com/channel/UCU1VXmeMoxZuPC2lvL8-RIw/videos" target="_blank" rel="noopener noreferrer">Videos ↗</a>
         </div>
       </div>
-      <div class="has-drop"><a class="navlink" href="projects.html">Our Work</a>
+      <div class="has-drop"><a class="navlink" href="opportunity-sectors.html">Sectors</a>
+        <div class="dropdown">
+          <a href="opportunity-sectors.html">All Sectors</a>
+          <a href="focus-art.html">Creative Economy</a>
+          <a href="focus-agriculture.html">Agriculture &amp; Food Systems</a>
+          <a href="focus-education.html">Learning &amp; Future Careers</a>
+          <a href="focus-entrepreneurship.html">Enterprise &amp; Youth Employment</a>
+          <a href="focus-ecotourism.html">Heritage &amp; Sustainability</a>
+          <a href="focus-ecotourism-forest-safari.html" class="dropdown__sub">Forest Safari</a>
+          <a href="focus-health.html">Health &amp; Wellbeing</a>
+          <a href="focus-technology.html">Technology &amp; Digital Inclusion</a>
+        </div>
+      </div>
+      <div class="has-drop"><a class="navlink" href="projects.html">Impact</a>
         <div class="dropdown">
           <a href="projects.html">Projects</a>
           <a href="events.html">Events</a>
           <a href="where-we-work.html">Where We Work</a>
         </div>
       </div>
-      <a class="navlink" href="contact.html">Contact</a>
-      <a class="btn btn--accent header__cta" href="donate.html">Donate Now</a>
+      <div class="has-drop"><a class="navlink" href="volunteer.html">Get Involved</a>
+        <div class="dropdown">
+          <a href="share-your-story.html">Share Your Story</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="volunteer-apply.html" class="dropdown__sub">Volunteer Application</a>
+          <a href="volunteer-fellowship.html" class="dropdown__sub">AYM Youth Fellowship</a>
+          <a href="chapter.html">Build a Team</a>
+          <a href="donate.html#fundraise">Support the Mission</a>
+        </div>
+      </div>
+      <div class="has-drop"><a class="navlink" href="chapter.html">Chapters</a>
+        <div class="dropdown">
+          <a href="chapter.html">Start an AYM Chapter</a>
+          <a href="where-we-work.html">Where We Work</a>
+          <a href="contact.html">Partner With Us</a>
+        </div>
+      </div>
+      <a class="btn btn--accent header__cta" href="donate.html">Donate</a>
     </nav>
   </div>
 </header>
@@ -127,6 +145,7 @@ FOOTER = """
       <div>
         <h4>Focus Areas</h4>
         <ul>
+          <li><a href="opportunity-sectors.html">Opportunity Sectors</a></li>
           <li><a href="focus-art.html">Art</a></li>
           <li><a href="focus-agriculture.html">Agriculture</a></li>
           <li><a href="focus-education.html">Education</a></li>
@@ -139,6 +158,7 @@ FOOTER = """
       <div>
         <h4>Quick Links</h4>
         <ul>
+          <li><a href="share-your-story.html">Share Your Story</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="projects.html">Our Work</a></li>
@@ -150,6 +170,7 @@ FOOTER = """
     <div class="footer__bottom">
       <span>&copy; <span data-year>2026</span> Twenty-First Century African Youth Movement (AYM), Inc., USA. All rights reserved.</span>
       <span>AYM is a 501(C)(3) Nonprofit Organization, EIN 39-1742519.</span>
+      <span class="footer__policies"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="accessibility.html">Accessibility</a></span>
     </div>
   </div>
 </footer>
@@ -159,10 +180,13 @@ FOOTER = """
 </html>
 """
 
-def page(name, title, desc, body, active=""):
-    write(name, head(title, desc, active) + body + FOOTER)
+def clean_html(html):
+    return "\n".join(line.rstrip() for line in html.splitlines()) + "\n"
 
-def hero_page(eyebrow, title, sub, image, crumb, actions="", extra="", cls=""):
+def page(name, title, desc, body, active=""):
+    write(name, clean_html(head(title, desc, active) + body + FOOTER))
+
+def hero_page(eyebrow, title, sub, image, crumb, actions="", extra="", cls="", post=""):
     return f"""
 <section class="hero hero--page{cls}">
   <img class="hero__bg" src="{image}" alt="">
@@ -174,6 +198,7 @@ def hero_page(eyebrow, title, sub, image, crumb, actions="", extra="", cls=""):
     {f'<div class="hero__actions">{actions}</div>' if actions else ''}
     {extra}
   </div>
+  {post}
 </section>
 """
 
@@ -253,30 +278,32 @@ def cards_grid(cards, cols=3):
 # PAGE: LANDING
 # ==========================================================================
 FOCUS = {
- "art": ("Creative Arts & Cultural Expression",
-   "We harness creative talent to build a thriving Creative Industry that empowers young artists and creates sustainable employment across all genres.",
+ "art": ("Creative Economy",
+    "We harness creative talent to build a thriving Creative Industry that supports creative livelihoods across all genres.",
    "focus-art.html"),
- "agriculture": ("Agribusiness & Economic Empowerment",
+ "agriculture": ("Agriculture &amp; Food Systems",
    "We cultivate short-duration crops, sustainable livestock, and youth entrepreneurship across Africa.",
    "focus-agriculture.html"),
- "education": ("Education & Skill Development",
+ "education": ("Learning &amp; Future Careers",
    "Revolutionizing rural learning through dynamic hybrid models, hands-on science, and mobile technology.",
    "focus-education.html"),
- "entrepreneurship": ("Youth Entrepreneurship & Innovation",
+ "entrepreneurship": ("Enterprise &amp; Youth Employment",
    "The driving force of the 21st century—unlocking creativity, building sustainable ventures, and empowering local economies.",
    "focus-entrepreneurship.html"),
- "ecotourism": ("Eco-Tourism & Sustainable Travel",
+ "ecotourism": ("Heritage &amp; Sustainability",
    "Experience the natural beauty of Sierra Leone while supporting local community development and conservation.",
    "focus-ecotourism.html"),
- "health": ("Community Healthcare Initiatives",
+ "health": ("Health &amp; Wellbeing",
    "Addressing vital healthcare needs through community assessment, medical supplies, and stakeholder collaboration.",
    "focus-health.html"),
- "technology": ("Technology & Digital Inclusion",
+ "technology": ("Technology &amp; Digital Inclusion",
    "Bridging the digital divide in rural Sierra Leone through broadband expansion, computer education, and sustainable infrastructure.",
    "focus-technology.html"),
 }
-FOCUS_ORDER = [("Art","art"),("Agriculture","agriculture"),("Education","education"),
- ("Entrepreneurship","entrepreneurship"),("Ecotourism","ecotourism"),("Healthcare","health"),("Technology","technology")]
+FOCUS_ORDER = [("Creative Economy","art"),("Agriculture &amp; Food Systems","agriculture"),
+ ("Learning &amp; Future Careers","education"),("Enterprise &amp; Youth Employment","entrepreneurship"),
+ ("Heritage &amp; Sustainability","ecotourism"),("Health &amp; Wellbeing","health"),
+ ("Technology &amp; Digital Inclusion","technology")]
 
 chips = "".join(
     f'<button class="chip{" is-active" if k=="art" else ""}" data-focus="{k}">{lbl}</button>'
@@ -286,24 +313,80 @@ panels = "".join(
     f'<p class="lead">{v[1]}</p><a class="btn btn--outline" href="{v[2]}">Check {lbl} →</a></div>'
     for lbl, k in FOCUS_ORDER for v in [FOCUS[k]])
 
+SECTOR_CARDS = [
+  {"title": "Creative Economy", "text": "We feature African artists, filmmakers, designers, musicians and cultural entrepreneurs whose work creates value, preserves heritage and opens new opportunities. Through interviews and learning resources, we explore the skills, markets and partnerships that can help creative talent grow.", "cta": "Explore sector", "href": "focus-art.html"},
+  {"title": "Agriculture &amp; Food Systems", "text": "Agriculture remains central to community livelihoods. VOTE Africa documents the experiences of young farmers, food processors and agribusiness innovators, while AYM may support approved local enterprise pilots, learning and partnerships.", "cta": "Explore sector", "href": "focus-agriculture.html"},
+  {"title": "Learning &amp; Future Careers", "text": "We examine how young Africans gain useful knowledge through schools, apprenticeships, online learning and practical work. Our stories connect training with real labor-market needs and highlight accessible pathways to develop skills.", "cta": "Explore sector", "href": "focus-education.html"},
+  {"title": "Enterprise &amp; Youth Employment", "text": "We report on young entrepreneurs who identify problems, test ideas, serve customers and create value. AYM helps approved teams organize, assess feasibility and mobilize resources responsibly; funding and success are not guaranteed.", "cta": "Explore sector", "href": "focus-entrepreneurship.html"},
+  {"title": "Heritage &amp; Sustainability", "text": "We explore the connection between African heritage, natural places and responsible local livelihoods. Stories feature community-led tourism, conservation, hospitality skills and cultural preservation, with verified local projects presented separately.", "cta": "Explore sector", "href": "focus-ecotourism.html"},
+  {"title": "Health &amp; Wellbeing", "text": "Healthy communities make youth opportunity possible. We share carefully sourced public-health stories, highlight qualified local practitioners and examine community-led solutions. VOTE Africa does not replace medical advice or clinical services.", "cta": "Explore sector", "href": "focus-health.html"},
+  {"title": "Technology &amp; Digital Inclusion", "text": "We document how African creators, students and enterprises use software, AI, mobile tools and digital infrastructure to solve practical problems. Our volunteer teams also build skills through supervised digital projects.", "cta": "Explore sector", "href": "focus-technology.html"},
+]
+SECTOR_HUB = hero_page(
+  "Opportunity Sectors",
+  "Explore Africa’s Opportunity Sectors.",
+  "We cover seven fields where African youth are learning, creating, working and improving their communities. Each sector follows the same five-part path: the challenge, African voices, opportunities and solutions, projects and evidence, and ways to get involved.",
+  "assets/img/landing-page01-1.png", "Opportunity Sectors",
+  actions='<a class="btn btn--accent" href="blog.html">Explore Stories</a>'
+          '<a class="btn btn--ghost" href="volunteer.html">Join the Movement</a>'
+) + f"""
+<section class="section">
+  <div class="container">
+    <div class="section__head center"><span class="eyebrow">Seven areas of opportunity</span><h2>Voices, evidence, opportunities and action</h2></div>
+    {cards_grid(SECTOR_CARDS, 3)}
+  </div>
+</section>
+""" + CONTACT_CTA
+page("opportunity-sectors.html", "Opportunity Sectors", "Explore the seven Opportunity Sectors covered by VOTE Africa and AYM.", SECTOR_HUB, "focus")
+
+print("opportunity sectors done")
+
 CURRENT_PROJECTS = [
-  {"title":"Building Artistic Bridges Through Perception","tag":"Africa / Art","text":"Connecting artists and audiences across continents to reshape global perceptions of Africa.","cta":"Learn More","href":"focus-art.html","img":"assets/img/projects-2.png"},
-  {"title":"Mattru Jong Project Summit","tag":"Ecotourism","text":"Developing 100+ acres along the Jong River into an ecotourism and enterprise hub.","cta":"Watch Videos","href":"focus-ecotourism.html"},
-  {"title":"Brick Making","tag":"Art","text":"A youth-led brick-making enterprise creating jobs and building materials locally.","cta":"Learn More","href":"focus-entrepreneurship.html","img":"assets/img/projects-3.png"},
-  {"title":"One Dollar Campaign","tag":"Micro-donations","text":"Small, consistent micro donations that fund youth-led projects.","cta":"Learn More","href":"donate.html"},
+  {"title":"Building Artistic Bridges Through Perception","tag":"Ongoing · Africa / Art","text":"Connecting artists and audiences across continents to reshape global perceptions of Africa.","cta":"Learn More","href":"focus-art.html","img":"assets/img/projects-2.png"},
+  {"title":"Mattru Jong Project Pioneer Summit","tag":"In planning · Ecotourism","text":"A community-led summit connecting local knowledge, enterprise ideas and ecotourism in Mattru Jong.","cta":"Learn More","href":"focus-ecotourism.html"},
 ]
 
+HOME_PROJECTS = [
+  {"title":"Building Artistic Bridges Through Perception","tag":"Africa / Art","text":"Connecting artists and audiences across continents to reshape global perceptions of Africa.","cta":"Learn More","href":"focus-art.html","img":"assets/img/projects-2.png"},
+  {"title":"Mattru Jong Project Summit","tag":"Ecotourism","text":"Developing 100+ acres along the Jong River into an ecotourism and enterprise hub.","cta":"Watch Videos","href":"focus-ecotourism.html"},
+  {"title":"Brick Making","tag":"Art","text":"A youth-led brick-making enterprise producing building materials and practical learning locally.","cta":"Learn More","href":"focus-entrepreneurship.html","img":"assets/img/projects-3.png"},
+]
+
+HERO_QUICK_NAV = """
+  <nav class="hero-quick-nav" aria-label="Homepage quick links">
+    <a class="hero-quick-nav__item" href="donate.html">
+      <span class="hero-quick-nav__bullet" aria-hidden="true"></span>
+      <span class="hero-quick-nav__copy"><span class="hero-quick-nav__title">Donate Now</span><span class="hero-quick-nav__desc">Back youth-led ideas</span></span>
+      <span class="hero-quick-nav__arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="hero-quick-nav__item" href="volunteer-apply.html">
+      <span class="hero-quick-nav__bullet" aria-hidden="true"></span>
+      <span class="hero-quick-nav__copy"><span class="hero-quick-nav__title">Apply as a Volunteer</span><span class="hero-quick-nav__desc">Share time and skills</span></span>
+      <span class="hero-quick-nav__arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="hero-quick-nav__item" href="chapter.html">
+      <span class="hero-quick-nav__bullet" aria-hidden="true"></span>
+      <span class="hero-quick-nav__copy"><span class="hero-quick-nav__title">Start a Chapter</span><span class="hero-quick-nav__desc">Lead in your community</span></span>
+      <span class="hero-quick-nav__arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="hero-quick-nav__item" href="store.html">
+      <span class="hero-quick-nav__bullet" aria-hidden="true"></span>
+      <span class="hero-quick-nav__copy"><span class="hero-quick-nav__title">Impact Shop</span><span class="hero-quick-nav__desc">Wear the movement</span></span>
+      <span class="hero-quick-nav__arrow" aria-hidden="true">↗</span>
+    </a>
+  </nav>
+"""
+
 LANDING = hero_page(
-  "Twenty-First Century African Youth Movement",
-  'Young People. <em>Real Power. A Thriving Africa.</em>',
-  "AYM works with young people to build skills, create enterprises, and strengthen communities",
+  "VOTE Africa",
+  "Africa Speaks. The World Listens.",
+  "Voices of the Emerging Africa is a global media and engagement initiative of the Twenty-First Century African Youth Movement, Inc. (AYM), a U.S.-registered nonprofit organization.",
   "assets/img/landing-page01-3.png", "Home",
-  actions='<a class="btn btn--accent btn--lg" href="donate.html">Donate Now</a>'
-          '<a class="btn btn--ghost btn--lg" href="volunteer.html">Volunteer</a>'
-          '<a class="btn btn--ghost btn--lg" href="chapter.html">Start a Chapter</a>'
-          '<a class="btn btn--ghost btn--lg" href="store.html">Impact Store</a>',
-  extra='<div class="hero__media hero__media--placeholder" role="img" aria-label="AYM project preview"><span class="hero__media-inner">AYM Project</span></div>',
-  cls=" hero--split",
+  actions='<a class="btn btn--accent btn--lg" href="blog.html">Watch Our Stories</a>'
+          '<a class="btn btn--ghost btn--lg" href="contact.html">Share Your Voice</a>'
+          '<a class="btn btn--ghost btn--lg" href="volunteer.html">Join the Movement</a>',
+  cls=" hero--home-nav",
+  post=HERO_QUICK_NAV,
 ) + f"""
 <section class="section">
   <div class="container">
@@ -337,7 +420,7 @@ LANDING = hero_page(
       <div class="card"><div class="card__body">
         <div class="card__tag">United States</div>
         <h3 class="card__title">Apply as a Volunteer</h3>
-        <p class="card__text">Run local campaigns via custom fundraising pages and leverage AYM's legal framework to pitch for institutional funding.</p>
+        <p class="card__text">Propose local campaigns for approval. Any fundraising or institutional funding activity must follow AYM's governance, authorization and written terms.</p>
         <a class="card__link" href="volunteer.html">Apply as a Volunteer →</a></div></div>
     </div>
   </div>
@@ -346,7 +429,7 @@ LANDING = hero_page(
 <section class="section">
   <div class="container">
     <div class="section__head"><span class="eyebrow">Current projects</span><h2>What we're working on right now</h2><p class="lead">Where your support goes today &mdash; live projects across art, ecotourism and youth enterprise.</p></div>
-    {cards_grid(CURRENT_PROJECTS[:3], 3)}
+    {cards_grid(HOME_PROJECTS, 3)}
     <div class="center mt-3"><a class="btn btn--outline" href="projects.html">View All Projects →</a></div>
   </div>
 </section>
@@ -368,8 +451,8 @@ LANDING = hero_page(
 <section class="section section--cream">
   <div class="container">
     <div class="section__head">
-      <span class="eyebrow">Focus Areas</span>
-      <h2>Check out the areas we focus on</h2>
+      <span class="eyebrow">Opportunity Sectors</span>
+      <h2>Explore Africa’s Opportunity Sectors.</h2>
       <p class="lead">AYM revitalizes youth potentials in rural communities for social and political stability through education, technology, agribusiness, eco-tourism, entrepreneurship, and the creative arts.</p>
     </div>
     <div class="chips mb-2">{chips}</div>
@@ -382,9 +465,9 @@ LANDING = hero_page(
     <div>
       <span class="eyebrow">Our Approach</span>
       <h2>Extinguishing Poverty through Innovative Strategies</h2>
-      <p class="lead">Twenty-First Century African Youth Movement empowers rural youth through technology programs and prepares them for employment in good paying jobs and enables them to take control of their own future.</p>
+      <p class="lead">Twenty-First Century African Youth Movement works with rural youth through technology programs that build practical skills for work, enterprise and community leadership.</p>
       <div class="grid grid-2 mt-2">
-        <div><h3>Start a Chapter at AYM</h3><p class="muted">Transition from pure volunteer work to creating direct jobs. Hire local talent and build social enterprise models that generate revenue to fund the mission.</p><a class="btn--link" href="chapter.html">Start a Chapter →</a></div>
+        <div><h3>Start a Chapter at AYM</h3><p class="muted">Move from volunteering to proposing community-led enterprise ideas. Any hiring, revenue activity or funding requires approved plans and governance.</p><a class="btn--link" href="chapter.html">Start a Chapter →</a></div>
         <div><h3>Contribute by buying goods</h3><p class="muted">Host local events, participate in the African Lecture Series, and collaborate on continent-wide initiatives with leaders across Africa.</p><a class="btn--link" href="store.html">View Store →</a></div>
       </div>
     </div>
@@ -434,7 +517,7 @@ ABOUT = hero_page(
   "assets/img/about-1.png", "About",
   actions='<a class="btn btn--accent" href="donate.html">Donate Now</a>'
           '<a class="btn btn--ghost" href="about-team.html">Meet the Team</a>'
-) + statrow([("2000", "Founded"), ("50+", "Enterprises Created"), ("7", "Sierra Leone Staff"), ("6", "Chapter Countries")]) + f"""
+) + statrow([("2000", "Founded"), ("Youth-led", "Program design"), ("Sierra Leone", "Operational base"), ("Local", "Community roots")]) + f"""
 <section class="section">
   <div class="container grid grid-2">
     <div>
@@ -456,7 +539,7 @@ ABOUT = hero_page(
     </div>
     <div class="card card--flat" style="max-width:920px;margin:0 auto"><div class="card__body">
       <h3 class="card__title">The Solution</h3>
-      <p class="card__text">Mobilizing and providing employment for Africa's unemployed and underemployed youth is the key to the continent's economic growth and stability. AYM works to mobilize marginalized youth through education, training, and entrepreneurial opportunities to help move communities away from poverty, disease, and hunger—engaging them as change-makers in the rebuilding and development of Sierra Leone and across Africa.</p>
+      <p class="card__text">Mobilizing and supporting Africa's unemployed and underemployed youth is central to the continent's economic growth and stability. AYM works through education, training, and entrepreneurial opportunities to help move communities away from poverty, disease, and hunger—engaging young people as change-makers in the rebuilding and development of Sierra Leone and across Africa.</p>
     </div></div>
   </div>
 </section>
@@ -465,11 +548,24 @@ ABOUT = hero_page(
   <div class="container">
     <div class="section__head"><span class="eyebrow">What we do</span><h2>What we do to take action</h2></div>
     <div class="grid grid-4">
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Job Creation</h3><p class="muted">We design programs that foster employment through skill-building workshops and hands-on training.</p></div>
+      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Skills and Enterprise</h3><p class="muted">We support skill-building workshops and supervised project experience connected to approved mission activities.</p></div>
       <div class="feature"><div class="feature__ico">&#9733;</div><h3>Youth Training</h3><p class="muted">We offer courses and mentorships in various sectors, including technology, entrepreneurship, agribusiness, and creative arts.</p></div>
       <div class="feature"><div class="feature__ico">&#9733;</div><h3>Community Projects</h3><p class="muted">Our initiatives connect youth with real-world projects that promote development and social impact.</p></div>
       <div class="feature"><div class="feature__ico">&#9733;</div><h3>Strategic Partnerships</h3><p class="muted">We collaborate with NGOs, educational institutions, and private sector partners to expand opportunities for youth.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="section section--cream" id="vote-africa">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">VOTE Africa</span>
+      <h2>Voices of the Emerging Africa</h2>
+      <p class="lead">VOTE Africa is a global media and engagement initiative of the Twenty-First Century African Youth Movement, Inc. (AYM), a U.S.-registered nonprofit organization. It shares African voices, perspectives and practical information about opportunity sectors across the continent.</p>
+      <p class="muted">VOTE Africa is not a separate nonprofit, political party, fundraising vehicle or employer. Stories are published for learning and dialogue. Programs, grants and enterprise activity take place only under approved AYM governance and written authorization.</p>
+      <p class="mt-2"><a class="btn btn--outline" href="opportunity-sectors.html">Explore Opportunity Sectors →</a></p>
+    </div>
+    <div class="split__media"><img src="assets/img/landing-page01-3.png" alt="VOTE Africa"></div>
   </div>
 </section>
 
@@ -478,7 +574,7 @@ ABOUT = hero_page(
     <div>
       <span class="eyebrow" style="color:var(--brand)">Our Story</span>
       <h2>The History and Story of AYM</h2>
-      <p class="lead" style="color:rgba(255,255,255,.85)">Abu-Hassan Koroma migrated to the United States in 1991, immediately after the start of the Sierra Leone Civil War. The war (1991–2002) left an estimated 60% of young people economically and socially abandoned. At the end of the war, training alone was not enough—creating long-term alternatives for self-reliance required a broader coalition and genuine employment opportunities.</p>
+      <p class="lead" style="color:rgba(255,255,255,.85)">Abu-Hassan Koroma migrated to the United States in 1991, immediately after the start of the Sierra Leone Civil War. The war (1991–2002) left an estimated 60% of young people economically and socially abandoned. At the end of the war, training alone was not enough—creating long-term alternatives for self-reliance required a broader coalition and practical pathways to work and enterprise.</p>
       <div class="tabs mt-2" data-tabs>
         <div class="tabs__nav">
           <button class="chip is-active" data-tab="roots">Roots</button>
@@ -551,7 +647,7 @@ page("about-team.html", "About the Team", "Meet the founder and leadership behin
 # ==========================================================================
 CONTACT = hero_page(
   "Contact",
-  "Get in touch",
+  "Get In Touch",
   "Our friendly team would love to hear from you.",
   "assets/img/contact-3.png", "Contact"
 ) + f"""
@@ -615,6 +711,24 @@ VOL_ROLES = [
   ("Project Manager", "remote on-site", "Remote / Sierra Leone", "Part-time Â· 10+ hrs/week",
    "Planning, coordination, reporting", "Experienced",
    "Coordinate volunteers and deliverables."),
+  ("Video Editor", "remote flexible", "Remote", "Flexible · 4+ hrs/week",
+   "Video editing, captions, visual storytelling", "Intermediate",
+   "Shape VOTE Africa story videos and short clips."),
+  ("Interview Host", "remote flexible", "Remote", "Flexible · 4+ hrs/week",
+   "Interviewing, facilitation, careful listening", "Beginner to intermediate",
+   "Host conversations with young leaders and community voices."),
+  ("Correspondent", "remote on-site", "Remote / Sierra Leone", "Part-time · 8+ hrs/week",
+   "Field reporting, photography, accurate notes", "Intermediate",
+   "Document community-led stories from the field."),
+  ("Producer", "remote part-time", "Remote", "Part-time · 10+ hrs/week",
+   "Planning, coordination, editorial judgment", "Experienced",
+   "Coordinate story production from pitch to publication."),
+  ("Translator", "remote flexible", "Remote", "Flexible · 4+ hrs/week",
+   "English and local-language fluency", "Intermediate",
+   "Support subtitles and accurate community-language access."),
+  ("Channel Manager", "remote part-time", "Remote", "Part-time · 6+ hrs/week",
+   "YouTube, scheduling, analytics", "Intermediate",
+   "Maintain the AYM video library and publishing calendar."),
 ]
 role_cards = "".join(
   f'<article class="card" data-role="{tags}"><div class="card__body">'
@@ -690,7 +804,7 @@ VOL = hero_page(
     <div>
       <span class="eyebrow">Fellowship</span>
       <h2>1-Year School Leaver Fellowship</h2>
-      <p class="lead">Not just ready for a job—ready to lead. The AYM Youth Fellowship is a one-year immersive placement that bridges the gap between school and a meaningful career.</p>
+      <p class="lead">A proposed one-year, supervised volunteer learning pathway for emerging African leaders. Participation does not guarantee employment, payment, travel or placement.</p>
       <p><a class="btn btn--brand" href="volunteer-fellowship.html">Explore the Fellowship →</a></p>
     </div>
   </div>
@@ -698,11 +812,8 @@ VOL = hero_page(
 
 <section class="section section--cream">
   <div class="container">
-    <div class="section__head center"><span class="eyebrow">Testimonials</span><h2>What our volunteers say</h2></div>
-    <div class="grid grid-2">
-      <blockquote class="quote"><p>"Volunteering with AYM gave me real responsibility and a global network I never expected."</p><cite>Amara K., Digital Marketing Volunteer</cite></blockquote>
-      <blockquote class="quote"><p>"I came to help build a website; I left having helped build a movement."</p><cite>David O., Web Designer</cite></blockquote>
-    </div>
+    <div class="section__head center"><span class="eyebrow">Volunteer Experience</span><h2>How volunteers contribute</h2></div>
+    <p class="lead center">Volunteers receive defined assignments, supervision and portfolio-building opportunities. Media support may include video editors, interview hosts, correspondents, producers, translators and channel managers. Roles begin on a voluntary basis and do not guarantee employment, payment, travel or placement.</p>
   </div>
 </section>
 
@@ -718,7 +829,7 @@ VOL = hero_page(
   ("What are the eligibility requirements?", "You must be 16 or older, able to work in English, and comfortable passing a basic background check. Most roles need no prior professional experience."),
   ("How do I apply?", 'Complete the <a href="volunteer-apply.html">five-step application form</a>. Your progress is saved as you go, so you can pause and return at any time.'),
   ("Do I need experience?", "Roles range from entry-level to specialist. We match your skills with a need."),
-  ("How much time is required?", "It's flexible—from a few hours a week to full-time fellowship placements."),
+  ("How much time is required?", "It's flexible—from a few hours a week to scheduled project work. Roles begin on a voluntary basis."),
   ("Can I volunteer remotely?", "Yes. Many of our roles are fully remote, joining a global network of volunteers."),
   ("What happens after I apply?", "Application → background check → role acceptance → start your first project."),
 ]) + CONTACT_CTA
@@ -896,18 +1007,18 @@ page("volunteer-apply.html", "Volunteer Application",
 # PAGE: VOLUNTEER-FELLOWSHIP
 # ==========================================================================
 FELLOW = hero_page(
-  "AYM Youth Fellowship",
-  "Bridge the Gap Between School &amp; Success",
-  "A 1-year immersive placement for school leavers to work alongside AYM leadership, build real-world experience, and launch their careers.",
+  "AYM Global Youth Leadership Fellowship",
+  "AYM Global Youth Leadership Fellowship (Proposed)",
+  "A proposed one-year, supervised volunteer learning pathway for emerging African leaders. Participation does not guarantee employment, payment, travel or placement.",
   "assets/img/volunteer--special-0.png", "Get Involved / Fellowship",
-  actions='<a class="btn btn--accent" href="volunteer-apply.html">Apply for the Fellowship</a>'
+  actions='<a class="btn btn--accent" href="#program">Read Program Outline</a>'
 ) + f"""
-<section class="section">
+<section class="section" id="program">
   <div class="container split">
     <div>
       <span class="eyebrow">The Program</span>
       <h2>Step Into Leadership From Day One</h2>
-      <p class="lead">The AYM Youth Fellowship is designed for young people finishing school who are ready to work—but who need experience, mentorship, and a foothold. You won't fetch coffee: you'll own real projects.</p>
+      <p class="lead">The proposed fellowship is a supervised volunteer learning pathway for young people finishing school. Fellows may support media production, research, digital operations, partnerships and approved project development while building documented experience.</p>
       <h3 class="mt-2">Apply if you are a:</h3>
       <ul class="ticks">
         <li>Recent secondary school leaver ready to learn by doing.</li>
@@ -925,7 +1036,7 @@ FELLOW = hero_page(
     <div class="grid grid-3">
       <div class="feature"><div class="feature__ico">&#10003;</div><h3>Direct Mentorship</h3><p class="muted">Work alongside AYM leadership and experienced professionals.</p></div>
       <div class="feature"><div class="feature__ico">&#10003;</div><h3>Verified Work Experience</h3><p class="muted">Build a portfolio and a reference you can prove.</p></div>
-      <div class="feature"><div class="feature__ico">&#10003;</div><h3>Career Pathways</h3><p class="muted">Exceptional fellows are retained as staff or referred to our partner network.</p></div>
+      <div class="feature"><div class="feature__ico">&#10003;</div><h3>Documented Experience</h3><p class="muted">Fellows may build portfolios and request references based on completed work.</p></div>
     </div>
   </div>
 </section>
@@ -959,7 +1070,7 @@ FELLOW = hero_page(
   ("Is it remote?", "Tracks combine on-site work in Sierra Leone with online collaboration."),
   ("What happens at the end?", "You graduate with a formal reference, a portfolio, and career-pathway support."),
 ]) + CONTACT_CTA
-page("volunteer-fellowship.html", "AYM Youth Fellowship", "A one-year immersive placement for school leavers to build real-world experience and launch their careers.", FELLOW, "volunteer")
+page("volunteer-fellowship.html", "AYM Global Youth Leadership Fellowship", "A proposed one-year, supervised volunteer learning pathway for emerging African leaders.", FELLOW, "volunteer")
 
 # ==========================================================================
 # PAGE: DONATE (Fundraising)
@@ -972,7 +1083,7 @@ TIERS = [
   ("250","Supports group training, mentorship, or a community project milestone.","$250"),
   ("500","Helps launch or expand a small youth-led pilot enterprise.","$500"),
   ("1000","Provides substantial support for training, equipment, or project implementation.","$1,000"),
-  ("monthly","Provides dependable funding that helps AYM plan and sustain its programs.","Monthly"),
+  ("monthly","Provides recurring support that helps AYM plan and sustain approved programs.","Monthly"),
 ]
 tier_buttons = "".join(
   f'<button class="tier{" is-active" if v=="100" else ""}" data-tier data-amount="{v}">{"$"+t if t!="monthly" else "Monthly"}<span>{d}</span></button>'
@@ -1015,7 +1126,7 @@ hero_amounts = "".join(
 DONATE = hero_page(
   "Fundraising",
   "Invest directly in <em>Africa's youth-led future</em>",
-  "Equip young leaders with skills and resources to launch enterprises, create jobs, and build lasting economic independence across rural communities.",
+  "Equip young leaders with skills and resources to explore enterprises, build livelihoods, and strengthen local economic independence across rural communities.",
   "assets/img/fundraising-2.png", "Get Involved / Donate",
   actions='<a class="btn btn--accent" href="#give">Donate Now</a>',
   extra=(f'<div class="hero-widget">'
@@ -1026,7 +1137,7 @@ DONATE = hero_page(
 ) + f"""
 <section class="section" id="give">
   <div class="container">
-    <div class="section__head center"><span class="eyebrow">Make a gift</span><h2>Choose an amount</h2><p class="lead">100% of your gift is directed to AYM's approved programs and operations.</p></div>
+    <div class="section__head center"><span class="eyebrow">Make a gift</span><h2>Choose an amount</h2><p class="lead">Choose a secure giving option. Donations may support approved programs and reasonable operating costs in accordance with donor restrictions and AYM policy. For project-restricted gifts, use only campaigns that AYM has approved and can administer.</p></div>
     <div class="tiers">{tier_buttons}</div>
 
     <div class="divider"></div>
@@ -1038,7 +1149,7 @@ DONATE = hero_page(
     <div class="center mt-3">
       <button class="btn btn--accent btn--lg" data-method-cta type="button">Donate $100 with Zeffy</button>
       <p class="cta-note" data-cta-note hidden></p>
-      <p class="small muted mt-1">Secure payments processed by verified third-party providers. AYM never stores your full card details.</p>
+      <p class="small muted mt-1">Payments are processed by third-party providers. AYM does not store your full card details.</p>
     </div>
     <dialog class="payment-dialog" data-payment-dialog aria-labelledby="payment-dialog-title">
       <div class="payment-dialog__head"><div><span class="eyebrow">AYM donations</span><h2 id="payment-dialog-title" data-payment-title>Payment details</h2></div><button class="payment-dialog__close" type="button" data-payment-close aria-label="Close">&times;</button></div>
@@ -1052,21 +1163,31 @@ DONATE = hero_page(
   <div class="container">
     <div class="section__head center"><span class="eyebrow">Your impact</span><h2>What your donation supports</h2></div>
     <div class="grid grid-3">
-      <div class="feature"><h3>Youth Employment</h3><p class="muted">Job training and hands-on placements that lead to real work.</p></div>
+      <div class="feature"><h3>Skills and Learning</h3><p class="muted">Practical learning and supervised project experience connected to approved mission activities.</p></div>
       <div class="feature"><h3>Youth Enterprises</h3><p class="muted">Seed support for small, youth-led ventures that generate income.</p></div>
       <div class="feature"><h3>Community Projects</h3><p class="muted">Education, agriculture, health, and tech initiatives in rural communities.</p></div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="section__head center"><span class="eyebrow">Areas we support</span><h2>Direct your gift to a focus area</h2><p class="lead">Choose a program area to see exactly what your money funds &mdash; or let AYM put it where it is needed most.</p></div>
+    <div class="section__head center"><span class="eyebrow">Charitable gifts and other support</span><h2>How support is accounted for</h2><p class="lead">Charitable donations fund approved mission activities. Sponsorships support identified media or events under written terms. Advertising, licensing and merchandise generate earned revenue that AYM accounts for separately.</p></div>
+    <div class="grid grid-3">
+      <div class="feature"><h3>Charitable donations</h3><p class="muted">Support approved mission activities and reasonable operating costs in line with donor restrictions and AYM policy.</p></div>
+      <div class="feature"><h3>Sponsorships</h3><p class="muted">Support identified media or events under written terms agreed with AYM.</p></div>
+      <div class="feature"><h3>Earned revenue</h3><p class="muted">Advertising, licensing and merchandise are accounted for separately from charitable gifts.</p></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section__head center"><span class="eyebrow">Opportunity Sectors</span><h2>Topics connected to AYM's work</h2><p class="lead">Explore the sectors covered by VOTE Africa. Project-restricted gifts are accepted only for campaigns AYM has approved and can administer.</p></div>
     <div class="chips chips--lg">
-      <a class="chip" href="focus-art.html">Art</a>
+      <a class="chip" href="opportunity-sectors.html">All sectors</a>
+      <a class="chip" href="focus-art.html">Creative Economy</a>
       <a class="chip" href="focus-agriculture.html">Agriculture</a>
-      <a class="chip" href="focus-education.html">Education</a>
-      <a class="chip" href="focus-entrepreneurship.html">Entrepreneurship</a>
-      <a class="chip" href="focus-ecotourism.html">Ecotourism</a>
-      <a class="chip" href="focus-health.html">Healthcare</a>
+      <a class="chip" href="focus-education.html">Learning</a>
+      <a class="chip" href="focus-entrepreneurship.html">Enterprise</a>
+      <a class="chip" href="focus-ecotourism.html">Heritage and Tourism</a>
+      <a class="chip" href="focus-health.html">Health</a>
       <a class="chip" href="focus-technology.html">Technology</a>
     </div>
   </div>
@@ -1080,7 +1201,7 @@ DONATE = hero_page(
       <div class="step"><div class="step__num">2</div><h3>Your receipt</h3><p class="muted">An emailed receipt with the amount, date, and AYM\u2019s EIN for your records.</p></div>
       <div class="step"><div class="step__num">3</div><h3>Impact updates</h3><p class="muted">We follow up with news of the programs and youth your gift supports.</p></div>
     </div>
-    <p class="small muted center mt-2">Gifts are processed by verified third-party payment providers. AYM does not store your card details.</p>
+    <p class="small muted center mt-2">Gifts are processed by third-party payment providers. AYM does not store your card details.</p>
   </div>
 </section>
 
@@ -1089,7 +1210,7 @@ DONATE = hero_page(
     <div class="card card--flat"><div class="card__body">
       <span class="eyebrow">Trust &amp; Transparency</span>
       <h3 class="card__title">Your gift is handled with care</h3>
-      <p class="card__text">AYM is committed to ethical stewardship and transparent reporting. We provide clear information on our leadership, finances, and programs so donors can see exactly how their support drives youth employment and community development.</p>
+      <p class="card__text">AYM is committed to ethical stewardship and transparent reporting. We provide clear information on our leadership, finances, and programs so donors can see how their support is directed to approved programs and community development.</p>
       <p class="small muted">AYM is a 501(C)(3) Nonprofit Organization.<br>EIN: 39-1742519. Donations are tax-deductible to the extent allowed by law.</p>
     </div></div>
     <div class="card card--flat"><div class="card__body">
@@ -1106,12 +1227,12 @@ DONATE = hero_page(
     <span class="eyebrow" style="color:var(--brand)">Our impact so far</span>
     <h2>Together we've built momentum</h2>
     <div class="stats stats--dark" style="justify-content:center">
-      <div class="stat"><div class="stat__num">5000+</div><div class="stat__label">Lives Changed</div></div>
-      <div class="stat"><div class="stat__num">50+</div><div class="stat__label">Enterprises Created</div></div>
-      <div class="stat"><div class="stat__num">$100K</div><div class="stat__label">Funds Raised</div></div>
-      <div class="stat"><div class="stat__num">10K+</div><div class="stat__label">Members Worldwide</div></div>
+      <div class="stat"><div class="stat__num">Local</div><div class="stat__label">Community-rooted programs</div></div>
+      <div class="stat"><div class="stat__num">Learning</div><div class="stat__label">Skills and practical experience</div></div>
+      <div class="stat"><div class="stat__num">Enterprise</div><div class="stat__label">Approved local pilots</div></div>
+      <div class="stat"><div class="stat__num">Verified</div><div class="stat__label">Updates published after review</div></div>
     </div>
-    <p class="small" style="color:rgba(255,255,255,.7)">Figures pending final verification with AYM's finance team.</p>
+    <p class="small" style="color:rgba(255,255,255,.7)">AYM publishes numeric impact figures only after program and finance verification.</p>
   </div>
 </section>
 """ + faq([
@@ -1122,10 +1243,10 @@ DONATE = hero_page(
   ("Can I donate to a particular project?", "Yes, when a designated option is available. AYM explains how it handles gifts when a project is completed, fully funded, postponed, or no longer feasible."),
   ("Can my employer match my donation?", "Some employers match charitable contributions or volunteer hours. Search your employer's matching-gift system or contact your human-resources department."),
   ("Can I donate equipment or supplies?", "AYM may accept approved gifts that meet a documented program need. Contact AYM before purchasing or shipping materials because transportation, customs, storage and distribution costs may exceed the item's value."),
-  ("Is online giving secure?", "Payments are processed through verified third-party services using encrypted connections. AYM does not collect or store complete card information directly on its website."),
+  ("Is online giving secure?", "Payments are processed through third-party services. AYM does not collect or store complete card information directly on its website. Check the provider's checkout page for its current security details."),
   ("Can I donate anonymously?", "Yes, where the payment system permits it. AYM may still need limited information to process the contribution and comply with legal or financial requirements."),
 ]) + CONTACT_CTA
-page("donate.html", "Donate", "Invest directly in Africa's youth-led future. Choose a one-time or monthly gift to support youth employment and enterprises.", DONATE, "donate")
+page("donate.html", "Donate", "Invest directly in Africa's youth-led future. Choose a one-time or monthly gift to support youth skills and enterprise activities.", DONATE, "donate")
 
 print("volunteer/fellowship/donate done")
 
@@ -1135,7 +1256,7 @@ print("volunteer/fellowship/donate done")
 CHAPTER = hero_page(
   "AYM Chapter",
   "Mobilize Your Community. <em>Lead an AYM Chapter.</em>",
-  "Bring the African Youth Movement to your city or country. Gain the backing, global credibility, and fundraising infrastructure you need to launch grassroots initiatives, hire local talent, and build sustainable solutions.",
+  "Bring the African Youth Movement to your city or country. Document community stories, develop practical ideas and collaborate under approved standards. Participation does not create an AYM legal chapter or authorize fundraising in AYM's name; independent community groups may partner without becoming official chapters.",
   "assets/img/aym-chapter-0.png", "About / Chapter",
   actions='<a class="btn btn--ghost" href="#network">Find an Existing Chapter</a>'
           '<a class="btn btn--accent" href="contact.html">Apply to Start a Chapter</a>'
@@ -1144,9 +1265,9 @@ CHAPTER = hero_page(
   <div class="container">
     <div class="section__head center"><span class="eyebrow">Why start a chapter</span><h2>Why Start a Local Chapter?</h2></div>
     <div class="grid grid-4">
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Global Credibility &amp; Fundraising</h3><p class="muted">Access AYM's established organizational status to apply for international grants and institutional funding.</p></div>
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Turnkey Resource Infrastructure</h3><p class="muted">Set up localized fundraising through integrated PayPal and digital campaign tools.</p></div>
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Centralized Pan-African Network</h3><p class="muted">Combine fundraising power across regional groups for continent-wide impact.</p></div>
+      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Global Credibility &amp; Fundraising</h3><p class="muted">Approved local teams may collaborate under AYM's governance on grant and institutional-funding proposals, subject to written authorization.</p></div>
+      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Turnkey Resource Infrastructure</h3><p class="muted">Approved teams may use AYM's campaign tools only under written authorization and reporting rules.</p></div>
+      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Centralized Pan-African Network</h3><p class="muted">Approved chapters and independent partners can coordinate shared activities without merging legal entities.</p></div>
       <div class="feature"><div class="feature__ico">&#9733;</div><h3>Leadership Development</h3><p class="muted">Connect members to cross-border conferences, leadership training and the African Lecture Series.</p></div>
     </div>
   </div>
@@ -1157,8 +1278,8 @@ CHAPTER = hero_page(
     <div class="section__head center"><span class="eyebrow">How it works</span><h2>How Chapters Drive Impact</h2></div>
     <div class="grid grid-4">
       <div class="step"><div class="step__num">1</div><h3>Local Grassroots Organizing</h3><p class="muted">Bring people together around the issues that matter in your community.</p></div>
-      <div class="step"><div class="step__num">2</div><h3>Resource Mobilization &amp; Grants</h3><p class="muted">Raise funds and apply for grants using AYM's infrastructure.</p></div>
-      <div class="step"><div class="step__num">3</div><h3>Creating Sustainable Employment</h3><p class="muted">Hire local talent and build social enterprise models.</p></div>
+      <div class="step"><div class="step__num">2</div><h3>Resource Mobilization &amp; Grants</h3><p class="muted">Approved teams may mobilize resources and apply for grants only with written authorization.</p></div>
+      <div class="step"><div class="step__num">3</div><h3>Creating Sustainable Employment</h3><p class="muted">Develop locally led enterprise ideas; hiring depends on approved plans and funding.</p></div>
       <div class="step"><div class="step__num">4</div><h3>Knowledge Sharing</h3><p class="muted">Share lessons across the Pan-African chapter network.</p></div>
     </div>
   </div>
@@ -1195,7 +1316,7 @@ CHAPTER = hero_page(
     <div class="section__head center"><span class="eyebrow">Resources</span><h2>Resources Provided to Chapter Leaders</h2></div>
     <div class="grid grid-3">
       <div class="feature"><h3>Fundraising &amp; Tech Toolkit</h3><p class="muted">Payment integrations, campaign templates and guides.</p></div>
-      <div class="feature"><h3>Legal &amp; Governance Support</h3><p class="muted">Operate under AYM's nonprofit framework with clear compliance guidance.</p></div>
+      <div class="feature"><h3>Legal &amp; Governance Support</h3><p class="muted">Approved teams receive guidance on operating within AYM's framework; other groups remain independent.</p></div>
       <div class="feature"><h3>Program &amp; Event Playbooks</h3><p class="muted">Proven templates for launching programs and local events.</p></div>
     </div>
   </div>
@@ -1208,16 +1329,17 @@ CHAPTER = hero_page(
       <div class="step"><div class="step__num">1</div><h3>Submit Your Application</h3><p class="muted">Tell us about your community and vision.</p></div>
       <div class="step"><div class="step__num">2</div><h3>Fill Background Check</h3><p class="muted">A screening step to keep our network safe.</p></div>
       <div class="step"><div class="step__num">3</div><h3>Receive Role Acceptance</h3><p class="muted">We confirm your chapter and connect you with mentors.</p></div>
-      <div class="step"><div class="step__num">4</div><h3>Start Your First Project</h3><p class="muted">Launch your first local initiative with full support.</p></div>
+      <div class="step"><div class="step__num">4</div><h3>Pilot a Documented Activity</h3><p class="muted">Run a small activity under agreed roles, brand permissions and reporting.</p></div>
     </div>
   </div>
 </section>
 """ + faq([
-  ("Who can start a chapter?", "Anyone committed to youth empowerment—individuals or small groups—can apply to start an AYM chapter."),
-  ("Is there a cost to start a chapter?", "No. Chapters are provided with resources, tooling and fundraising support at no cost."),
-  ("What support do I receive?", "A fundraising & tech toolkit, legal and governance support, and program & event playbooks."),
+  ("Who can start a chapter?", "Anyone committed to youth empowerment—individuals or small groups—can apply. Approval is required before a group may describe itself as an approved AYM chapter or use AYM's name and marks."),
+  ("Are all local groups official AYM chapters?", "No. Only groups that complete AYM's application, screening and written acceptance are recognized as approved AYM chapters. Other groups may be partners or emerging teams and should not imply formal status or tax-exempt status."),
+  ("Is there a cost to start a chapter?", "No. Local teams may use public resources and templates where permitted."),
+  ("What support do I receive?", "Orientation, role guidance, reporting expectations and approved templates where applicable."),
   ("How long does onboarding take?", "Submit application → background check → acceptance → start your first project."),
-  ("Do chapters handle their own finances?", "Yes, with transparency and compliance oversight from the AYM central team."),
+  ("Do chapters handle their own finances?", "Approved AYM chapters do not become separate 501(c)(3) organizations by joining the network. Financial activity must follow AYM's governance, reporting and written authorization; independent groups remain legally and financially separate."),
 ]) + CONTACT_CTA
 page("chapter.html", "Start an AYM Chapter", "Bring the African Youth Movement to your city or country and lead grassroots change.", CHAPTER, "chapter")
 
@@ -1225,16 +1347,16 @@ page("chapter.html", "Start an AYM Chapter", "Bring the African Youth Movement t
 # PAGE: STORE
 # ==========================================================================
 PRODUCTS = [
-  ("AYM Heritage Collegiate T-Shirt — Est. 2000","From $23.50","assets/img/store-1.png","Clothing"),
-  ("AYM Logo Cap — Est. 2000","$20.00","assets/img/store-0.png","Clothing"),
-  ("AYM Mission Mug","$12.00","assets/img/image-36-0.png","Mugs"),
-  ("AYM Spirit Tote Bag","$18.00","assets/img/image-38-0.png","Bags"),
-  ("AYM Pin Button Set","$8.00","","Accessories"),
-  ("AYM Sticker Pack","$5.00","","Accessories"),
-  ("AYM Laptop Sleeve","$28.00","","Accessories"),
-  ("AYM Water Bottle","$16.00","","Accessories"),
-  ("AYM Spiral Notebook","$10.00","","Stationery"),
-  ("AYM Tapestry","$30.00","","Home"),
+  ("AYM Heritage Collegiate T-Shirt — Est. 2000","From $23.50","assets/img/store-1.png","Clothing",False),
+  ("AYM Logo Cap — Est. 2000","$20.00","assets/img/store-0.png","Clothing",True),
+  ("AYM Mission Mug","$12.00","assets/img/image-36-0.png","Mugs",True),
+  ("AYM Spirit Tote Bag","$18.00","assets/img/image-38-0.png","Bags",True),
+  ("AYM Pin Button Set","$8.00","","Accessories",True),
+  ("AYM Sticker Pack","$5.00","","Accessories",True),
+  ("AYM Laptop Sleeve","$28.00","","Accessories",True),
+  ("AYM Water Bottle","$16.00","","Accessories",True),
+  ("AYM Spiral Notebook","$10.00","","Stationery",True),
+  ("AYM Tapestry","$30.00","","Home",True),
 ]
 cart_msg = ("Demo store \u2014 the shopping cart isn\u2019t connected yet. "
             "Link this button to your eCommerce provider (WooCommerce, Shopify Buy Button or Snipcart) to take real orders.")
@@ -1242,11 +1364,11 @@ product_cards = "".join(
   f'<article class="card" data-role="{c.lower()}">'
   + (f'<img class="card__img" src="{img}" alt="{t}" loading="lazy">' if img
      else '<div class="card__img card__img--placeholder" aria-hidden="true"></div>')
-  + f'<div class="card__body"><div class="card__tag">{c}</div>'
+  + f'<div class="card__body"><div class="card__tag">{c}{" · Sample listing" if sample else ""}</div>'
   f'<h3 class="card__title">{t}</h3><p class="price">{p}</p>'
   f'<button type="button" class="btn btn--outline btn--block" data-demo-msg="{cart_msg}">Add to Cart</button>'
   f'</div></article>'
-  for t, p, img, c in PRODUCTS
+  for t, p, img, c, sample in PRODUCTS
 )
 STORE = hero_page(
   "Impact Store",
@@ -1270,7 +1392,7 @@ STORE = hero_page(
     <div class="grid grid-4" data-filter-list>{product_cards}</div>
     <div class="center mt-3"><button class="btn btn--outline" data-demo-msg="All available items are already shown.">Load More</button></div>
     <p class="cta-note" data-demo-note hidden></p>
-    <p class="small muted center mt-1">Prices and stock are pending final confirmation. The previous site used "Ksh" pricing by mistake; US customers are shown USD here.</p>
+    <p class="small muted center mt-1">Sample listings are shown for design review only. The live shop currently lists the AYM Heritage Collegiate T-Shirt at $23.50–$27.50.</p>
   </div>
 </section>
 
@@ -1299,22 +1421,96 @@ print("chapter/store done")
 # FOCUS PAGES
 # ==========================================================================
 def focus_hero(title, sub, img, actions):
-    return hero_page("Focus Area", title, sub, img, "Focus Areas", actions)
+    return hero_page("Opportunity Sector", title, sub, img, "Opportunity Sectors", actions)
+
+SECTOR_FRAMEWORK = {
+  "art": (
+    "Creative talent is often treated as culture only, with limited access to skills, markets and fair recognition.",
+    "Artists, filmmakers, designers and cultural workers explain how they build value while preserving heritage.",
+    "Portfolio skills, mentorship, market access and partnerships can turn creative practice into livelihoods.",
+    "AYM presents verified exhibitions, profiles and learning resources separately from future ambitions.",
+    "Propose a creator profile, volunteer your skills or support an approved creative-learning activity."
+  ),
+  "agriculture": (
+    "Young farmers face limited land access, finance, storage and reliable routes to market.",
+    "Farmers, processors and agribusiness innovators share what works in local conditions.",
+    "Short-duration crops, small livestock, training and buyer links can support practical enterprise pilots.",
+    "AYM separates documented pilots from proposals and publishes figures only after verification.",
+    "Suggest a farmer story, propose an enterprise pilot or support an approved training activity."
+  ),
+  "education": (
+    "Rural learners often lack consistent access to teachers, digital tools and practical career pathways.",
+    "Students, mentors and local educators describe the barriers they face and the solutions they are testing.",
+    "Hybrid learning, hands-on science, mobile access and mentorship connect education with real opportunities.",
+    "AYM reports verified learning activities and avoids promising outcomes that cannot be evidenced.",
+    "Volunteer as a mentor, share a learning story or support an approved education activity."
+  ),
+  "entrepreneurship": (
+    "Young people with viable ideas often lack business basics, mentorship, seed support and market access.",
+    "Founders explain how they identify problems, serve customers and build value in their communities.",
+    "Feasibility support, basic training, peer networks and responsible resource mobilization can help pilots start.",
+    "AYM states clearly that funding, placement and success are not guaranteed.",
+    "Submit an idea, volunteer your business skills or support an approved enterprise pilot."
+  ),
+  "ecotourism": (
+    "Natural places and cultural heritage need protection while local communities need reliable livelihoods.",
+    "Guides, hosts and community leaders share how tourism can respect heritage and distribute benefits locally.",
+    "Hospitality skills, local guiding, conservation and transparent visitor arrangements can support community-led income.",
+    "AYM presents verified destinations and approved arrangements separately from future plans.",
+    "Suggest a community feature, enquire about visits or support an approved conservation activity."
+  ),
+  "health": (
+    "Communities face gaps in reliable health information, qualified local support and practical prevention resources.",
+    "Qualified practitioners and community health workers explain needs and locally appropriate responses.",
+    "Needs assessment, stakeholder collaboration and carefully sourced resources can strengthen community-led action.",
+    "AYM does not provide clinical advice and publishes health information only from responsible sources.",
+    "Suggest a carefully sourced health story or support an approved community activity."
+  ),
+  "technology": (
+    "Rural communities are often cut off from connectivity, devices and the skills needed for the digital economy.",
+    "Students, creators and local enterprises show how practical tools solve everyday problems.",
+    "Computer education, sustainable connectivity, supervised digital projects and shared infrastructure can widen access.",
+    "AYM documents verified access projects and separates them from planned infrastructure work.",
+    "Share an innovation, volunteer technical skills or support an approved digital-inclusion activity."
+  ),
+}
+
+def sector_framework(key):
+    challenge, voices, opportunities, evidence, involve = SECTOR_FRAMEWORK[key]
+    items = [
+        ("The Challenge", challenge),
+        ("African Voices", voices),
+        ("Opportunities and Solutions", opportunities),
+        ("Projects and Evidence", evidence),
+        ("Get Involved", involve),
+    ]
+    cards = "".join(
+        f'<div class="feature"><h3>{title}</h3><p class="muted">{text}</p></div>'
+        for title, text in items
+    )
+    return f"""
+<section class="section">
+  <div class="container">
+    <div class="section__head center"><span class="eyebrow">Sector framework</span><h2>From voices to opportunity</h2><p class="lead">Every sector follows the same path so stories, evidence and action stay connected.</p></div>
+    <div class="grid grid-3">{cards}</div>
+  </div>
+</section>
+"""
 
 # ---- ART ----
 ART = focus_hero(
-  "Creative Arts &amp; <em>Cultural Expression</em>",
-  "We harness creative talent to build a thriving Creative Industry that empowers young artists and creates sustainable employment across all genres.",
+  "Creative Economy",
+  "We feature African artists, filmmakers, designers, musicians and cultural entrepreneurs whose work creates value, preserves heritage and opens new opportunities. Through interviews and learning resources, we explore the skills, markets and partnerships that can help creative talent grow.",
   "assets/img/art-2.png",
-  '<a class="btn btn--accent" href="donate.html">Support Art</a><a class="btn btn--ghost" href="chapter.html">Start an Art Chapter</a>'
-) + statrow([("All genres","Music, visual, film, design"),("Youth-led","Artist employment"),("Heritage","Cultural preservation"),("Global","Perception & dialogue")]) + f"""
+  '<a class="btn btn--accent" href="contact.html">Profile a Creator</a><a class="btn btn--ghost" href="opportunity-sectors.html">Explore Skills and Markets</a>'
+) + statrow([("All genres","Music, visual, film, design"),("Youth-led","Creator profiles"),("Heritage","Cultural preservation"),("Global","Perception & dialogue")]) + f"""
 <section class="section">
   <div class="container">
     <div class="section__head center"><span class="eyebrow">Core Strategy</span><h2>Our approach to the creative economy</h2></div>
     <div class="grid grid-3">
       <div class="feature"><h3>Unlocking Potential</h3><p class="muted">Give young creatives the skills, tools and market access to turn talent into income.</p></div>
       <div class="feature"><h3>Amplifying Heritage</h3><p class="muted">Celebrate and preserve Sierra Leone's masking traditions and cultural identity.</p></div>
-      <div class="feature"><h3>Economic Viability</h3><p class="muted">Build a Creative Industry that sustains jobs for artists across every genre.</p></div>
+      <div class="feature"><h3>Economic Viability</h3><p class="muted">Build a Creative Industry that supports creative livelihoods across every genre.</p></div>
     </div>
   </div>
 </section>
@@ -1346,19 +1542,19 @@ ART = focus_hero(
     <div class="split__media"><img src="assets/img/art-1.png" alt="Imagining Africa"></div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-art.html", "Art", "AYM harnesses creative talent to build a thriving creative industry in Sierra Leone.", ART)
+""" + sector_framework("art") + CONTACT_CTA
+page("focus-art.html", "Creative Economy", "Profiles, interviews and learning resources for African creative talent.", ART)
 
 # ---- AGRICULTURE ----
 AGRI = focus_hero(
-  "Agribusiness &amp; <em>Economic Empowerment</em>",
-  "We cultivate short-duration crops, sustainable livestock, and youth entrepreneurship to build self-reliant rural economies.",
+  "Agriculture &amp; Food Systems",
+  "Agriculture remains central to community livelihoods. VOTE Africa documents the experiences of young farmers, food processors and agribusiness innovators, while AYM may support approved local enterprise pilots, learning and partnerships.",
   "assets/img/agri-0.png",
-  '<a class="btn btn--accent" href="donate.html">Support Agribusiness</a><a class="btn btn--ghost" href="chapter.html">Start a Farm Chapter</a>'
-) + statrow([("Short-duration","crops for rapid returns"),("6+","livestock varieties"),("Fast-turnover","harvesting"),("100%","youth-led approach")]) + f"""
+  '<a class="btn btn--accent" href="blog.html">Watch Farmer Stories</a><a class="btn btn--ghost" href="contact.html">Propose an Enterprise Pilot</a>'
+) + statrow([("Short-duration","crops for rapid returns"),("6+","livestock varieties"),("Fast-turnover","harvesting"),("Local","enterprise pilots")]) + f"""
 <section class="section">
   <div class="container">
-    <div class="section__head center"><span class="eyebrow">Key Focus Areas</span><h2>High-value, youth-led agriculture</h2></div>
+    <div class="section__head center"><span class="eyebrow">Sector Focus</span><h2>High-value, youth-led agriculture</h2></div>
     <div class="grid grid-3">
       <div class="feature"><h3>High Profitability</h3><p class="muted">Rapid-harvest, fast-turnover crops that generate income quickly.</p></div>
       <div class="feature"><h3>Skill Building</h3><p class="muted">Comprehensive agricultural mentorship and hands-on training.</p></div>
@@ -1381,15 +1577,15 @@ AGRI = focus_hero(
     <div class="split__media"><img src="assets/img/agri-2.png" alt="AYM agriculture"></div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-agriculture.html", "Agriculture", "AYM's agribusiness programs cultivate short-duration crops and sustainable livestock for youth-led economic empowerment.", AGRI)
+""" + sector_framework("agriculture") + CONTACT_CTA
+page("focus-agriculture.html", "Agriculture &amp; Food Systems", "Farmer stories, food-system learning and approved local enterprise pilots.", AGRI)
 
 # ---- EDUCATION ----
 EDU = focus_hero(
-  "Education &amp; <em>Skill Development</em>",
-  "Revolutionizing rural learning through dynamic hybrid models, hands-on science, and mobile technology.",
+  "Learning &amp; Future Careers",
+  "We examine how young Africans gain useful knowledge through schools, apprenticeships, online learning and practical work. Our stories connect training with real labor-market needs and highlight accessible pathways to develop skills.",
   "assets/img/education-1.png",
-  '<a class="btn btn--accent" href="donate.html">Support Rural Schools</a><a class="btn btn--ghost" href="chapter.html">Start an Education Chapter</a>'
+  '<a class="btn btn--accent" href="blog.html">Explore Learning Stories</a><a class="btn btn--ghost" href="volunteer.html">Volunteer as a Mentor</a>'
 ) + f"""
 <section class="section">
   <div class="container split">
@@ -1427,24 +1623,24 @@ EDU = focus_hero(
     </div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-education.html", "Education", "AYM revolutionizes rural learning through hybrid models, hands-on science, and mobile technology.", EDU)
+""" + sector_framework("education") + CONTACT_CTA
+page("focus-education.html", "Learning &amp; Future Careers", "Learning stories, skills pathways and practical work connected to future careers.", EDU)
 
 print("art/agri/edu done")
 
 # ---- ENTREPRENEURSHIP ----
 ENTRE = focus_hero(
-  "Youth Entrepreneurship &amp; <em>Innovation</em>",
-  "The driving force of the 21st century—unlocking creativity, building sustainable ventures, and empowering local economies.",
+  "Enterprise &amp; Youth Employment",
+  "We report on young entrepreneurs who identify problems, test ideas, serve customers and create value. AYM helps approved teams organize, assess feasibility and mobilize resources responsibly; funding and success are not guaranteed.",
   "assets/img/entre-1.png",
-  '<a class="btn btn--accent" href="donate.html">Support Entrepreneurs</a><a class="btn btn--ghost" href="volunteer.html">Volunteer Your Skills</a>'
+  '<a class="btn btn--accent" href="contact.html">Submit an Idea</a><a class="btn btn--ghost" href="blog.html">Watch Enterprise Stories</a>'
 ) + f"""
 <section class="section">
   <div class="container">
     <div class="section__head center"><span class="eyebrow">Three Pillars</span><h2>How we build entrepreneurs</h2></div>
     <div class="grid grid-3">
       <div class="feature"><div class="feature__ico">&#9733;</div><h3>Endless Avenues of Exploration</h3><p class="muted">From technology to agribusiness, we help young people discover and pursue opportunity.</p></div>
-      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Empowering Local Communities</h3><p class="muted">Ventures are rooted in local needs, creating jobs that stay in the community.</p></div>
+      <div class="feature"><div class="feature__ico">&#9733;</div><h3>Empowering Local Communities</h3><p class="muted">Ventures are rooted in local needs and designed to strengthen community livelihoods.</p></div>
       <div class="feature"><div class="feature__ico">&#9733;</div><h3>Driving Social Change</h3><p class="muted">Enterprise becomes a tool for stability, dignity and lasting progress.</p></div>
     </div>
   </div>
@@ -1467,15 +1663,15 @@ ENTRE = focus_hero(
     </div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-entrepreneurship.html", "Entrepreneurship", "AYM unlocks youth creativity and builds sustainable ventures that empower local economies.", ENTRE)
+""" + sector_framework("entrepreneurship") + CONTACT_CTA
+page("focus-entrepreneurship.html", "Enterprise &amp; Youth Employment", "Entrepreneur stories, responsible feasibility support and practical learning.", ENTRE)
 
 # ---- HEALTHCARE ----
 HEALTH = focus_hero(
-  "Community <em>Healthcare Initiatives</em>",
-  "Addressing vital healthcare needs through community assessment, medical supplies, and stakeholder collaboration.",
+  "Health &amp; Wellbeing",
+  "Healthy communities make youth opportunity possible. We share carefully sourced public-health stories, highlight qualified local practitioners and examine community-led solutions. VOTE Africa does not replace medical advice or clinical services.",
   "assets/img/health-0.png",
-  '<a class="btn btn--accent" href="donate.html">Support Healthcare</a><a class="btn btn--ghost" href="volunteer.html">Volunteer Your Skills</a>'
+  '<a class="btn btn--accent" href="contact.html">Suggest a Health Story</a><a class="btn btn--ghost" href="blog.html">Explore Verified Resources</a>'
 ) + f"""
 <section class="section">
   <div class="container">
@@ -1483,7 +1679,7 @@ HEALTH = focus_hero(
     <div class="grid grid-4">
       <div class="step"><div class="step__num">1</div><h3>In-depth Needs Assessment</h3><p class="muted">We start by understanding the real health gaps in each community.</p></div>
       <div class="step"><div class="step__num">2</div><h3>Stakeholder Collaboration</h3><p class="muted">We partner with local clinics, leaders and health workers.</p></div>
-      <div class="step"><div class="step__num">3</div><h3>Direct Medical Support</h3><p class="muted">Supplies, screenings and targeted interventions where needed.</p></div>
+      <div class="step"><div class="step__num">3</div><h3>Community-Led Support</h3><p class="muted">Medical supplies and community-led solutions where needs are verified.</p></div>
       <div class="step"><div class="step__num">4</div><h3>Continuous Evaluation</h3><p class="muted">We measure outcomes and improve programs over time.</p></div>
     </div>
   </div>
@@ -1499,8 +1695,8 @@ HEALTH = focus_hero(
     <div class="split__media"><img src="assets/img/health-1.png" alt="AYM healthcare"></div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-health.html", "Healthcare", "AYM addresses vital community healthcare needs through assessment, medical supplies and collaboration.", HEALTH)
+""" + sector_framework("health") + CONTACT_CTA
+page("focus-health.html", "Health &amp; Wellbeing", "Carefully sourced public-health stories and community-led solutions.", HEALTH)
 
 # ---- ECOTOURISM ----
 # (title, description, image, optional detail href)
@@ -1532,10 +1728,10 @@ eco_cards = "".join(
   for t, d, img, href in ACTIVITIES
 )
 ECO = focus_hero(
-  "Eco-Tourism &amp; <em>Sustainable Travel</em>",
-  "Experience the natural beauty of Sierra Leone while directly supporting local community development, youth employment, and environmental conservation.",
+  "Heritage &amp; Sustainability",
+  "We explore the connection between African heritage, natural places and responsible local livelihoods. Stories feature community-led tourism, conservation, hospitality skills and cultural preservation, with verified local projects presented separately.",
   "assets/img/ecotourism-0.png",
-  '<a class="btn btn--accent" href="#packages">Book Your Experience</a>'
+  '<a class="btn btn--accent" href="blog.html">Explore Heritage Stories</a><a class="btn btn--ghost" href="contact.html">Suggest a Community Feature</a>'
 ) + f"""
 <section class="section">
   <div class="container">
@@ -1554,7 +1750,7 @@ ECO = focus_hero(
     <div>
       <span class="eyebrow">Featured Destination</span>
       <h2>Sustainable Travel &amp; Community Development</h2>
-      <p class="lead">Discover Moselle Beach, Sierra Leone. Every visit supports local jobs, conservation and community projects.</p>
+      <p class="lead">Discover Moselle Beach, Sierra Leone. Visits may support local livelihoods, conservation and community projects under approved arrangements.</p>
     </div>
   </div>
 </section>
@@ -1586,15 +1782,15 @@ ECO = focus_hero(
     </div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-ecotourism.html", "Ecotourism", "Experience Sierra Leone's natural beauty with AYM eco-tourism while supporting local communities.", ECO)
+""" + sector_framework("ecotourism") + CONTACT_CTA
+page("focus-ecotourism.html", "Heritage &amp; Sustainability", "Heritage stories, responsible tourism and community-led conservation.", ECO)
 
 # ---- ECOTOURISM > FOREST SAFARI (inner sub-page from the Figma menu) ----
 SAFARI = hero_page(
-  "Eco-Tourism / Forest Safari",
+  "Heritage &amp; Sustainability / Forest Safari",
   "A Journey Into <em>the Wild</em>",
   "Walk Sierra Leone's protected forests with a local guide and see the wildlife, rivers and canopy that make the country's interior so extraordinary.",
-  "assets/img/ecotourism-3.png", "Focus Areas / Ecotourism / Forest Safari",
+  "assets/img/ecotourism-3.png", "Opportunity Sectors / Heritage &amp; Sustainability / Forest Safari",
   actions='<a class="btn btn--accent" href="focus-ecotourism.html#packages">Book Your Experience</a> '
           '<a class="btn btn--ghost btn--lg" href="contact.html">Ask a Question</a>'
 ) + f"""
@@ -1603,7 +1799,7 @@ SAFARI = hero_page(
     <div class="section__head center"><span class="eyebrow">The Experience</span><h2>What you'll do in the forest</h2></div>
     <div class="grid grid-3">
       <div class="feature"><h3>Guided forest walk</h3><p class="muted">A knowledgeable local guide leads you along established trails through primary and secondary forest.</p></div>
-      <div class="feature"><h3>Wildlife &amp; birdwatching</h3><p class="muted">Spot monkeys, forest birds and plant life that exist nowhere else on earth.</p></div>
+      <div class="feature"><h3>Wildlife &amp; birdwatching</h3><p class="muted">Spot monkeys, forest birds and a wide range of plant life along the trail.</p></div>
       <div class="feature"><h3>Rivers &amp; clearings</h3><p class="muted">Rest at streams and forest clearings, with time for photos and questions along the way.</p></div>
     </div>
   </div>
@@ -1646,8 +1842,8 @@ SAFARI = hero_page(
     <div class="section__head center"><span class="eyebrow">Plan your visit</span><h2>Forest Safari at a glance</h2></div>
     <div class="grid grid-3">
       <div class="card card--flat"><div class="card__body"><div class="card__tag">Group size</div><h3 class="card__title">Small groups</h3><p class="card__text">Solo travellers, pairs and groups are all welcome.</p></div></div>
-      <div class="card card--flat"><div class="card__body"><div class="card__tag">Duration</div><h3 class="card__title">Half or full day</h3><p class="card__text">Choose a shorter loop or a full day deeper into the forest.</p></div></div>
-      <div class="card card--flat"><div class="card__body"><div class="card__tag">Price</div><h3 class="card__title">From $45.00</h3><p class="card__text">Group rates apply. See full package tiers for current pricing.</p></div></div>
+      <div class="card card--flat"><div class="card__body"><div class="card__tag">Duration</div><h3 class="card__title">Indicative: half or full day</h3><p class="card__text">Confirm the available route with AYM Sierra Leone before booking.</p></div></div>
+      <div class="card card--flat"><div class="card__body"><div class="card__tag">Price</div><h3 class="card__title">Indicative: from $45.00</h3><p class="card__text">Group rates shown for guidance only; confirm current pricing before booking.</p></div></div>
     </div>
     <div class="center mt-3">
       <a class="btn btn--accent" href="focus-ecotourism.html#packages">See Package Pricing</a>
@@ -1661,10 +1857,10 @@ page("focus-ecotourism-forest-safari.html", "Forest Safari",
 
 # ---- TECHNOLOGY ----
 TECH = focus_hero(
-  "Technology &amp; <em>Digital Inclusion</em>",
-  "Bridging the digital divide in rural Sierra Leone through broadband expansion, computer education, and sustainable infrastructure.",
+  "Technology &amp; Digital Inclusion",
+  "We document how African creators, students and enterprises use software, AI, mobile tools and digital infrastructure to solve practical problems. Our volunteer teams also build skills through supervised digital projects.",
   "assets/img/tech-0.png",
-  '<a class="btn btn--accent" href="donate.html">Support Project Mattru Jong</a><a class="btn btn--ghost" href="volunteer.html">Volunteer Tech Skills</a>'
+  '<a class="btn btn--accent" href="contact.html">Share an Innovation</a><a class="btn btn--ghost" href="volunteer.html">Volunteer Technical Skills</a>'
 ) + f"""
 <section class="section">
   <div class="container split">
@@ -1691,8 +1887,8 @@ TECH = focus_hero(
     </div>
   </div>
 </section>
-""" + CONTACT_CTA
-page("focus-technology.html", "Technology", "AYM bridges the digital divide in rural Sierra Leone through broadband, computer education and sustainable infrastructure.", TECH)
+""" + sector_framework("technology") + CONTACT_CTA
+page("focus-technology.html", "Technology &amp; Digital Inclusion", "Stories of African creators, students and enterprises using practical digital tools.", TECH)
 
 print("entre/health/eco/tech done")
 
@@ -1701,8 +1897,8 @@ print("entre/health/eco/tech done")
 # ==========================================================================
 PROJECTS = hero_page(
   "Our Work",
-  "Our Projects &amp; <em>Global Initiatives</em>",
-  "From grassroots community building to Pan-African intellectual dialogue—explore how AYM drives sustainable change.",
+  "Ideas Into Action",
+  "From grassroots community building to Pan-African intellectual dialogue—explore approved projects, their current status and the pillars behind AYM's work.",
   "assets/img/projects-0.png", "Our Work / Projects",
   actions='<a class="btn btn--accent" href="donate.html">Support Ongoing Projects</a>'
 ) + f"""
@@ -1717,7 +1913,6 @@ PROJECTS = hero_page(
         <div><h3>Interactive Q&amp;A</h3><p class="muted">Direct conversation with speakers and leaders.</p></div>
         <div><h3>In-Person Sessions (Later)</h3><p class="muted">Expanding to physical gatherings as the program grows.</p></div>
       </div>
-      <p class="mt-2"><a class="btn btn--brand" href="#register">Register for Next Session</a> <a class="btn btn--outline" href="#archive">View Lecture Archives</a></p>
     </div>
     <div class="split__media"><img src="assets/img/projects-1.png" alt="Lecture Series"></div>
   </div>
@@ -1726,18 +1921,13 @@ PROJECTS = hero_page(
 <section class="section section--cream">
   <div class="container">
     <div class="section__head"><span class="eyebrow">Current Projects</span><h2>Projects we're building now</h2></div>
-    {cards_grid([
-      {"title":"Building Artistic Bridges Through Perception","tag":"Africa / Art","text":"Connecting artists and audiences across continents to reshape global perceptions of Africa.","cta":"Learn More","href":"focus-art.html","img":"assets/img/projects-2.png"},
-      {"title":"Mattru Jong Project Summit","tag":"Ecotourism","text":"Developing 100+ acres along the Jong River into an ecotourism and enterprise hub.","cta":"Watch Videos","href":"focus-ecotourism.html"},
-      {"title":"Brick Making","tag":"Art","text":"A youth-led brick-making enterprise creating jobs and building materials locally.","cta":"Learn More","href":"focus-entrepreneurship.html","img":"assets/img/projects-3.png"},
-      {"title":"One Dollar Campaign","tag":"Micro-donations","text":"Small, consistent micro donations that fund youth-led projects.","cta":"Learn More","href":"donate.html"},
-    ], 4)}
+    {cards_grid(CURRENT_PROJECTS, 2)}
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section__head"><span class="eyebrow">Track Record</span><h2>Successful Past Projects</h2></div>
+    <div class="section__head"><span class="eyebrow">Completed and Pillars</span><h2>Completed projects and foundations</h2></div>
     <div class="grid grid-4">
       <div class="feature"><h3>Global Perception &amp; Dialogue</h3><p class="muted">International exhibitions and conversations on Africa's image.</p></div>
       <div class="feature"><h3>Travelling Art</h3><p class="muted">Taking Sierra Leonean art to audiences abroad.</p></div>
@@ -1820,10 +2010,10 @@ WORK = hero_page(
 
 <section class="section section--cream">
   <div class="container">
-    <div class="section__head center"><span class="eyebrow">Grassroots Ventures</span><h2>Micro-enterprises creating real jobs</h2></div>
+    <div class="section__head center"><span class="eyebrow">Grassroots Ventures</span><h2>Micro-enterprises building local livelihoods</h2></div>
     <div class="grid grid-2">
       <div class="feature"><h3>Power &amp; Charging Services</h3><p class="muted">Youth-run power and phone-charging micro-enterprises generating reliable income.</p></div>
-      <div class="feature"><h3>The Mattru Jong Transformation</h3><p class="muted">100+ acres along the Jong River being developed into an enterprise and ecotourism base.</p></div>
+      <div class="feature"><h3>Mattru Jong Collaboration</h3><p class="muted">Community-led enterprise and ecotourism activity connected to local priorities.</p></div>
     </div>
   </div>
 </section>
@@ -1834,7 +2024,7 @@ WORK = hero_page(
     <div class="grid grid-3">
       <div class="feature"><h3>Social Enterprise &amp; Ecotourism Base</h3><p class="muted">An incubator for youth-led ventures and sustainable tourism.</p></div>
       <div class="feature"><h3>Educational &amp; Cultural Hub</h3><p class="muted">A center for training, learning and cultural exchange.</p></div>
-      <div class="feature"><h3>Developing 100+ Acres</h3><p class="muted">Land along the Jong River for agriculture, enterprise and conservation.</p></div>
+      <div class="feature"><h3>Developing Land Along the Jong River</h3><p class="muted">Land-use plans for agriculture, enterprise and conservation under approved local arrangements.</p></div>
     </div>
   </div>
 </section>
@@ -1858,6 +2048,235 @@ WORK = hero_page(
 </section>
 """ + cta_trio() + CONTACT_CTA
 page("where-we-work.html", "Where We Work", "AYM operates from Sierra Leone with a global coordination hub in the United States.", WORK, "work")
+
+# ==========================================================================
+# PAGE: SHARE YOUR STORY
+# ==========================================================================
+SHARE_STORY = hero_page(
+  "Get Involved",
+  "Share Your <em>Story.</em>",
+  "Send an experience, idea or community project to AYM for review. Nothing submitted here is published automatically.",
+  "assets/img/contact-3.png", "Get Involved / Share Your Story"
+) + f"""
+<section class="section section--cream">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Before You Begin</span>
+      <h2>Your words stay in review until permission is clear.</h2>
+      <p class="lead">This form sends a draft to the AYM team for editorial and safeguarding review. It is not a publishing tool, and submitting it does not grant permission to publish.</p>
+      <ul class="ticks">
+        <li>We review submissions for accuracy, context and safeguarding.</li>
+        <li>We may contact you to verify details or ask follow-up questions.</li>
+        <li>Publication is considered only after separate, clear approval.</li>
+      </ul>
+    </div>
+    <div class="split__media"><img src="assets/img/contact-4.png" alt="A young person sharing a story with AYM"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2">
+    <div>
+      <span class="eyebrow">Submission Form</span>
+      <h2>Tell us your story</h2>
+      <p class="muted">Use the fields below to share the basic details. You can write in your own words and do not need to include private or sensitive information.</p>
+      <form class="form mt-2" action="https://api.web3forms.com/submit" method="POST" data-web3forms data-success-note="Thanks — your story draft has been sent for review. It has not been published, and AYM will ask for separate permission if it moves forward.">
+        <input type="hidden" name="access_key" value="1afd7c99-a77e-4aab-9fac-111a25871653">
+        <input type="hidden" name="from_name" value="AYM Website — Story Submission">
+        <input type="hidden" name="subject" value="Story submission for review — not for publication">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+        <div class="grid grid-2">
+          <label>First name<input type="text" name="first" autocomplete="given-name" required></label>
+          <label>Last name<input type="text" name="last" autocomplete="family-name" required></label>
+        </div>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Country or location<input type="text" name="location" autocomplete="country-name" placeholder="Optional"></label>
+        <label>Type of story
+          <select name="story_type" required>
+            <option value="">Choose one</option>
+            <option>Personal experience</option>
+            <option>Community project</option>
+            <option>Youth-led initiative</option>
+            <option>Creative work</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Story title<input type="text" name="story_title" placeholder="A short working title"></label>
+        <label>Your story<textarea name="story" rows="7" placeholder="Tell us what happened, why it matters and what you would like people to understand." required></textarea><span class="form__hint">Do not include passwords, identity numbers, medical records or other sensitive details.</span></label>
+        <label>Links or supporting material<input type="text" name="links" placeholder="Optional URLs only"></label>
+        <fieldset>
+          <legend>Safeguarding consent <span class="req">*</span></legend>
+          <label class="checkbox"><input type="radio" name="age_consent" value="adult" required> I am 18 or older.</label>
+          <label class="checkbox"><input type="radio" name="age_consent" value="guardian" required> I am under 18 and have a parent or guardian's permission to submit.</label>
+          <label>Guardian name, if under 18<input type="text" name="guardian_name" autocomplete="off"></label>
+          <label>Guardian email, if under 18<input type="email" name="guardian_email" autocomplete="off"></label>
+          <label class="checkbox"><input type="checkbox" name="consent_accuracy" required> I confirm this account is accurate and I have permission to share any details about other people. <span class="req">*</span></label>
+          <label class="checkbox"><input type="checkbox" name="consent_review" required> I understand this is a submission for review only. It is not published automatically and does not authorize publication. <span class="req">*</span></label>
+          <label class="checkbox"><input type="checkbox" name="consent_contact"> AYM may contact me to verify details and discuss possible next steps.</label>
+        </fieldset>
+        <button class="btn btn--accent" type="submit">Send for review</button>
+        <p class="form__note" data-form-note role="status" aria-live="polite" hidden></p>
+        <p class="muted small">Read our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a> before submitting.</p>
+      </form>
+    </div>
+    <div>
+      <h2>What happens next</h2>
+      <div class="info mt-2">
+        <div><strong>1. Review</strong><p class="muted">The team checks the submission for clarity, accuracy, safeguarding and fit with AYM's work.</p></div>
+        <div><strong>2. Verification</strong><p class="muted">We may ask questions, request context or check permissions before considering any story further.</p></div>
+        <div><strong>3. Separate permission</strong><p class="muted">If a story moves forward, AYM asks for clear approval about how it may be used. No approval is assumed from this form.</p></div>
+      </div>
+      <div class="card card--flat mt-2">
+        <div class="card__body">
+          <h3 class="card__title">Prefer to talk first?</h3>
+          <p class="card__text">You can ask a question before sending a draft through our <a href="contact.html">contact page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+"""
+page("share-your-story.html", "Share Your Story", "Submit a story to AYM for review. Nothing is published automatically and separate permission is required.", SHARE_STORY, "story")
+
+# ==========================================================================
+# PAGE: PRIVACY POLICY
+# ==========================================================================
+PRIVACY = hero_page(
+  "Policies",
+  "Privacy Policy",
+  "How AYM handles information submitted through this website.",
+  "assets/img/about-2.png", "Policies / Privacy"
+) + f"""
+<section class="section">
+  <div class="container policy">
+    <p class="lead">Last updated: 25 November 2026.</p>
+    <p>The Twenty-First Century African Youth Movement, Inc. (AYM) respects your privacy. This summary explains what information this website may receive, how it is used and how you can ask questions about it.</p>
+
+    <h2>Information we receive</h2>
+    <ul>
+      <li><strong>Information you provide:</strong> details you enter in contact, volunteer, story submission and other forms, such as your name, email, location, submitted text and consent choices.</li>
+      <li><strong>Story submissions:</strong> drafts sent through <a href="share-your-story.html">Share Your Story</a> are treated as review materials, not published content.</li>
+      <li><strong>Browser storage:</strong> some features may use local browser storage to keep draft text or interface preferences on your device.</li>
+      <li><strong>Service data:</strong> form and hosting providers may process technical information needed to deliver and secure the site.</li>
+    </ul>
+
+    <h2>How we use information</h2>
+    <ul>
+      <li>To respond to enquiries and review forms you submit.</li>
+      <li>To verify story submissions and assess safeguarding permissions.</li>
+      <li>To operate approved programs and keep records of consent where needed.</li>
+      <li>To improve the website and protect it from misuse.</li>
+      <li>To meet legal or governance requirements where applicable.</li>
+    </ul>
+
+    <h2>Sharing and service providers</h2>
+    <p>AYM does not sell personal information. We may share limited information with service providers that help operate this site, such as form delivery, email, hosting and payment providers. Information may also be shared where required by law or where needed to protect people and property.</p>
+
+    <h2>Stories and publication</h2>
+    <p>Submitting a story through this website does not automatically publish it and does not grant AYM permission to publish. If a submission moves forward, AYM asks for separate, clear approval about how the story may be used. You may withdraw permission by contacting us, subject to material already published or shared under prior approval.</p>
+
+    <h2>Children and safeguarding</h2>
+    <p>We do not knowingly collect information from children through this website without appropriate parent or guardian involvement. The story form asks submitters to confirm their age or guardian permission and to confirm they have the right to share details about other people.</p>
+
+    <h2>Retention and your choices</h2>
+    <p>We keep information only for as long as it is needed for the purpose it was collected, unless a longer period is required for legal, safety or recordkeeping reasons. You may ask to access, correct or delete information you submitted by contacting <a href="mailto:info@aym-inc.org">info@aym-inc.org</a>.</p>
+
+    <h2>Updates</h2>
+    <p>We may update this page as our practices change. The date at the top shows the latest version.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:info@aym-inc.org">info@aym-inc.org</a> or through our <a href="contact.html">contact page</a>. See also our <a href="terms.html">Terms of Use</a> and <a href="accessibility.html">Accessibility</a> pages.</p>
+  </div>
+</section>
+"""
+page("privacy.html", "Privacy Policy", "How AYM handles information submitted through this website.", PRIVACY, "policy")
+
+# ==========================================================================
+# PAGE: TERMS OF USE
+# ==========================================================================
+TERMS = hero_page(
+  "Policies",
+  "Terms of Use",
+  "Plain-language terms for using this website and submitting material to AYM.",
+  "assets/img/about-1.png", "Policies / Terms"
+) + f"""
+<section class="section">
+  <div class="container policy">
+    <p class="lead">Last updated: 25 November 2026.</p>
+    <p>These terms explain the basic rules for using the AYM website. By using the site or submitting material, you agree to the points below.</p>
+
+    <h2>Using this website</h2>
+    <p>You may browse, share and link to pages on this site for lawful purposes. Do not use the site to harass people, spread false information, attempt unauthorized access, interfere with its operation or submit unlawful content.</p>
+
+    <h2>Website content</h2>
+    <p>Text, images, branding and other materials on this site belong to AYM or its contributors. You may quote or link to material with clear attribution, but do not present it as your own or imply endorsement without written permission.</p>
+
+    <h2>Story submissions</h2>
+    <ul>
+      <li>You keep ownership of what you write.</li>
+      <li>Sending a story through <a href="share-your-story.html">Share Your Story</a> gives AYM permission to review it only.</li>
+      <li>Nothing is published automatically, and no publication permission is assumed.</li>
+      <li>If AYM wishes to use a story, it will ask for separate, clear approval first.</li>
+      <li>You confirm that you have the right to share the material and any details about other people.</li>
+    </ul>
+    <p>Submissions that are incomplete, unsafe, defamatory, privacy-invasive or submitted without required safeguarding consent may not be reviewed further.</p>
+
+    <h2>Donations and third-party services</h2>
+    <p>Donations, purchases and form submissions may be handled by third-party providers. Their terms and privacy practices apply to those transactions. Details about giving are described on the <a href="donate.html">donate page</a>, and handling of submitted information is described in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Accuracy and availability</h2>
+    <p>AYM aims to keep site information accurate and useful, but content may change or contain errors. The site is provided for general information and is not professional, legal, medical or financial advice.</p>
+
+    <h2>Changes to these terms</h2>
+    <p>We may update these terms to reflect changes to the site or our work. The date at the top shows the latest version.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms can be sent to <a href="mailto:info@aym-inc.org">info@aym-inc.org</a> or through our <a href="contact.html">contact page</a>.</p>
+  </div>
+</section>
+"""
+page("terms.html", "Terms of Use", "Plain-language terms for using this website and submitting material to AYM.", TERMS, "policy")
+
+# ==========================================================================
+# PAGE: ACCESSIBILITY
+# ==========================================================================
+ACCESSIBILITY = hero_page(
+  "Policies",
+  "Accessibility",
+  "Our approach to making this website easier to use for more people.",
+  "assets/img/contact-0.png", "Policies / Accessibility"
+) + f"""
+<section class="section">
+  <div class="container policy">
+    <p class="lead">Last updated: 25 November 2026.</p>
+    <p>AYM wants this website to be usable by as many people as possible, including people who use keyboards, screen readers, magnification, captions or reduced motion settings.</p>
+
+    <h2>Our approach</h2>
+    <p>We aim to meet recognized web accessibility guidance, including WCAG 2.1 AA where practical. Accessibility is reviewed as pages are added and updated, rather than treated as a one-time task.</p>
+
+    <h2>What we work on</h2>
+    <ul>
+      <li>Clear page structure, headings and descriptive link text.</li>
+      <li>Keyboard access to navigation, forms and interactive controls.</li>
+      <li>Visible focus styles and labels for form fields.</li>
+      <li>Alternative text for meaningful images.</li>
+      <li>Readable text, sufficient contrast and responsive layouts.</li>
+      <li>Reduced motion options for animation and transitions where supported.</li>
+      <li>Status messages for form outcomes where supported.</li>
+    </ul>
+
+    <h2>Known limitations</h2>
+    <p>Some media, archived articles or embedded third-party content may not yet meet the same standard. If you find something difficult to use, we want to know so we can improve it.</p>
+
+    <h2>Give feedback</h2>
+    <p>If a page, form or feature is hard to access, email <a href="mailto:info@aym-inc.org">info@aym-inc.org</a> with the page address and a short description of the issue. You can also use our <a href="contact.html">contact page</a>.</p>
+
+    <h2>Related policies</h2>
+    <p>See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+  </div>
+</section>
+"""
+page("accessibility.html", "Accessibility", "AYM's approach to website accessibility and how to report an issue.", ACCESSIBILITY, "policy")
 
 print("ALL PAGES DONE")
 

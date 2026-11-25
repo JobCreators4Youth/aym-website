@@ -8,7 +8,7 @@ for p in pages:
     for m in re.findall(r'(?:href|src)="([^"]+)"', html):
         if m.startswith(('http', 'mailto', '#', 'tel:', 'bitcoin:')):
             continue
-        path = m.split('#')[0]
+        path = m.split('#')[0].split('?')[0]
         if not path:
             continue
         if not os.path.exists(os.path.join(OUT, path)):
