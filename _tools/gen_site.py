@@ -383,7 +383,7 @@ LANDING = hero_page(
   "Voices of the Emerging Africa is a global media and engagement initiative of the Twenty-First Century African Youth Movement, Inc. (AYM), a U.S.-registered nonprofit organization.",
   "assets/img/landing-page01-3.png", "Home",
   actions='<a class="btn btn--accent btn--lg" href="blog.html">Watch Our Stories</a>'
-          '<a class="btn btn--ghost btn--lg" href="contact.html">Share Your Voice</a>'
+          '<a class="btn btn--ghost btn--lg" href="share-your-story.html">Share Your Voice</a>'
           '<a class="btn btn--ghost btn--lg" href="volunteer.html">Join the Movement</a>',
   cls=" hero--home-nav",
   post=HERO_QUICK_NAV,
@@ -2055,104 +2055,60 @@ page("where-we-work.html", "Where We Work", "AYM operates from Sierra Leone with
 # ==========================================================================
 # PAGE: SHARE YOUR STORY
 # ==========================================================================
-STORY_FORM_URL = ""
+STORY_FORM_URL = "https://forms.gle/5ziFYCgoBE9tDStc9"
 STORY_HERO_ACTION = (
-  f'<a class="btn btn--accent btn--lg" href="{STORY_FORM_URL}" target="_blank" rel="noopener noreferrer">Open the Story Form ↗</a>'
-  if STORY_FORM_URL else
-  '<a class="btn btn--accent btn--lg" href="#submit-story">Start Your Submission</a>'
+  f'<a class="btn btn--accent btn--lg" href="{STORY_FORM_URL}" target="_blank" rel="noopener noreferrer">SHARE YOUR STORY</a>'
 )
-STORY_FORM_FIELDS = """
-<form class="form mt-2" action="https://api.web3forms.com/submit" method="POST" data-web3forms data-success-note="Thanks — your story draft has been sent for review. It has not been published, and AYM will ask for separate permission if it moves forward.">
-  <input type="hidden" name="access_key" value="1afd7c99-a77e-4aab-9fac-111a25871653">
-  <input type="hidden" name="from_name" value="AYM Website — Story Submission">
-  <input type="hidden" name="subject" value="Story submission for review — not for publication">
-  <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-  <div class="grid grid-2">
-    <label>First name<input type="text" name="first" autocomplete="given-name" required></label>
-    <label>Last name<input type="text" name="last" autocomplete="family-name" required></label>
-  </div>
-  <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
-  <label>Country or location<input type="text" name="location" autocomplete="country-name" placeholder="Optional"></label>
-  <label>Type of story
-    <select name="story_type" required>
-      <option value="">Choose one</option>
-      <option>Personal experience</option>
-      <option>Community project</option>
-      <option>Youth-led initiative</option>
-      <option>Creative work</option>
-      <option>Other</option>
-    </select>
-  </label>
-  <label>Story title<input type="text" name="story_title" placeholder="A short working title"></label>
-  <label>Your story<textarea name="story" rows="7" placeholder="Tell us what happened, why it matters and what you would like people to understand." required></textarea><span class="form__hint">Do not include passwords, identity numbers, medical records or other sensitive details.</span></label>
-  <label>Links or supporting material<input type="text" name="links" placeholder="Optional URLs only"></label>
-  <fieldset>
-    <legend>Safeguarding consent <span class="req">*</span></legend>
-    <label class="checkbox"><input type="radio" name="age_consent" value="adult" required> I am 18 or older.</label>
-    <label class="checkbox"><input type="radio" name="age_consent" value="guardian" required> I am under 18 and have a parent or guardian's permission to submit.</label>
-    <label>Guardian name, if under 18<input type="text" name="guardian_name" autocomplete="off"></label>
-    <label>Guardian email, if under 18<input type="email" name="guardian_email" autocomplete="off"></label>
-    <label class="checkbox"><input type="checkbox" name="consent_accuracy" required> I confirm the information I provide is accurate and I have permission to share any details about other people. <span class="req">*</span></label>
-    <label class="checkbox"><input type="checkbox" name="consent_review" required> I understand this is a submission for review only. It is not published automatically and does not authorize publication. <span class="req">*</span></label>
-    <label class="checkbox"><input type="checkbox" name="consent_contact"> AYM may contact me to verify details and discuss possible next steps.</label>
-  </fieldset>
-  <button class="btn btn--accent" type="submit">Send for review</button>
-  <p class="form__note" data-form-note role="status" aria-live="polite" hidden></p>
-  <p class="muted small">Read our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a> before submitting.</p>
-</form>
-"""
-STORY_GOOGLE_PANEL = f"""
-<p class="mt-2"><a class="btn btn--accent btn--lg" href="{STORY_FORM_URL}" target="_blank" rel="noopener noreferrer">Open the Story Form ↗</a></p>
-<p class="small muted">The form opens in a new tab. Your submission still goes to AYM for review only.</p>
-"""
-STORY_SUBMISSION_PANEL = STORY_GOOGLE_PANEL if STORY_FORM_URL else STORY_FORM_FIELDS
 STORY_FORM_BLOCK = f"""
 <section class="section section--cream">
   <div class="container split">
     <div>
-      <span class="eyebrow">Before You Begin</span>
-      <h2>Your story stays in review until permission is clear.</h2>
-      <p class="lead">Send an experience, idea or community project for editorial and safeguarding review. Submitting does not publish anything or grant permission to publish.</p>
-      <ul class="ticks">
-        <li>We check accuracy, context and safeguarding.</li>
-        <li>We may contact you to verify details.</li>
-        <li>Publication is considered only after separate, clear approval.</li>
-      </ul>
+      <span class="eyebrow">VOICES OF THE EMERGING AFRICA</span>
+      <h2>Your Story. Your Voice. Your Africa.</h2>
+      <p class="lead">Every experience has the power to inspire, educate, and create change. Share your journey, your challenges, your achievements, and your ideas with the world.</p>
+      <p class="mt-2"><a class="btn btn--accent btn--lg" href="{STORY_FORM_URL}" target="_blank" rel="noopener noreferrer">SHARE YOUR STORY</a></p>
+      <p class="small muted">The questionnaire opens in a new tab. It is the first step in sharing your story with VOE Africa.</p>
     </div>
-    <div class="split__media"><img src="assets/img/contact-4.png" alt="A young person sharing a story with AYM"></div>
+    <div class="split__media"><img src="assets/img/aym-health-community.jpg" alt="Community members gathered together in Africa"></div>
   </div>
 </section>
 
 <section class="section" id="submit-story">
   <div class="container grid grid-2">
     <div>
-      <span class="eyebrow">Submission</span>
-      <h2>Tell us your story</h2>
-      <p class="muted">Share the basic details in your own words. Do not include passwords, identity numbers, medical records or other sensitive information.</p>
-      {STORY_SUBMISSION_PANEL}
+      <span class="eyebrow">Share Your Story</span>
+      <h2>Tell the world what Africa looks like through your eyes</h2>
+      <p class="muted">VOE Africa welcomes stories from across the continent and diaspora?entrepreneurial journeys, community impact, creative work, challenges overcome, and ideas for Africa?s future.</p>
+      <p class="mt-2"><a class="btn btn--accent btn--lg" href="{STORY_FORM_URL}" target="_blank" rel="noopener noreferrer">SHARE YOUR STORY</a></p>
+      <div class="card card--flat mt-2">
+        <div class="card__body">
+          <h3 class="card__title">Before you submit</h3>
+          <ul class="ticks">
+            <li>Share only information you have the right to share.</li>
+            <li>Do not include passwords, identity numbers, medical records, or other sensitive personal information.</li>
+            <li>If your story includes other people, make sure you have their permission.</li>
+            <li>Submitting the questionnaire does not automatically publish your story.</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div>
       <h2>What happens next</h2>
       <div class="info mt-2">
-        <div><strong>1. Review</strong><p class="muted">The team checks the submission for clarity, accuracy, safeguarding and fit with AYM's work.</p></div>
-        <div><strong>2. Verification</strong><p class="muted">We may ask questions, request context or check permissions before considering any story further.</p></div>
-        <div><strong>3. Separate permission</strong><p class="muted">If a story moves forward, AYM asks for clear approval about how it may be used. No approval is assumed from this form.</p></div>
+        <div><strong>1. Review</strong><p class="muted">The AYM/VOE Africa team reviews submissions for clarity, accuracy, safeguarding, and fit with the movement?s mission.</p></div>
+        <div><strong>2. Verification</strong><p class="muted">We may contact you to verify details, request context, or discuss how your story could be shared responsibly.</p></div>
+        <div><strong>3. Separate permission</strong><p class="muted">If your story moves forward, AYM will request separate, clear approval before publication, distribution, or other use.</p></div>
       </div>
       <div class="card card--flat mt-2">
         <div class="card__body">
-          <h3 class="card__title">What to have ready</h3>
-          <ul class="ticks">
-            <li>A short working title and summary.</li>
-            <li>Your country or location, if you are comfortable sharing it.</li>
-            <li>Any links or supporting material.</li>
-            <li>Confirmation that you can share details about other people.</li>
-          </ul>
+          <h3 class="card__title">Publishing framework</h3>
+          <p class="card__text">The initial questionnaire supports content acquisition, global talent identification, and opportunity development. Before publication, AYM will integrate the Media Release Agreement, Editorial Standards, and safeguarding procedures. The Media Release Agreement will address editing, international distribution, copyright, platform monetization, compensation arrangements, and the use of a contributor?s name, image, and voice.</p>
         </div>
       </div>
       <div class="card card--flat mt-2">
         <div class="card__body">
-          <h3 class="card__title">Prefer to talk first?</h3>
-          <p class="card__text">Use the WhatsApp button, AYM Assistant or our <a href="contact.html">contact page</a> to ask a question before sending a draft.</p>
+          <h3 class="card__title">Need help?</h3>
+          <p class="card__text">Use the WhatsApp button, AYM Assistant, or our <a href="contact.html">contact page</a> if you have questions before submitting your story.</p>
         </div>
       </div>
     </div>
@@ -2161,15 +2117,14 @@ STORY_FORM_BLOCK = f"""
 """
 
 SHARE_STORY = hero_page(
-  "Get Involved",
-  "Share Your <em>Story.</em>",
-  "Send an experience, idea or community project to AYM for review. Nothing submitted here is published automatically.",
-  "assets/img/contact-3.png", "Get Involved / Share Your Story",
+  "VOICES OF THE EMERGING AFRICA",
+  "Your Story. Your Voice. <em>Your Africa.</em>",
+  "Every experience has the power to inspire, educate, and create change. Share your journey, your challenges, your achievements, and your ideas with the world.",
+  "assets/img/aym-art-youth-creatives.jpg", "Get Involved / Share Your Story",
   actions=STORY_HERO_ACTION
 ) + STORY_FORM_BLOCK
-page("share-your-story.html", "Share Your Story", "Share an experience, idea or community project with AYM for review. Nothing is published automatically and separate permission is required.", SHARE_STORY, "story")
+page("share-your-story.html", "Share Your Story | Voices of the Emerging Africa", "Share your African story, entrepreneurial journey, achievements, challenges, and ideas with a global audience through VOE Africa.", SHARE_STORY, "story")
 
-# ==========================================================================
 # PAGE: PRIVACY POLICY
 # ==========================================================================
 PRIVACY = hero_page(
@@ -2186,7 +2141,7 @@ PRIVACY = hero_page(
     <h2>Information we receive</h2>
     <ul>
       <li><strong>Information you provide:</strong> details you enter in contact, volunteer, story submission and other forms, such as your name, email, location, submitted text and consent choices.</li>
-      <li><strong>Story submissions:</strong> drafts sent through <a href="share-your-story.html">Share Your Story</a> are treated as review materials, not published content.</li>
+      <li><strong>Story submissions:</strong> information submitted through <a href="share-your-story.html">Share Your Story</a> and its questionnaire is treated as review material, not published content.</li>
       <li><strong>Browser storage:</strong> some features may use local browser storage to keep draft text or interface preferences on your device.</li>
       <li><strong>Service data:</strong> form and hosting providers may process technical information needed to deliver and secure the site.</li>
     </ul>
@@ -2204,7 +2159,7 @@ PRIVACY = hero_page(
     <p>AYM does not sell personal information. We may share limited information with service providers that help operate this site, such as form delivery, email, hosting and payment providers. Information may also be shared where required by law or where needed to protect people and property.</p>
 
     <h2>Stories and publication</h2>
-    <p>Submitting a story through this website does not automatically publish it and does not grant AYM permission to publish. If a submission moves forward, AYM asks for separate, clear approval about how the story may be used. You may withdraw permission by contacting us, subject to material already published or shared under prior approval.</p>
+    <p>Submitting a story or questionnaire through this website does not automatically publish it and does not grant AYM permission to publish. If a submission moves forward, AYM asks for separate, clear approval about how the story may be used, including any applicable Media Release Agreement, Editorial Standards, and safeguarding procedures. You may withdraw permission by contacting us, subject to material already published or shared under prior approval.</p>
 
     <h2>Children and safeguarding</h2>
     <p>We do not knowingly collect information from children through this website without appropriate parent or guardian involvement. The story form asks submitters to confirm their age or guardian permission and to confirm they have the right to share details about other people.</p>
@@ -2245,7 +2200,7 @@ TERMS = hero_page(
     <h2>Story submissions</h2>
     <ul>
       <li>You keep ownership of what you write.</li>
-      <li>Sending a story through <a href="share-your-story.html">Share Your Story</a> gives AYM permission to review it only.</li>
+      <li>Sending a story through <a href="share-your-story.html">Share Your Story</a> or its questionnaire gives AYM permission to review it only.</li>
       <li>Nothing is published automatically, and no publication permission is assumed.</li>
       <li>If AYM wishes to use a story, it will ask for separate, clear approval first.</li>
       <li>You confirm that you have the right to share the material and any details about other people.</li>
